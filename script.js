@@ -1827,7 +1827,7 @@ function initFreeTrialModal() {
     }
 
     // Attach to all trial triggers
-    const trialTriggers = document.querySelectorAll('.trial-trigger, .nav-signup, [data-action="trial"]');
+    const trialTriggers = document.querySelectorAll('.trial-trigger, [data-action="trial"]');
     trialTriggers.forEach(btn => {
         btn.addEventListener('click', (e) => {
             e.preventDefault();
