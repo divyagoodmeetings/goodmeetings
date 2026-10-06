@@ -1,0 +1,1272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trust & Observability | One Layer for Human & AI Conversations - Goodmeetings</title>
+    <meta name="description" content="One unified layer to monitor, evaluate and improve every customer interaction, human and AI. Sit above the conversation layer with full trust and observability.">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="alternate icon" type="image/png" href="favicon.png">
+
+    
+    <!-- Google Fonts: Inter for UI, Montserrat for Logo (Matching index.html) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@800;900&display=swap" rel="stylesheet">
+    
+    <!-- Early Theme Check -->
+    <script>
+        (function() {
+            try {
+                var urlParams = new URLSearchParams(window.location.search);
+                var theme = urlParams.get('theme') || localStorage.getItem('gm-theme');
+                if (theme === 'light') {
+                    document.documentElement.classList.add('light-mode');
+                    window.addEventListener('DOMContentLoaded', function() {
+                        document.body.classList.add('light-mode');
+                    });
+                }
+            } catch(e) {}
+        })();
+    </script>
+</head>
+<body>
+    <div id="main-content" class="main-content visible">
+        
+        <!-- Premium Floating Navbar -->
+        <nav class="navbar">
+            <div class="nav-container">
+                <!-- Logo -->
+                <a href="/" class="nav-logo" aria-label="Goodmeetings Home">
+                    <img src="logo.png" alt="Goodmeetings" class="nav-logo-img">
+                </a>
+
+                <!-- Hamburger Menu Button (Mobile Only) -->
+                <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                </button>
+
+                <!-- Navigation Links (Desktop) -->
+                <ul class="nav-links" id="nav-links">
+                    <li class="nav-item has-dropdown active">
+                        <a href="trust-observability.html">Services <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+                        <div class="dropdown services-menu">
+                            <a href="call-audit.html" class="service-dropdown-item">
+                                <div class="service-icon-box">
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+                                        <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+                                        <path d="m9 14 2 2 4-4"></path>
+                                    </svg>
+                                </div>
+                                <div class="service-text-content">
+                                    <div class="service-title">Call Audit</div>
+                                    <div class="service-desc">100% call audit, human level accuracy</div>
+                                </div>
+                            </a>
+                            <a href="voice-bot.html" class="service-dropdown-item">
+                                <div class="service-icon-box">
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                    </svg>
+                                </div>
+                                <div class="service-text-content">
+                                    <div class="service-title">Voice Bot</div>
+                                    <div class="service-desc">Automated voice outreach, 24×7</div>
+                                </div>
+                            </a>
+                            <a href="trust-observability.html" class="service-dropdown-item active">
+                                <div class="service-icon-box">
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                        <path d="m9 12 2 2 4-4"></path>
+                                    </svg>
+                                </div>
+                                <div class="service-text-content">
+                                    <div class="service-title">Trust & Observability</div>
+                                    <div class="service-desc">One layer for human and AI conversations</div>
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item has-dropdown">
+                        <a href="case-studies.html">Case Studies <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+                        <div class="dropdown services-menu case-studies-menu">
+                            <a href="case-studies.html" class="service-dropdown-item">
+                                <div class="service-icon-box">
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M3 18v-6a9 9 0 0 1 18 0v6"></path>
+                                        <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path>
+                                    </svg>
+                                </div>
+                                <div class="service-text-content">
+                                    <div class="service-title">Customer Support</div>
+                                    <div class="service-desc">Catch misattributions & eliminate QA blindspots</div>
+                                </div>
+                            </a>
+                            <a href="collections-compliance.html" class="service-dropdown-item">
+                                <div class="service-icon-box">
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                        <path d="m9 12 2 2 4-4"></path>
+                                    </svg>
+                                </div>
+                                <div class="service-text-content">
+                                    <div class="service-title">Collections compliance</div>
+                                    <div class="service-desc">Audit 100% of calls for regulatory adherence</div>
+                                </div>
+                            </a>
+                            <a href="bot-ticket-audit.html" class="service-dropdown-item">
+                                <div class="service-icon-box">
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="3" y="11" width="18" height="10" rx="2"></rect>
+                                        <circle cx="12" cy="5" r="2"></circle>
+                                        <path d="M12 7v4"></path>
+                                        <line x1="8" y1="16" x2="8" y2="16"></line>
+                                        <line x1="16" y1="16" x2="16" y2="16"></line>
+                                    </svg>
+                                </div>
+                                <div class="service-text-content">
+                                    <div class="service-title">Bot & Ticket Audit</div>
+                                    <div class="service-desc">Detect bot hallucinations & ticket errors</div>
+                                </div>
+                            </a>
+                            <a href="sales.html" class="service-dropdown-item">
+                                <div class="service-icon-box">
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <line x1="18" y1="20" x2="18" y2="10"></line>
+                                        <line x1="12" y1="20" x2="12" y2="4"></line>
+                                        <line x1="6" y1="20" x2="6" y2="14"></line>
+                                        <polyline points="4 9 12 2 20 7"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="service-text-content">
+                                    <div class="service-title">Sales</div>
+                                    <div class="service-desc">Uncover deal drop-off moments & buyer objections</div>
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://goodmeetings.ai/blog/" target="_blank" rel="noopener noreferrer">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html">Connect</a>
+                    </li>
+                </ul>
+
+                <!-- Login / Sign Up & Theme Toggle (Desktop) -->
+                <div class="nav-auth" id="nav-auth">
+                    <!-- Dark / Light Mode Toggle Button -->
+                    <button class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Toggle dark and light mode" title="Toggle theme">
+                        <span class="theme-toggle-track">
+                            <span class="theme-toggle-thumb">
+                                <svg class="theme-icon sun-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="5"></circle>
+                                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                                </svg>
+                                <svg class="theme-icon moon-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                                </svg>
+                            </span>
+                        </span>
+                    </button>
+                    <a href="https://app.goodmeetings.ai/login" target="_blank" rel="noopener noreferrer" class="nav-login">Log in</a>
+                    <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=GoodMeetings+Demo+Session+with+Shreya&add=shreya@goodmeetings.ai&details=1-on-1+Demo+Session+for+GoodMeetings+AI+Conversation+Intelligence" target="_blank" class="btn-primary nav-signup book-demo-trigger">Sign Up <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- =========================================================
+             SECTION 1: HERO (Screenshot 5)
+             ========================================================= -->
+        <header class="to-hero-section">
+            <div class="vb-ambient-orb orb-left" aria-hidden="true"></div>
+            <div class="vb-ambient-orb orb-right" aria-hidden="true"></div>
+
+            <div class="to-hero-container">
+                <!-- Left Column: Copy -->
+                <div class="to-hero-copy">
+                    <div class="service-meta-badge">
+                        <span class="badge-dot pulse-teal"></span>
+                        <span>Service 03 · Trust & Observability</span>
+                    </div>
+                    <h1 class="to-hero-title">
+                        Trust &<br>
+                        Observability for <span class="editorial-accent">AI<br>
+                        conversations.</span>
+                    </h1>
+                    <p class="to-hero-sub">
+                        One unified layer to monitor, evaluate and improve every customer interaction, human and AI.
+                    </p>
+                    <div class="to-hero-cta-group">
+                        <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=GoodMeetings+Demo+Session+with+Shreya&add=shreya@goodmeetings.ai&details=1-on-1+Demo+Session+for+GoodMeetings+AI+Conversation+Intelligence" target="_blank" class="btn-primary vb-btn-demo book-demo-trigger">
+                            Get a demo
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
+                        <a href="#what-we-audit" class="vb-btn-secondary">
+                            See what we audit
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Column: Interactive AI Performance Card -->
+                <div class="to-hero-card-col">
+                    <div class="to-window-card">
+                        <!-- Card Header -->
+                        <div class="to-window-topbar">
+                            <div class="to-window-title">AI performance · Sample view</div>
+                            <div class="to-telemetry-badge">
+                                <span class="to-telemetry-pulse"></span>
+                                <span>LIVE TELEMETRY</span>
+                            </div>
+                        </div>
+
+                        <!-- Window Content: 6 Sparklines Grid -->
+                        <div class="to-window-body">
+                            <div class="to-sparklines-grid">
+                                <!-- Card 1: Accuracy -->
+                                <div class="to-sparkline-card">
+                                    <div class="to-sparkline-head">
+                                        <span class="to-sparkline-title">Accuracy</span>
+                                        <span class="to-sparkline-val" id="to-val-accuracy">99.2%</span>
+                                    </div>
+                                    <svg class="to-sparkline-svg" viewBox="0 0 160 38" preserveAspectRatio="none">
+                                        <path class="to-sparkline-path" id="to-path-accuracy" d="M 2 24 C 25 24, 45 18, 75 22 C 105 24, 130 14, 158 8" vector-effect="non-scaling-stroke" />
+                                        <circle id="to-ring-accuracy" cx="158" cy="8" class="sparkline-beacon-ring" />
+                                        <circle id="to-dot-accuracy" cx="158" cy="8" class="sparkline-beacon-dot" />
+                                    </svg>
+                                </div>
+
+                                <!-- Card 2: Containment -->
+                                <div class="to-sparkline-card">
+                                    <div class="to-sparkline-head">
+                                        <span class="to-sparkline-title">Containment</span>
+                                        <span class="to-sparkline-val" id="to-val-containment">78.5%</span>
+                                    </div>
+                                    <svg class="to-sparkline-svg" viewBox="0 0 160 38" preserveAspectRatio="none">
+                                        <path class="to-sparkline-path" id="to-path-containment" d="M 2 22 C 30 24, 60 18, 90 20 C 120 22, 140 14, 158 10" vector-effect="non-scaling-stroke" />
+                                        <circle id="to-ring-containment" cx="158" cy="10" class="sparkline-beacon-ring" />
+                                        <circle id="to-dot-containment" cx="158" cy="10" class="sparkline-beacon-dot" />
+                                    </svg>
+                                </div>
+
+                                <!-- Card 3: Escalation rates -->
+                                <div class="to-sparkline-card">
+                                    <div class="to-sparkline-head">
+                                        <span class="to-sparkline-title">Escalation rates</span>
+                                        <span class="to-sparkline-val" id="to-val-escalation">1.8%</span>
+                                    </div>
+                                    <svg class="to-sparkline-svg" viewBox="0 0 160 38" preserveAspectRatio="none">
+                                        <path class="to-sparkline-path" id="to-path-escalation" d="M 2 10 C 30 12, 60 10, 90 18 C 120 22, 140 22, 158 26" vector-effect="non-scaling-stroke" />
+                                        <circle id="to-ring-escalation" cx="158" cy="26" class="sparkline-beacon-ring" />
+                                        <circle id="to-dot-escalation" cx="158" cy="26" class="sparkline-beacon-dot" />
+                                    </svg>
+                                </div>
+
+                                <!-- Card 4: CSAT -->
+                                <div class="to-sparkline-card">
+                                    <div class="to-sparkline-head">
+                                        <span class="to-sparkline-title">CSAT</span>
+                                        <span class="to-sparkline-val" id="to-val-csat">4.85</span>
+                                    </div>
+                                    <svg class="to-sparkline-svg" viewBox="0 0 160 38" preserveAspectRatio="none">
+                                        <path class="to-sparkline-path" id="to-path-csat" d="M 2 26 C 30 24, 65 18, 100 16 C 130 14, 145 10, 158 8" vector-effect="non-scaling-stroke" />
+                                        <circle id="to-ring-csat" cx="158" cy="8" class="sparkline-beacon-ring" />
+                                        <circle id="to-dot-csat" cx="158" cy="8" class="sparkline-beacon-dot" />
+                                    </svg>
+                                </div>
+
+                                <!-- Card 5: Failure trends -->
+                                <div class="to-sparkline-card">
+                                    <div class="to-sparkline-head">
+                                        <span class="to-sparkline-title">Failure trends</span>
+                                        <span class="to-sparkline-val" id="to-val-failure">0.4%</span>
+                                    </div>
+                                    <svg class="to-sparkline-svg" viewBox="0 0 160 38" preserveAspectRatio="none">
+                                        <path class="to-sparkline-path" id="to-path-failure" d="M 2 14 C 25 12, 45 22, 75 16 C 105 24, 130 20, 158 26" vector-effect="non-scaling-stroke" />
+                                        <circle id="to-ring-failure" cx="158" cy="26" class="sparkline-beacon-ring" />
+                                        <circle id="to-dot-failure" cx="158" cy="26" class="sparkline-beacon-dot" />
+                                    </svg>
+                                </div>
+
+                                <!-- Card 6: Compliance -->
+                                <div class="to-sparkline-card">
+                                    <div class="to-sparkline-head">
+                                        <span class="to-sparkline-title">Compliance</span>
+                                        <span class="to-sparkline-val" id="to-val-compliance">99.8%</span>
+                                    </div>
+                                    <svg class="to-sparkline-svg" viewBox="0 0 160 38" preserveAspectRatio="none">
+                                        <path class="to-sparkline-path" id="to-path-compliance" d="M 2 22 C 30 20, 65 18, 100 15 C 130 13, 145 11, 158 10" vector-effect="non-scaling-stroke" />
+                                        <circle id="to-ring-compliance" cx="158" cy="10" class="sparkline-beacon-ring" />
+                                        <circle id="to-dot-compliance" cx="158" cy="10" class="sparkline-beacon-dot" />
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <!-- Bottom Filter Pills -->
+                            <div class="to-filter-pills" role="tablist">
+                                <button class="to-filter-pill active" type="button" data-pill="voice">Voice bot</button>
+                                <button class="to-filter-pill" type="button" data-pill="chat">Chat bot</button>
+                                <button class="to-filter-pill" type="button" data-pill="email">Email bot</button>
+                                <button class="to-filter-pill" type="button" data-pill="human">Human agents</button>
+                            </div>
+
+                            <!-- Bottom Accent Statement -->
+                            <div class="to-window-statement">
+                                One layer. One view. Total accountability.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- =========================================================
+             SECTION 2: WHAT WE AUDIT (Screenshots 3 & 1)
+             ========================================================= -->
+        <section class="to-what-section" id="what-we-audit">
+            <div class="to-what-container">
+                <div class="vb-eyebrow">TRUST & OBSERVABILITY · WHAT WE AUDIT</div>
+                <h2 class="to-heading">
+                    One layer above <span class="editorial-accent">every conversation.</span>
+                </h2>
+                <p class="to-subheading">
+                    Goodmeetings sits above the conversation layer, analyzing human voice, AI agents, video, tickets, and email through a single trust lens.
+                </p>
+
+                <!-- Detailed Omnichannel Conversation Inputs (Human & AI) & Evaluation Layer Architecture -->
+                <div class="platform-architecture-box stage-architecture-box to-arch-box">
+                    <div class="arch-bg-glow arch-glow-top"></div>
+                    <div class="arch-bg-glow arch-glow-bottom"></div>
+
+                    <div class="arch-channels-title">
+                        <div class="live-stream-beacon">
+                            <span class="beacon-pulse"></span>
+                            <span class="beacon-dot"></span>
+                            <span class="beacon-text">LIVE STREAM INGESTION</span>
+                        </div>
+                        <h3>OMNICHANNEL CONVERSATION INPUTS (HUMAN &amp; AI)</h3>
+                        <p class="arch-channels-subtitle">Stitching together 100% of human agent and autonomous AI conversations across every customer touchpoint</p>
+                    </div>
+                    
+                    <!-- 6 Interaction Channels Grid with Distinct Color Palette -->
+                    <div class="channels-grid">
+                        <!-- Channel 1: Human Voice Calls (Purple / Violet) -->
+                        <div class="channel-card ch-purple" data-channel="voice">
+                            <div class="channel-card-glow glow-purple"></div>
+                            <div class="channel-card-top">
+                                <span class="ch-badge badge-purple">Human</span>
+                                <div class="ch-live-indicator">
+                                    <span class="eq-bar bar-purple"></span>
+                                    <span class="eq-bar bar-purple"></span>
+                                    <span class="eq-bar bar-purple"></span>
+                                    <span class="eq-bar bar-purple"></span>
+                                    <span class="eq-bar bar-purple"></span>
+                                </div>
+                            </div>
+                            <div class="channel-icon-wrap icon-purple">
+                                <span class="icon-pulse-aura aura-purple"></span>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <circle cx="12" cy="12" r="10" stroke="#8B5CF6" stroke-width="1.5" stroke-opacity="0.3" fill="#8B5CF6" fill-opacity="0.1"/>
+                                    <path d="M16.5 13a4.5 4.5 0 1 0-9 0v2a2 2 0 0 0 2 2h1v-4H8.5v-1a3.5 3.5 0 0 1 7 0v1H13.5v4h1a2 2 0 0 0 2-2v-2z" fill="#8B5CF6" fill-opacity="0.25" stroke="#7C3AED" stroke-width="1.8" stroke-linejoin="round"/>
+                                    <path d="M12 17.5v2.5a2 2 0 0 0 2 2h1" stroke="#8B5CF6" stroke-width="1.8" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                            <div class="channel-info">
+                                <h4>Human Voice Calls</h4>
+                                <p>Live agent conversations</p>
+                            </div>
+                            <div class="channel-metric-chip chip-purple">
+                                <span class="chip-dot dot-purple"></span>
+                                <span>100% Stream Capture</span>
+                            </div>
+                        </div>
+
+                        <!-- Channel 2: Voice AI Agents (Sky Blue) -->
+                        <div class="channel-card ch-blue" data-channel="voice-ai">
+                            <div class="channel-card-glow glow-blue"></div>
+                            <div class="channel-card-top">
+                                <span class="ch-badge badge-blue">AI Agent</span>
+                                <div class="ch-sonar-wrap">
+                                    <span class="sonar-ring r1 ring-blue"></span>
+                                    <span class="sonar-ring r2 ring-blue"></span>
+                                    <span class="pulse-ring-mini beacon-blue"></span>
+                                </div>
+                            </div>
+                            <div class="channel-icon-wrap icon-blue">
+                                <span class="icon-pulse-aura aura-blue"></span>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <rect x="3" y="7" width="18" height="14" rx="4" fill="#0284C7" fill-opacity="0.16" stroke="#0284C7" stroke-width="1.8"/>
+                                    <circle cx="8.5" cy="13" r="1.8" fill="#0284C7"/>
+                                    <circle cx="15.5" cy="13" r="1.8" fill="#0284C7"/>
+                                    <path d="M9 17.5c1 .8 5 .8 6 0" stroke="#0284C7" stroke-width="1.8" stroke-linecap="round"/>
+                                    <path d="M12 2v5" stroke="#0284C7" stroke-width="1.8" stroke-linecap="round"/>
+                                    <circle cx="12" cy="2" r="1.2" fill="#0284C7"/>
+                                    <path d="M1 12h2M21 12h2" stroke="#0284C7" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                            <div class="channel-info">
+                                <h4>Voice AI Agents</h4>
+                                <p>Inbound + outbound</p>
+                            </div>
+                            <div class="channel-metric-chip chip-blue">
+                                <span class="chip-dot dot-blue"></span>
+                                <span>&lt; 450ms Ultra-low Latency</span>
+                            </div>
+                        </div>
+
+                        <!-- Channel 3: Chat AI Agents (Teal / Mint) -->
+                        <div class="channel-card ch-teal" data-channel="chat-ai">
+                            <div class="channel-card-glow glow-teal"></div>
+                            <div class="channel-card-top">
+                                <span class="ch-badge badge-teal">AI Agent</span>
+                                <div class="ch-typing-dots dots-teal">
+                                    <span></span><span></span><span></span>
+                                </div>
+                            </div>
+                            <div class="channel-icon-wrap icon-teal">
+                                <span class="icon-pulse-aura aura-teal"></span>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 8 8.5z" fill="#0D9488" fill-opacity="0.16" stroke="#0D9488" stroke-width="1.8" stroke-linejoin="round"/>
+                                    <circle cx="8" cy="12" r="1.2" fill="#0D9488"/>
+                                    <circle cx="12" cy="12" r="1.2" fill="#0D9488"/>
+                                    <circle cx="16" cy="12" r="1.2" fill="#0D9488"/>
+                                    <path d="M17 4l1 2 2 1-2 1-1 2-1-2-2-1 2-1 1-2z" fill="#0D9488"/>
+                                </svg>
+                            </div>
+                            <div class="channel-info">
+                                <h4>Chat AI Agents</h4>
+                                <p>Text-based AI</p>
+                            </div>
+                            <div class="channel-metric-chip chip-teal">
+                                <span class="chip-dot dot-teal"></span>
+                                <span>Live Sentiment Track</span>
+                            </div>
+                        </div>
+
+                        <!-- Channel 4: Video Audit (Orange / Amber) -->
+                        <div class="channel-card ch-orange" data-channel="video">
+                            <div class="channel-card-glow glow-orange"></div>
+                            <div class="channel-card-top">
+                                <span class="ch-badge badge-orange">Hybrid</span>
+                                <div class="ch-rec-badge">
+                                    <span class="rec-dot"></span>
+                                    <span>REC</span>
+                                </div>
+                            </div>
+                            <div class="channel-icon-wrap icon-orange has-scanner">
+                                <span class="icon-pulse-aura aura-orange"></span>
+                                <span class="scan-laser-line"></span>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <rect x="2" y="5" width="14" height="14" rx="3" fill="#EA580C" fill-opacity="0.16" stroke="#EA580C" stroke-width="1.8"/>
+                                    <polygon points="16 9.5 22 6.5 22 17.5 16 14.5 16 9.5" fill="#EA580C" fill-opacity="0.3" stroke="#EA580C" stroke-width="1.8" stroke-linejoin="round"/>
+                                    <circle cx="9" cy="12" r="2.5" stroke="#FB923C" stroke-width="1.6" fill="#EA580C"/>
+                                    <path d="M5 8h1M5 16h1" stroke="#FB923C" stroke-width="1.5" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                            <div class="channel-info">
+                                <h4>Video Audit</h4>
+                                <p>Sales + CS recordings</p>
+                            </div>
+                            <div class="channel-metric-chip chip-orange">
+                                <span class="chip-dot dot-orange"></span>
+                                <span>Screen + Speech QA</span>
+                            </div>
+                        </div>
+
+                        <!-- Channel 5: Support Tickets (Indigo / Royal) -->
+                        <div class="channel-card ch-indigo" data-channel="tickets">
+                            <div class="channel-card-glow glow-indigo"></div>
+                            <div class="channel-card-top">
+                                <span class="ch-badge badge-indigo">System</span>
+                                <div class="ch-flow-spark spark-indigo">
+                                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#4F46E5" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" fill="rgba(79, 70, 229, 0.3)"/></svg>
+                                </div>
+                            </div>
+                            <div class="channel-icon-wrap icon-indigo">
+                                <span class="icon-pulse-aura aura-indigo"></span>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <rect x="3" y="4" width="18" height="16" rx="3" fill="#4F46E5" fill-opacity="0.16" stroke="#4F46E5" stroke-width="1.8"/>
+                                    <line x1="7" y1="9" x2="17" y2="9" stroke="#4F46E5" stroke-width="1.8" stroke-linecap="round"/>
+                                    <line x1="7" y1="13" x2="13" y2="13" stroke="#4F46E5" stroke-width="1.8" stroke-linecap="round"/>
+                                    <path d="M15 16l2 2 4-4" stroke="#4F46E5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <circle cx="7" cy="16.5" r="1.5" fill="#4F46E5"/>
+                                </svg>
+                            </div>
+                            <div class="channel-info">
+                                <h4>Support Tickets</h4>
+                                <p>Helpdesk conversations</p>
+                            </div>
+                            <div class="channel-metric-chip chip-indigo">
+                                <span class="chip-dot dot-indigo"></span>
+                                <span>Auto-Triage &amp; SLA</span>
+                            </div>
+                        </div>
+
+                        <!-- Channel 6: Email AI Agents (Rose / Pink) -->
+                        <div class="channel-card ch-rose" data-channel="email-ai">
+                            <div class="channel-card-glow glow-rose"></div>
+                            <div class="channel-card-top">
+                                <span class="ch-badge badge-rose">AI Agent</span>
+                                <div class="ch-send-beam beam-rose">
+                                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#E11D48" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                                </div>
+                            </div>
+                            <div class="channel-icon-wrap icon-rose">
+                                <span class="icon-pulse-aura aura-rose"></span>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <rect x="2.5" y="4.5" width="19" height="15" rx="3" fill="#E11D48" fill-opacity="0.16" stroke="#E11D48" stroke-width="1.8"/>
+                                    <path d="M3 6.5l9 6.5 9-6.5" stroke="#E11D48" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M17 14l3.5 3.5M7 14L3.5 17.5" stroke="#E11D48" stroke-width="1.5" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                            <div class="channel-info">
+                                <h4>Email AI Agents</h4>
+                                <p>Automated outreach</p>
+                            </div>
+                            <div class="channel-metric-chip chip-rose">
+                                <span class="chip-dot dot-rose"></span>
+                                <span>Intent Extraction</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Multi-Color Data Confluence Flow Laser Beams Animation Graphic -->
+                    <div class="arch-confluence-flow">
+                        <svg viewBox="0 0 1000 65" class="confluence-svg" preserveAspectRatio="none">
+                            <defs>
+                                <filter id="laser-glow-to" x="-20%" y="-20%" width="140%" height="140%">
+                                    <feGaussianBlur stdDeviation="3" result="blur" />
+                                    <feMerge>
+                                        <feMergeNode in="blur" />
+                                        <feMergeNode in="SourceGraphic" />
+                                    </feMerge>
+                                </filter>
+                                <radialGradient id="focal-prism-grad" cx="50%" cy="50%" r="50%">
+                                    <stop offset="0%" stop-color="#FFFFFF" />
+                                    <stop offset="35%" stop-color="#0D9488" />
+                                    <stop offset="70%" stop-color="#8B5CF6" />
+                                    <stop offset="100%" stop-color="#E11D48" stop-opacity="0" />
+                                </radialGradient>
+                            </defs>
+
+                            <!-- Base Grid Laser Tracks (Color coded) -->
+                            <path d="M 83 0 Q 83 40 500 60" class="laser-track track-purple" />
+                            <path d="M 250 0 Q 250 35 500 60" class="laser-track track-blue" />
+                            <path d="M 416 0 Q 416 30 500 60" class="laser-track track-teal" />
+                            <path d="M 583 0 Q 583 30 500 60" class="laser-track track-orange" />
+                            <path d="M 750 0 Q 750 35 500 60" class="laser-track track-indigo" />
+                            <path d="M 916 0 Q 916 40 500 60" class="laser-track track-rose" />
+
+                            <!-- Animated Flowing Color-Coded Data Laser Beams -->
+                            <path d="M 83 0 Q 83 40 500 60" class="laser-beam beam-purple" />
+                            <path d="M 250 0 Q 250 35 500 60" class="laser-beam beam-blue" />
+                            <path d="M 416 0 Q 416 30 500 60" class="laser-beam beam-teal" />
+                            <path d="M 583 0 Q 583 30 500 60" class="laser-beam beam-orange" />
+                            <path d="M 750 0 Q 750 35 500 60" class="laser-beam beam-indigo" />
+                            <path d="M 916 0 Q 916 40 500 60" class="laser-beam beam-rose" />
+
+                            <!-- Convergence Core Multi-Color Radiant Focal Ring -->
+                            <circle cx="500" cy="60" r="8" fill="url(#focal-prism-grad)" />
+                            <circle cx="500" cy="60" r="5" class="laser-focal-point" />
+                        </svg>
+                    </div>
+
+                    <!-- Central Evaluation Layer Core Card -->
+                    <div class="evaluation-layer-showcase">
+                        <!-- Multi-color ambient glowing sparkles -->
+                        <span class="eval-ambient-dot dot-purple-amb"></span>
+                        <span class="eval-ambient-dot dot-blue-amb"></span>
+                        <span class="eval-ambient-dot dot-teal-amb"></span>
+                        <span class="eval-ambient-dot dot-orange-amb"></span>
+                        <span class="eval-ambient-dot dot-rose-amb"></span>
+
+                        <!-- Evaluation Layer Header -->
+                        <div class="eval-showcase-header">
+                            <h2 class="eval-brand-tag">GOODMEETINGS</h2>
+                            <h1 class="eval-layer-title">EVALUATION LAYER</h1>
+                            <div class="eval-title-glow-line"></div>
+                            <p class="eval-layer-subtitle">Conversation Analysis &amp; Quality Engine</p>
+                        </div>
+
+                        <!-- 5-Feature Card (Each with distinct color identity) -->
+                        <div class="eval-feature-card eval-white-card">
+                            <!-- Feature 1: Multi-Language ASR (Cyan / Teal) -->
+                            <div class="eval-feature-col col-teal">
+                                <div class="eval-icon-box box-teal">
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+                                        <path d="M12 3v18M8 7v10M4 11v2M16 7v10M20 11v2"/>
+                                    </svg>
+                                </div>
+                                <h4 class="eval-col-title">Multi-Language<br/>ASR</h4>
+                                <p class="eval-col-desc">Accurate transcription across 100+ languages and dialects.</p>
+                            </div>
+
+                            <!-- Feature 2: 100% Quality Assurance (Emerald Green) -->
+                            <div class="eval-feature-col col-green">
+                                <div class="eval-icon-box box-green">
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                        <polyline points="9 12 11 14 15 10"/>
+                                    </svg>
+                                </div>
+                                <h4 class="eval-col-title">100% Quality<br/>Assurance</h4>
+                                <p class="eval-col-desc">Auto-evaluate every conversation for quality and accuracy.</p>
+                            </div>
+
+                            <!-- Feature 3: Compliance & Governance (Indigo) -->
+                            <div class="eval-feature-col col-indigo">
+                                <div class="eval-icon-box box-indigo">
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="4" y="10" width="16" height="11" rx="2.5" ry="2.5"/>
+                                        <path d="M7 10V7a5 5 0 0 1 10 0v3"/>
+                                        <circle cx="12" cy="15.5" r="1.5" fill="currentColor"/>
+                                    </svg>
+                                </div>
+                                <h4 class="eval-col-title">Compliance &amp;<br/>Governance</h4>
+                                <p class="eval-col-desc">Ensure policy adherence, regulatory compliance and data security.</p>
+                            </div>
+
+                            <!-- Feature 4: Sentiment & Intent AI (Purple / Violet) -->
+                            <div class="eval-feature-col col-purple">
+                                <div class="eval-icon-box box-purple">
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M9.5 2A4.5 4.5 0 0 0 5 6.5c0 1.2.5 2.3 1.3 3.1A4.5 4.5 0 0 0 5 13.5a4.48 4.48 0 0 0 2 3.7V19a3 3 0 0 0 3 3h2"/>
+                                        <path d="M14.5 2A4.5 4.5 0 0 1 19 6.5c0 1.2-.5 2.3-1.3 3.1A4.5 4.5 0 0 1 19 13.5a4.48 4.48 0 0 1-2 3.7V19a3 3 0 0 1-3 3h-2"/>
+                                        <path d="M12 2v20"/>
+                                    </svg>
+                                </div>
+                                <h4 class="eval-col-title">Sentiment &amp;<br/>Intent AI</h4>
+                                <p class="eval-col-desc">Detect sentiment, intent and key topics in real time.</p>
+                            </div>
+
+                            <!-- Feature 5: Lead Conversion Scoring (Rose / Coral) -->
+                            <div class="eval-feature-col col-rose">
+                                <div class="eval-icon-box box-rose">
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/>
+                                        <polyline points="16 7 22 7 22 13"/>
+                                    </svg>
+                                </div>
+                                <h4 class="eval-col-title">Lead Conversion<br/>Scoring</h4>
+                                <p class="eval-col-desc">Identify intent, score leads and prioritize high value opportunities.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Enterprise Platform Guarantee Callout -->
+                    <div class="platform-banner-callout">
+                        <p><strong>The same evaluation engine across every customer interaction.</strong> One source of truth for quality, compliance and revenue signal.</p>
+                    </div>
+                </div>
+
+                <!-- 4 Key Benefit Badges (Screenshot 1) -->
+                <div class="to-benefits-row">
+                    <div class="to-benefit-card">
+                        <strong class="to-benefit-strong">Complete visibility</strong>
+                        <span class="to-benefit-span">Across human + AI interactions</span>
+                    </div>
+                    <div class="to-benefit-card">
+                        <strong class="to-benefit-strong">Trusted audits</strong>
+                        <span class="to-benefit-span">Compliance ready by default</span>
+                    </div>
+                    <div class="to-benefit-card">
+                        <strong class="to-benefit-strong">Faster resolution</strong>
+                        <span class="to-benefit-span">Issues detected in hours, not days</span>
+                    </div>
+                    <div class="to-benefit-card">
+                        <strong class="to-benefit-strong">Consistent experience</strong>
+                        <span class="to-benefit-span">Quality held constant at scale</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================================
+             SECTION 3: REPORTING AND METRICS (Screenshots 4 & 2)
+             ========================================================= -->
+        <section class="to-reporting-section" id="reporting-and-metrics">
+            <div class="to-reporting-container">
+                <div class="vb-eyebrow">TRUST & OBSERVABILITY · REPORTING AND METRICS</div>
+                <h2 class="to-heading">
+                    What audit looks like, <span class="editorial-accent">human or AI.</span>
+                </h2>
+                <p class="to-subheading">
+                    The same audit engine produces the same clear reporting for human agents and AI agents. Choose a view.
+                </p>
+
+                <!-- Interactive Tabs (Human Audit vs AI Audit) -->
+                <div class="to-tabs-group" role="tablist">
+                    <button class="to-tab-btn active" id="btn-human-tab" data-tab="human" type="button" role="tab" aria-selected="true">Human audit</button>
+                    <button class="to-tab-btn" id="btn-ai-tab" data-tab="ai" type="button" role="tab" aria-selected="false">AI audit</button>
+                </div>
+
+                <!-- 2-Column Reporting Showcase -->
+                <div class="to-reporting-grid">
+                    <!-- Left Column: Report Scope & Details -->
+                    <div class="to-reporting-left">
+                        <h3 class="to-report-subtitle" id="to-tab-title">
+                            Human audit: every agent call scored the same way.
+                        </h3>
+                        <p class="to-report-subdesc" id="to-tab-desc">
+                            Every call scored across fatal, non fatal, and compliance metrics, with automated disposition tagging built in.
+                        </p>
+
+                        <div class="to-steps-eyebrow" id="to-steps-eyebrow">WHAT THE REPORT COVERS</div>
+
+                        <div class="to-steps-list" id="to-steps-list">
+                            <!-- 01 -->
+                            <div class="to-step-item">
+                                <span class="to-step-badge">01</span>
+                                <div class="to-step-info">
+                                    <strong>Scorecards by agent and team</strong>
+                                    <span>Quality, compliance and conversion signals for every rep, on every call.</span>
+                                </div>
+                            </div>
+
+                            <!-- 02 -->
+                            <div class="to-step-item">
+                                <span class="to-step-badge">02</span>
+                                <div class="to-step-info">
+                                    <strong>Fatal, non fatal and compliance metrics</strong>
+                                    <span>Serious violations never hide inside an average.</span>
+                                </div>
+                            </div>
+
+                            <!-- 03 -->
+                            <div class="to-step-item">
+                                <span class="to-step-badge">03</span>
+                                <div class="to-step-info">
+                                    <strong>Automated dispositions</strong>
+                                    <span>PTP, broken promise, refusal, not reachable and third party contact tagged on every call.</span>
+                                </div>
+                            </div>
+
+                            <!-- 04 (Screenshot 2) -->
+                            <div class="to-step-item">
+                                <span class="to-step-badge">04</span>
+                                <div class="to-step-info">
+                                    <strong>Coaching and leaderboards</strong>
+                                    <span>Weekly rep coaching reports and monthly manager leaderboards.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Audit Console & Verification Checklist (Screenshots 4 & 2) -->
+                    <div class="to-reporting-right">
+                        <!-- Dark Console Box -->
+                        <div class="to-report-console">
+                            <div class="to-report-console-head">
+                                <span class="to-console-tag" id="to-console-title">HUMAN AUDIT REPORT</span>
+                                <span class="to-console-pill">Sample layout</span>
+                            </div>
+
+                            <!-- 4 Mini Sparklines -->
+                            <div class="to-mini-charts-grid" id="to-mini-charts">
+                                <div class="to-mini-chart">
+                                    <span class="to-mini-chart-title">Quality score</span>
+                                    <svg class="to-sparkline-svg" viewBox="0 0 160 36" preserveAspectRatio="none">
+                                        <path class="to-sparkline-path" d="M 2 20 C 30 22, 60 14, 90 16 C 120 18, 140 10, 158 8" vector-effect="non-scaling-stroke" />
+                                    </svg>
+                                </div>
+                                <div class="to-mini-chart">
+                                    <span class="to-mini-chart-title">Fatal violations</span>
+                                    <svg class="to-sparkline-svg" viewBox="0 0 160 36" preserveAspectRatio="none">
+                                        <path class="to-sparkline-path" d="M 2 10 C 30 12, 60 10, 90 16 C 120 18, 140 22, 158 24" vector-effect="non-scaling-stroke" />
+                                    </svg>
+                                </div>
+                                <div class="to-mini-chart">
+                                    <span class="to-mini-chart-title">Compliance adherence</span>
+                                    <svg class="to-sparkline-svg" viewBox="0 0 160 36" preserveAspectRatio="none">
+                                        <path class="to-sparkline-path" d="M 2 22 C 30 20, 65 18, 100 16 C 130 14, 145 12, 158 10" vector-effect="non-scaling-stroke" />
+                                    </svg>
+                                </div>
+                                <div class="to-mini-chart">
+                                    <span class="to-mini-chart-title">Call coverage</span>
+                                    <svg class="to-sparkline-svg" viewBox="0 0 160 36" preserveAspectRatio="none">
+                                        <path class="to-sparkline-path" d="M 2 24 C 30 22, 65 18, 100 14 C 130 12, 145 10, 158 8" vector-effect="non-scaling-stroke" />
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <!-- Issues by Type Progress Bars -->
+                            <div class="to-issues-header">ISSUES BY TYPE</div>
+                            <div class="to-issues-bars">
+                                <div class="to-issue-row">
+                                    <span class="to-issue-label">Fatal metrics</span>
+                                    <div class="to-issue-track">
+                                        <div class="to-issue-fill" style="width: 25%;"></div>
+                                    </div>
+                                </div>
+                                <div class="to-issue-row">
+                                    <span class="to-issue-label">Non fatal metrics</span>
+                                    <div class="to-issue-track">
+                                        <div class="to-issue-fill" style="width: 70%;"></div>
+                                    </div>
+                                </div>
+                                <div class="to-issue-row">
+                                    <span class="to-issue-label">Compliance metrics</span>
+                                    <div class="to-issue-track">
+                                        <div class="to-issue-fill" style="width: 35%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Checklist Under Console (Screenshot 2) -->
+                        <div class="to-checklist-box">
+                            <div class="to-check-row">
+                                <svg class="to-check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                    <circle cx="12" cy="12" r="10" stroke="#34D399" stroke-width="2" />
+                                    <polyline points="8 12 11 15 16 9" stroke="#34D399" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <span>From 4% to 100% compliance tracking coverage.</span>
+                            </div>
+                            <div class="to-check-row">
+                                <svg class="to-check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                    <circle cx="12" cy="12" r="10" stroke="#34D399" stroke-width="2" />
+                                    <polyline points="8 12 11 15 16 9" stroke="#34D399" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <span>Turnaround time cut from 5 to 6 days to 5 to 6 hours.</span>
+                            </div>
+                            <div class="to-check-row">
+                                <svg class="to-check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                    <circle cx="12" cy="12" r="10" stroke="#34D399" stroke-width="2" />
+                                    <polyline points="8 12 11 15 16 9" stroke="#34D399" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <span>Zero manual audit effort; team redeployed to higher value tasks.</span>
+                            </div>
+                        </div>
+
+                        <!-- Split Highlight Banner (Screenshot 2) -->
+                        <div class="to-highlight-banner">
+                            <span class="to-stat-left">99%+ accuracy</span>
+                            <span class="to-stat-right">100% coverage</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================================
+             SECTION 4: EXPLORE OTHER SERVICES (Screenshot 2)
+             ========================================================= -->
+        <section class="call-audit-metrics-strip-section vb-explore-section">
+            <div class="metrics-strip-container">
+                <div class="explore-services-block">
+                    <div class="explore-eyebrow">EXPLORE THE OTHER SERVICES</div>
+                    <div class="explore-cards-grid">
+                        <!-- 1. Call Audit -->
+                        <a href="call-audit.html" class="explore-service-card">
+                            <div class="explore-icon-box">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+                                    <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+                                    <path d="m9 14 2 2 4-4"></path>
+                                </svg>
+                            </div>
+                            <div class="explore-info">
+                                <h4 class="explore-title">Call Audit</h4>
+                                <p class="explore-desc">100% of sales, collection and support calls audited, with human level accuracy.</p>
+                            </div>
+                            <div class="explore-arrow">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                            </div>
+                        </a>
+
+                        <!-- 2. Voice Bot -->
+                        <a href="voice-bot.html" class="explore-service-card">
+                            <div class="explore-icon-box">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                </svg>
+                            </div>
+                            <div class="explore-info">
+                                <h4 class="explore-title">Voice Bot</h4>
+                                <p class="explore-desc">Automated voice outreach, 24×7, human in feel.</p>
+                            </div>
+                            <div class="explore-arrow">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================================
+             SECTION 5: BOTTOM CTA
+             ========================================================= -->
+        <section class="audit-cta-section">
+            <div class="audit-cta-ambient-glow" aria-hidden="true"></div>
+            <div class="audit-cta-container">
+                <h2 class="cta-heading">
+                    Bring complete observability to <span class="editorial-accent">every conversation.</span>
+                </h2>
+                <p class="cta-sub">
+                    Get unified compliance, quality assurance, and real-time guardrails across human reps and AI agents.
+                </p>
+                <div class="cta-buttons-wrap">
+                    <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=GoodMeetings+Demo+Session+with+Shreya&add=shreya@goodmeetings.ai&details=1-on-1+Demo+Session+for+GoodMeetings+AI+Conversation+Intelligence" target="_blank" class="btn-primary hero-btn-demo book-demo-trigger">
+                        <span>Schedule a Personalized Demo</span>
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
+                    <a href="/" class="btn-secondary">
+                        <span>Back to Home</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================================
+             SITE FOOTER
+             ========================================================= -->
+        <footer class="site-footer">
+            <div class="footer-top-grid nav-matched">
+                <div class="footer-col brand-col">
+                    <a href="/" class="footer-logo">
+                        <svg viewBox="0 0 97 131" class="footer-logo-icon">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M42.0345 64.5586C52.9021 64.5933 61.5561 56.1185 61.65 45.3503C61.7426 34.6332 53.1449 26.0015 42.2747 25.8994C31.471 25.7973 22.678 34.4066 22.6542 45.1125C22.6292 55.9068 31.2169 64.5224 42.0345 64.5586ZM0.89649 45.2632C0.907756 22.4321 19.2469 4.11909 42.1296 4.08793C64.9722 4.05808 83.3377 22.3636 83.3878 45.2109C83.4365 68.0022 65.0923 86.3351 42.1859 86.3875C19.3896 86.4397 0.885233 68.0084 0.89649 45.2632Z" fill="currentColor" />
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0.814453 85.7657H22.2456C22.9664 92.6245 25.0423 99.04 31.4477 102.425C34.9689 104.285 39.2584 105.703 43.1712 105.635C53.5333 105.454 59.9325 98.3889 61.9796 85.8902H83.3085C83.3507 99.4671 78.2366 110.575 67.4954 118.741C53.5596 129.336 38.2286 130.749 22.7687 122.642C8.34357 115.077 1.22864 102.561 0.814453 85.7657Z" fill="currentColor" />
+                        <path d="M85.6337 21.1465C78.4873 18.7784 68.7603 22.1332 64.7901 24.1066L49.9018 15.2262C48.4129 16.213 48.1152 16.1143 58.8347 7.82588C69.5543 -0.462522 88.1151 -0.561194 96.0555 0.425521V25.5867C95.5592 25.0934 92.7801 23.5146 85.6337 21.1465Z" fill="currentColor" />
+                    </svg>
+                        <span class="brand-text">GOODMEETINGS</span>
+                    </a>
+                    <p class="footer-mission">
+                        The frontier infrastructure for 100% conversation auditing, autonomous voice bots, and unified trust across every interaction.
+                    </p>
+                    <div class="system-status">
+                        <span class="status-indicator-dot"></span>
+                        <span>All Systems Operational</span>
+                    </div>
+                    <div class="footer-socials">
+                        <a href="https://in.linkedin.com/company/goodmeetings" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.25V10.9H6.46M7.86 6.75a1.45 1.45 0 1 0 0 2.9 1.45 1.45 0 0 0 0-2.9z"/></svg></a>
+                        <a href="https://x.com/GoodmeetingsAI" target="_blank" rel="noopener noreferrer" aria-label="X / Twitter"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+                        <a href="https://www.youtube.com/@goodmeetings_ai/" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="call-audit.html">Call Audit</a></li>
+                        <li><a href="voice-bot.html">Voice Bot</a></li>
+                        <li><a href="trust-observability.html">Trust & Observability</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Case Studies</h4>
+                    <ul>
+                        <li><a href="case-studies.html">Customer Support</a></li>
+                        <li><a href="collections-compliance.html">Collections compliance</a></li>
+                        <li><a href="bot-ticket-audit.html">Bot & Ticket Audit</a></li>
+                        <li><a href="sales.html">Sales</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>About Us</h4>
+                    <ul>
+                        <li><a href="about.html#our-mission">Our Mission</a></li>
+                        <li><a href="about.html#our-story">Our Story</a></li>
+                        <li><a href="about.html#why-goodmeetings">What Sets Us Apart</a></li>
+                        <li><a href="about.html">About Goodmeetings</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Blog</h4>
+                    <ul>
+                        <li><a href="/#faq">Latest AI Insights</a></li>
+                        <li><a href="/#faq">Frontier Agent Research</a></li>
+                        <li><a href="/#faq">QA Automation Guides</a></li>
+                        <li><a href="/#faq">Product Updates & Changelog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="contact.html?type=demo" class="book-demo-trigger">Book a Demo</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="mailto:support@goodmeetings.ai">support@goodmeetings.ai</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">© 2026 Goodmeetings Inc. All rights reserved.</p>
+                <div class="footer-legal-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Security & SOC2</a>
+                    <a href="#">Cookie Preferences</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- =========================================================
+         INTERACTIVE SCRIPTS
+         ========================================================= -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Theme toggle
+            const themeBtn = document.getElementById('theme-toggle-btn');
+            if (themeBtn) {
+                themeBtn.addEventListener('click', function() {
+                    const isLight = document.body.classList.toggle('light-mode');
+                    document.documentElement.classList.toggle('light-mode', isLight);
+                    try {
+                        localStorage.setItem('gm-theme', isLight ? 'light' : 'dark');
+                    } catch(e) {}
+                });
+            }
+
+            // Mobile menu toggle
+            const mobileBtn = document.getElementById('mobile-menu-btn');
+            const navLinks = document.getElementById('nav-links');
+            const navAuth = document.getElementById('nav-auth');
+            if (mobileBtn && navLinks) {
+                mobileBtn.addEventListener('click', function() {
+                    navLinks.classList.toggle('mobile-active');
+                    if (navAuth) navAuth.classList.toggle('mobile-active');
+                });
+            }
+
+            // Interactive 3D Card Tilt & Cursor Spotlight
+            const tiltCards = document.querySelectorAll('.to-channel-card, .to-window-card, .to-benefit-card, .to-report-console, .explore-service-card');
+            tiltCards.forEach(card => {
+                card.addEventListener('mousemove', (e) => {
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    card.style.setProperty('--mouse-x', `${x}px`);
+                    card.style.setProperty('--mouse-y', `${y}px`);
+
+                    const centerX = rect.width / 2;
+                    const centerY = rect.height / 2;
+                    const rotateX = ((y - centerY) / centerY) * -3;
+                    const rotateY = ((x - centerX) / centerX) * 3;
+                    card.style.transform = `perspective(1000px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) translateY(-5px)`;
+                });
+
+                card.addEventListener('mouseleave', () => {
+                    card.style.transform = '';
+                    card.style.setProperty('--mouse-x', '-200px');
+                    card.style.setProperty('--mouse-y', '-200px');
+                });
+            });
+
+            // Filter Pills Toggle in Hero Window
+            const filterPills = document.querySelectorAll('.to-filter-pill');
+            filterPills.forEach(pill => {
+                pill.addEventListener('click', () => {
+                    filterPills.forEach(p => p.classList.remove('active'));
+                    pill.classList.add('active');
+
+                    // Sparkline wave micro-animation on filter switch
+                    const sparklines = document.querySelectorAll('.to-sparkline-path');
+                    sparklines.forEach((path, i) => {
+                        path.style.animation = 'none';
+                        void path.offsetHeight; // trigger reflow
+                        path.style.animation = `drawSparkline 1.6s ease-out forwards ${i * 0.05}s`;
+                    });
+                });
+            });
+
+            // Interactive Tabs (Human Audit vs AI Audit)
+            const btnHuman = document.getElementById('btn-human-tab');
+            const btnAi = document.getElementById('btn-ai-tab');
+            const tabTitle = document.getElementById('to-tab-title');
+            const tabDesc = document.getElementById('to-tab-desc');
+            const stepsEyebrow = document.getElementById('to-steps-eyebrow');
+            const stepsList = document.getElementById('to-steps-list');
+            const consoleTitle = document.getElementById('to-console-title');
+
+            const tabData = {
+                human: {
+                    title: 'Human audit: every agent call scored the same way.',
+                    desc: 'Every call scored across fatal, non fatal, and compliance metrics, with automated disposition tagging built in.',
+                    eyebrow: 'WHAT THE REPORT COVERS',
+                    consoleTitle: 'HUMAN AUDIT REPORT',
+                    steps: [
+                        { num: '01', title: 'Scorecards by agent and team', desc: 'Quality, compliance and conversion signals for every rep, on every call.' },
+                        { num: '02', title: 'Fatal, non fatal and compliance metrics', desc: 'Serious violations never hide inside an average.' },
+                        { num: '03', title: 'Automated dispositions', desc: 'PTP, broken promise, refusal, not reachable and third party contact tagged on every call.' },
+                        { num: '04', title: 'Coaching and leaderboards', desc: 'Weekly rep coaching reports and monthly manager leaderboards.' }
+                    ]
+                },
+                ai: {
+                    title: 'AI agent audit: benchmarked to your top performers.',
+                    desc: 'Observe synthetic agent containment, prompt drift, hallucination risk, and customer sentiment in real time.',
+                    eyebrow: 'WHAT AI OBSERVABILITY MONITORS',
+                    consoleTitle: 'AI AGENT OBSERVABILITY REPORT',
+                    steps: [
+                        { num: '01', title: 'Hallucination & drift guardrails', desc: 'Continuous semantic evaluation stops unauthorized claims before they spread.' },
+                        { num: '02', title: 'Containment & warm handoff triggers', desc: 'Real-time sentiment monitoring routes edge-cases smoothly to live human reps.' },
+                        { num: '03', title: 'End-to-end prompt adherence', desc: 'Ensure every synthetic interaction rigorously adheres to approved playbooks.' },
+                        { num: '04', title: 'Self-learning model benchmarks', desc: 'AI SDRs iteratively calibrated against validated human top-performer calls.' }
+                    ]
+                }
+            };
+
+            function switchTab(mode) {
+                if (mode === 'human') {
+                    btnHuman.classList.add('active');
+                    btnHuman.setAttribute('aria-selected', 'true');
+                    btnAi.classList.remove('active');
+                    btnAi.setAttribute('aria-selected', 'false');
+                } else {
+                    btnAi.classList.add('active');
+                    btnAi.setAttribute('aria-selected', 'true');
+                    btnHuman.classList.remove('active');
+                    btnHuman.setAttribute('aria-selected', 'false');
+                }
+
+                const data = tabData[mode];
+                tabTitle.textContent = data.title;
+                tabDesc.textContent = data.desc;
+                stepsEyebrow.textContent = data.eyebrow;
+                consoleTitle.textContent = data.consoleTitle;
+
+                stepsList.innerHTML = data.steps.map(s => `
+                    <div class="to-step-item">
+                        <span class="to-step-badge">${s.num}</span>
+                        <div class="to-step-info">
+                            <strong>${s.title}</strong>
+                            <span>${s.desc}</span>
+                        </div>
+                    </div>
+                `).join('');
+
+                // Trigger sparkline draw
+                const miniPaths = document.querySelectorAll('.to-mini-charts-grid .to-sparkline-path');
+                miniPaths.forEach(p => {
+                    p.style.animation = 'none';
+                    void p.offsetHeight;
+                    p.style.animation = 'drawSparkline 1.8s ease-out forwards';
+                });
+            }
+
+            if (btnHuman && btnAi) {
+                btnHuman.addEventListener('click', () => switchTab('human'));
+                btnAi.addEventListener('click', () => switchTab('ai'));
+            }
+
+            // Hero Analytics Card Dynamic Data & Animations
+            const heroFilterPills = document.querySelectorAll('.to-filter-pills .to-filter-pill');
+            const heroDataSets = {
+                voice: {
+                    accuracy: { val: '99.2%', d: 'M 2 24 C 25 24, 45 18, 75 22 C 105 24, 130 14, 158 8', cx: 158, cy: 8 },
+                    containment: { val: '78.5%', d: 'M 2 22 C 30 24, 60 18, 90 20 C 120 22, 140 14, 158 10', cx: 158, cy: 10 },
+                    escalation: { val: '1.8%', d: 'M 2 10 C 30 12, 60 10, 90 18 C 120 22, 140 22, 158 26', cx: 158, cy: 26 },
+                    csat: { val: '4.85', d: 'M 2 26 C 30 24, 65 18, 100 16 C 130 14, 145 10, 158 8', cx: 158, cy: 8 },
+                    failure: { val: '0.4%', d: 'M 2 14 C 25 12, 45 22, 75 16 C 105 24, 130 20, 158 26', cx: 158, cy: 26 },
+                    compliance: { val: '99.8%', d: 'M 2 22 C 30 20, 65 18, 100 15 C 130 13, 145 11, 158 10', cx: 158, cy: 10 }
+                },
+                chat: {
+                    accuracy: { val: '98.7%', d: 'M 2 20 C 30 18, 60 22, 90 14 C 120 18, 140 12, 158 9', cx: 158, cy: 9 },
+                    containment: { val: '86.2%', d: 'M 2 26 C 35 24, 70 16, 100 18 C 130 12, 145 8, 158 6', cx: 158, cy: 6 },
+                    escalation: { val: '2.4%', d: 'M 2 8 C 25 14, 60 12, 90 20 C 125 24, 145 22, 158 24', cx: 158, cy: 24 },
+                    csat: { val: '4.78', d: 'M 2 22 C 30 20, 60 16, 95 18 C 125 14, 145 11, 158 9', cx: 158, cy: 9 },
+                    failure: { val: '0.6%', d: 'M 2 16 C 30 18, 60 14, 90 22 C 120 20, 140 26, 158 28', cx: 158, cy: 28 },
+                    compliance: { val: '99.9%', d: 'M 2 24 C 30 20, 70 16, 105 14 C 130 10, 145 8, 158 6', cx: 158, cy: 6 }
+                },
+                email: {
+                    accuracy: { val: '99.6%', d: 'M 2 22 C 28 20, 62 16, 96 14 C 124 10, 142 8, 158 6', cx: 158, cy: 6 },
+                    containment: { val: '91.4%', d: 'M 2 28 C 30 24, 65 18, 100 12 C 130 10, 145 6, 158 5', cx: 158, cy: 5 },
+                    escalation: { val: '0.9%', d: 'M 2 12 C 25 16, 60 18, 95 24 C 125 26, 145 28, 158 30', cx: 158, cy: 30 },
+                    csat: { val: '4.92', d: 'M 2 24 C 30 22, 65 16, 100 12 C 130 10, 145 8, 158 6', cx: 158, cy: 6 },
+                    failure: { val: '0.2%', d: 'M 2 12 C 25 15, 60 20, 95 24 C 125 26, 145 28, 158 31', cx: 158, cy: 31 },
+                    compliance: { val: '100%', d: 'M 2 20 C 30 16, 70 14, 105 10 C 130 8, 145 6, 158 5', cx: 158, cy: 5 }
+                },
+                human: {
+                    accuracy: { val: '96.4%', d: 'M 2 26 C 25 22, 55 24, 85 18 C 115 20, 138 14, 158 12', cx: 158, cy: 12 },
+                    containment: { val: '94.8%', d: 'M 2 24 C 30 20, 65 18, 95 14 C 125 12, 145 10, 158 8', cx: 158, cy: 8 },
+                    escalation: { val: '4.1%', d: 'M 2 14 C 30 16, 60 14, 90 20 C 120 22, 140 24, 158 22', cx: 158, cy: 22 },
+                    csat: { val: '4.70', d: 'M 2 20 C 30 22, 60 18, 90 19 C 120 16, 140 14, 158 12', cx: 158, cy: 12 },
+                    failure: { val: '1.2%', d: 'M 2 18 C 30 20, 60 18, 90 24 C 120 22, 140 25, 158 24', cx: 158, cy: 24 },
+                    compliance: { val: '98.6%', d: 'M 2 24 C 30 22, 65 19, 100 17 C 130 15, 145 13, 158 12', cx: 158, cy: 12 }
+                }
+            };
+
+            function updateHeroCard(channelKey) {
+                const dataset = heroDataSets[channelKey];
+                if (!dataset) return;
+
+                heroFilterPills.forEach(pill => {
+                    const isActive = pill.getAttribute('data-pill') === channelKey;
+                    pill.classList.toggle('active', isActive);
+                });
+
+                const metricKeys = ['accuracy', 'containment', 'escalation', 'csat', 'failure', 'compliance'];
+                metricKeys.forEach(m => {
+                    const item = dataset[m];
+                    if (!item) return;
+
+                    const valEl = document.getElementById(`to-val-${m}`);
+                    const pathEl = document.getElementById(`to-path-${m}`);
+                    const ringEl = document.getElementById(`to-ring-${m}`);
+                    const dotEl = document.getElementById(`to-dot-${m}`);
+
+                    if (valEl) {
+                        valEl.textContent = item.val;
+                        valEl.classList.remove('val-pulse');
+                        void valEl.offsetWidth;
+                        valEl.classList.add('val-pulse');
+                    }
+
+                    if (pathEl) {
+                        pathEl.setAttribute('d', item.d);
+                    }
+
+                    if (ringEl && dotEl) {
+                        ringEl.setAttribute('cx', item.cx);
+                        ringEl.setAttribute('cy', item.cy);
+                        dotEl.setAttribute('cx', item.cx);
+                        dotEl.setAttribute('cy', item.cy);
+                    }
+                });
+            }
+
+            heroFilterPills.forEach(pill => {
+                pill.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const key = pill.getAttribute('data-pill');
+                    updateHeroCard(key);
+                });
+            });
+
+            let heroPillIndex = 0;
+            const heroPillKeys = ['voice', 'chat', 'email', 'human'];
+            let heroAutoTimer = setInterval(() => {
+                heroPillIndex = (heroPillIndex + 1) % heroPillKeys.length;
+                updateHeroCard(heroPillKeys[heroPillIndex]);
+            }, 4500);
+
+            const heroCardContainer = document.querySelector('.to-window-card');
+            if (heroCardContainer) {
+                heroCardContainer.addEventListener('mouseenter', () => clearInterval(heroAutoTimer));
+                heroCardContainer.addEventListener('mouseleave', () => {
+                    clearInterval(heroAutoTimer);
+                    heroAutoTimer = setInterval(() => {
+                        heroPillIndex = (heroPillIndex + 1) % heroPillKeys.length;
+                        updateHeroCard(heroPillKeys[heroPillIndex]);
+                    }, 4500);
+                });
+            }
+        });
+    </script>
+</body>
+</html>

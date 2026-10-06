@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call Audit | 100% Call Audit with Human-Level Accuracy - Goodmeetings</title>
+    <meta name="description" content="Every call audited by AI, not sampled. Scored across fatal, non fatal and compliance metrics, with dispositions tagged automatically.">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="alternate icon" type="image/png" href="favicon.png">
+
+    
+    <!-- Google Fonts: Inter for UI, Montserrat for Logo -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@800;900&display=swap" rel="stylesheet">
+    
+    <!-- Early Theme Check -->
+    <script>
+        (function() {
+            try {
+                var urlParams = new URLSearchParams(window.location.search);
+                var theme = urlParams.get('theme') || localStorage.getItem('gm-theme');
+                if (theme === 'light') {
+                    document.documentElement.classList.add('light-mode');
+                    window.addEventListener('DOMContentLoaded', function() {
+                        document.body.classList.add('light-mode');
+                    });
+                }
+            } catch(e) {}
+        })();
+    </script>
+</head>
+<body class="call-audit-page">
+    <!-- Main Website Content -->
+    <div id="main-content" class="main-content visible">
+        
+        <!-- Premium Floating Navbar -->
+        <nav class="navbar">
+            <div class="nav-container">
+                <!-- Logo -->
+                <a href="/" class="nav-logo" aria-label="Goodmeetings Home">
+                    <img src="logo.png" alt="Goodmeetings" class="nav-logo-img">
+                </a>
+
+                <!-- Hamburger Menu Button (Mobile Only) -->
+                <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                </button>
+
+                <!-- Navigation Links (Desktop) -->
+                <ul class="nav-links" id="nav-links">
+                    <li class="nav-item has-dropdown active">
+                        <a href="call-audit.html">Services <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+                        <div class="dropdown services-menu">
+                            <a href="call-audit.html" class="service-dropdown-item active">
+                                <div class="service-icon-box">
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+                                        <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+                                        <path d="m9 14 2 2 4-4"></path>
+                                    </svg>
+                                </div>
+                                <div class="service-text-content">
+                                    <div class="service-title">Call Audit</div>
+                                    <div class="service-desc">100% call audit, human level accuracy</div>
+                                </div>
+                            </a>
+                            <a href="voice-bot.html" class="service-dropdown-item">
+                                <div class="service-icon-box">
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                    </svg>
+                                </div>
+                                <div class="service-text-content">
+                                    <div class="service-title">Voice Bot</div>
+                                    <div class="service-desc">Automated voice outreach, 24×7</div>
+                                </div>
+                            </a>
+                            <a href="trust-observability.html" class="service-dropdown-item">
+                                <div class="service-icon-box">
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                        <path d="m9 12 2 2 4-4"></path>
+                                    </svg>
+                                </div>
+                                <div class="service-text-content">
+                                    <div class="service-title">Trust & Observability</div>
+                                    <div class="service-desc">One layer for human and AI conversations</div>
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item has-dropdown">
+                        <a href="case-studies.html">Case Studies <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+                        <div class="dropdown services-menu case-studies-menu">
+                            <a href="case-studies.html" class="service-dropdown-item">
+                                <div class="service-icon-box">
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M3 18v-6a9 9 0 0 1 18 0v6"></path>
+                                        <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path>
+                                    </svg>
+                                </div>
+                                <div class="service-text-content">
+                                    <div class="service-title">Customer Support</div>
+                                    <div class="service-desc">Catch misattributions & eliminate QA blindspots</div>
+                                </div>
+                            </a>
+                            <a href="collections-compliance.html" class="service-dropdown-item">
+                                <div class="service-icon-box">
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                        <path d="m9 12 2 2 4-4"></path>
+                                    </svg>
+                                </div>
+                                <div class="service-text-content">
+                                    <div class="service-title">Collections compliance</div>
+                                    <div class="service-desc">Audit 100% of calls for regulatory adherence</div>
+                                </div>
+                            </a>
+                            <a href="bot-ticket-audit.html" class="service-dropdown-item">
+                                <div class="service-icon-box">
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="3" y="11" width="18" height="10" rx="2"></rect>
+                                        <circle cx="12" cy="5" r="2"></circle>
+                                        <path d="M12 7v4"></path>
+                                        <line x1="8" y1="16" x2="8" y2="16"></line>
+                                        <line x1="16" y1="16" x2="16" y2="16"></line>
+                                    </svg>
+                                </div>
+                                <div class="service-text-content">
+                                    <div class="service-title">Bot & Ticket Audit</div>
+                                    <div class="service-desc">Detect bot hallucinations & ticket errors</div>
+                                </div>
+                            </a>
+                            <a href="sales.html" class="service-dropdown-item">
+                                <div class="service-icon-box">
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <line x1="18" y1="20" x2="18" y2="10"></line>
+                                        <line x1="12" y1="20" x2="12" y2="4"></line>
+                                        <line x1="6" y1="20" x2="6" y2="14"></line>
+                                        <polyline points="4 9 12 2 20 7"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="service-text-content">
+                                    <div class="service-title">Sales</div>
+                                    <div class="service-desc">Uncover deal drop-off moments & buyer objections</div>
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://goodmeetings.ai/blog/" target="_blank" rel="noopener noreferrer">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html">Connect</a>
+                    </li>
+                </ul>
+
+                <!-- Login / Sign Up & Theme Toggle (Desktop) -->
+                <div class="nav-auth" id="nav-auth">
+                    <!-- Dark / Light Mode Toggle Button -->
+                    <button class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Toggle dark and light mode" title="Toggle theme">
+                        <span class="theme-toggle-track">
+                            <span class="theme-toggle-thumb">
+                                <svg class="theme-icon sun-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="5"></circle>
+                                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                                </svg>
+                                <svg class="theme-icon moon-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                                </svg>
+                            </span>
+                        </span>
+                    </button>
+                    <a href="https://app.goodmeetings.ai/login" target="_blank" rel="noopener noreferrer" class="nav-login">Log in</a>
+                    <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=GoodMeetings+Demo+Session+with+Shreya&add=shreya@goodmeetings.ai&details=1-on-1+Demo+Session+for+GoodMeetings+AI+Conversation+Intelligence" target="_blank" class="btn-primary nav-signup book-demo-trigger">Sign Up <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- =========================================================
+             SECTION 1: HERO (100% call audit, human level accuracy)
+             ========================================================= -->
+        <header class="audit-hero-section">
+            <!-- Ambient Background Glows & Particles -->
+            <div class="audit-hero-bg-effects" aria-hidden="true">
+                <div class="audit-hero-glow-orb orb-primary"></div>
+                <div class="audit-hero-glow-orb orb-secondary"></div>
+                <div class="audit-hero-grid-mesh"></div>
+            </div>
+
+            <div class="audit-hero-container">
+                <!-- Left Column: Copy & Actions -->
+                <div class="audit-hero-copy">
+                    <div class="audit-service-badge">
+                        <span class="badge-dot-cyan pulse"></span>
+                        <span>Service 01 · Call Audit</span>
+                    </div>
+
+                    <h1 class="audit-hero-heading">
+                        100% call audit,<br>
+                        <span class="text-gradient">human level accuracy.</span>
+                    </h1>
+
+                    <p class="audit-hero-desc">
+                        Every call audited by AI, not sampled. Scored across fatal, non fatal and compliance metrics, with dispositions tagged automatically.
+                    </p>
+
+                    <div class="audit-hero-actions">
+                        <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=GoodMeetings+Demo+Session+with+Shreya&add=shreya@goodmeetings.ai&details=1-on-1+Demo+Session+for+GoodMeetings+AI+Conversation+Intelligence" target="_blank" class="btn-primary audit-btn-demo book-demo-trigger">
+                            <span>Get a demo</span>
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                        <a href="#why-goodmeetings" class="btn-secondary audit-btn-outline">
+                            <span>See where we are different</span>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <!-- Live Micro-Features Strip -->
+                    <div class="audit-hero-live-strip">
+                        <div class="live-pill">
+                            <span class="live-pulse-dot"></span>
+                            <span>100% Audited, Zero Sampling</span>
+                        </div>
+                        <div class="live-pill">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                            <span>Sub-Hour Turnaround</span>
+                        </div>
+                        <div class="live-pill">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                            <span>30+ Regional Dialects</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Audit Report Sample Data Mockup Window -->
+                <div class="audit-hero-mockup-wrapper">
+                    <!-- Floating Micro-Badge Top Right -->
+                    <div class="floating-badge badge-top-right">
+                        <span class="badge-icon">⚡</span>
+                        <div class="badge-content">
+                            <span class="badge-label">Turnaround</span>
+                            <strong class="badge-val">5 to 6 Hours</strong>
+                        </div>
+                    </div>
+
+                    <!-- Floating Micro-Badge Bottom Left -->
+                    <div class="floating-badge badge-bottom-left">
+                        <span class="badge-icon">🛡️</span>
+                        <div class="badge-content">
+                            <span class="badge-label">Fatal Violations</span>
+                            <strong class="badge-val">0% Tolerance</strong>
+                        </div>
+                    </div>
+
+                    <div class="audit-window-frame ai-card-theme">
+                        <!-- Card Header (matching AI Agents Voice Bot Console) -->
+                        <div class="ai-bot-header audit-card-header">
+                            <div class="ai-bot-tag">
+                                <div class="bot-wave-icon">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0F766E" stroke-width="2.2" stroke-linecap="round">
+                                        <path d="M12 3v18M8 7v10M4 11v2M16 7v10M20 11v2"/>
+                                    </svg>
+                                </div>
+                                <span class="bot-type-text">AUDIT REPORT <span class="dot-sep">•</span> SAMPLE CONVERSATION</span>
+                            </div>
+                            <div class="bot-live-pill">
+                                <span class="live-dot-pulse"></span>
+                                <span>LIVE AUDIT</span>
+                            </div>
+                        </div>
+
+                        <!-- Window Content -->
+                        <div class="window-body audit-card-body">
+                            <!-- Live Audio Waveform Stream Visualizer -->
+                            <div class="audio-stream-bar">
+                                <div class="audio-stream-meta">
+                                    <span class="stream-channel">Call #8492 · Hindi + English</span>
+                                    <span class="stream-timer">08:24 / 12:40</span>
+                                </div>
+                                <div class="audio-stream-waves" aria-hidden="true">
+                                    <span class="wave-bar w-1"></span>
+                                    <span class="wave-bar w-2"></span>
+                                    <span class="wave-bar w-3"></span>
+                                    <span class="wave-bar w-4"></span>
+                                    <span class="wave-bar w-5"></span>
+                                    <span class="wave-bar w-6"></span>
+                                    <span class="wave-bar w-7"></span>
+                                    <span class="wave-bar w-8"></span>
+                                    <span class="wave-bar w-9"></span>
+                                    <span class="wave-bar w-10"></span>
+                                    <span class="wave-bar w-11"></span>
+                                    <span class="wave-bar w-12"></span>
+                                    <span class="wave-bar w-13"></span>
+                                    <span class="wave-bar w-14"></span>
+                                    <span class="wave-bar w-15"></span>
+                                    <span class="wave-bar w-16"></span>
+                                    <span class="wave-bar w-17"></span>
+                                    <span class="wave-bar w-18"></span>
+                                </div>
+                            </div>
+
+                            <!-- Top Row: Score ring + Metrics Table -->
+                            <div class="audit-score-row">
+                                <!-- Donut Score Circle with Glow -->
+                                <div class="audit-score-circle-wrap">
+                                    <svg class="score-donut-svg" viewBox="0 0 100 100">
+                                        <circle class="score-donut-bg" cx="50" cy="50" r="40" />
+                                        <circle class="score-donut-meter" cx="50" cy="50" r="40" stroke-dasharray="251.2" stroke-dashoffset="35" id="hero-score-ring" />
+                                    </svg>
+                                    <div class="score-number-display">
+                                        <span class="score-val" id="hero-score-number">86</span>
+                                        <span class="score-sub">SCORE</span>
+                                    </div>
+                                </div>
+
+                                <!-- Metrics Breakdown Rows with Icons -->
+                                <div class="audit-metrics-table">
+                                    <div class="metric-row">
+                                        <div class="metric-left">
+                                            <svg class="metric-check-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                            <span class="metric-label">Fatal metrics</span>
+                                        </div>
+                                        <span class="metric-status-pill pass">Pass</span>
+                                    </div>
+                                    <div class="metric-row">
+                                        <div class="metric-left">
+                                            <svg class="metric-flag-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
+                                            <span class="metric-label">Non fatal metrics</span>
+                                        </div>
+                                        <span class="metric-status-pill flags">2 flags</span>
+                                    </div>
+                                    <div class="metric-row">
+                                        <div class="metric-left">
+                                            <svg class="metric-shield-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                                            <span class="metric-label">Compliance metrics</span>
+                                        </div>
+                                        <span class="metric-status-pill pass">Pass</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Dispositions Section -->
+                            <div class="dispositions-block">
+                                <div class="disposition-header-label">
+                                    <span>DISPOSITIONS TAGGED AUTOMATICALLY</span>
+                                    <span class="disp-count-badge">5 Detected</span>
+                                </div>
+                                <div class="disposition-chips-grid">
+                                    <span class="disp-chip active">PTP</span>
+                                    <span class="disp-chip">Broken promise</span>
+                                    <span class="disp-chip">Refusal</span>
+                                    <span class="disp-chip">Not reachable</span>
+                                    <span class="disp-chip">Third party contact</span>
+                                </div>
+                            </div>
+
+                            <!-- Bottom Highlight Banner -->
+                            <div class="audit-bottom-banner">
+                                <span class="banner-stat">100%</span>
+                                <span class="banner-text">of calls audited by AI, not sampled.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- =========================================================
+             SECTION 2: BY TEAM BREAKDOWN (Every conversation audited, not sampled)
+             ========================================================= -->
+        <section class="team-audit-section">
+            <div class="team-audit-container">
+                <!-- Section Header -->
+                <div class="team-section-header">
+                    <div class="team-eyebrow">CALL AUDIT · BY TEAM</div>
+                    <h2 class="team-heading">
+                        Every conversation audited, <span class="text-gradient">not sampled.</span>
+                    </h2>
+                    <p class="team-subheading">
+                        Every conversation is audited by AI, not sampled. Choose a team to see what gets audited and what changes.
+                    </p>
+
+                    <!-- Interactive Team Tabs -->
+                    <div class="team-tabs-bar" role="tablist">
+                        <button class="team-tab-btn active" id="tab-sales" data-team="sales" role="tab" aria-selected="true">
+                            Sales
+                        </button>
+                        <button class="team-tab-btn" id="tab-collections" data-team="collections" role="tab" aria-selected="false">
+                            Collections
+                        </button>
+                        <button class="team-tab-btn" id="tab-support" data-team="support" role="tab" aria-selected="false">
+                            Customer Support
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Interactive Team Card (Content dynamically updates on click) -->
+                <div class="team-content-card" id="team-content-container">
+                    <!-- Left Column: Scope & Objective -->
+                    <div class="team-scope-col">
+                        <h3 class="team-card-title" id="team-card-title">
+                            Every conversation, monitored.<br>
+                            Revenue per rep, lifted.
+                        </h3>
+                        <p class="team-card-desc" id="team-card-desc">
+                            Automated call audits, CRM native automation, and inference that tells you which leads actually convert.
+                        </p>
+
+                        <div class="scope-header-tag">SCOPE AND OBJECTIVE</div>
+
+                        <div class="team-steps-list" id="team-steps-list">
+                            <div class="team-step-item">
+                                <div class="step-num-badge">01</div>
+                                <div class="step-text-wrap">
+                                    <strong>100% sales call audit</strong>
+                                    <span>Automated monitoring of every customer interaction.</span>
+                                </div>
+                            </div>
+                            <div class="team-step-item">
+                                <div class="step-num-badge">02</div>
+                                <div class="step-text-wrap">
+                                    <strong>Automation</strong>
+                                    <span>Call dispositions logged directly into your CRM.</span>
+                                </div>
+                            </div>
+                            <div class="team-step-item">
+                                <div class="step-num-badge">03</div>
+                                <div class="step-text-wrap">
+                                    <strong>Inference</strong>
+                                    <span>Identify good vs bad reps, lift revenue per rep.</span>
+                                </div>
+                            </div>
+                            <div class="team-step-item">
+                                <div class="step-num-badge">04</div>
+                                <div class="step-text-wrap">
+                                    <strong>Insights</strong>
+                                    <span>Surface the top leads most likely to convert.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Business Impact -->
+                    <div class="team-impact-col">
+                        <div class="impact-header-tag">BUSINESS IMPACT</div>
+                        
+                        <div class="impact-cards-group" id="team-impact-cards">
+                            <div class="impact-card">
+                                <div class="impact-icon-circle">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <polyline points="9 12 12 15 16 10"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="impact-text">
+                                    Increased revenue per rep by 30%.
+                                </div>
+                            </div>
+
+                            <div class="impact-card">
+                                <div class="impact-icon-circle">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <polyline points="9 12 12 15 16 10"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="impact-text">
+                                    Optimised the full funnel, conversions up 20%.
+                                </div>
+                            </div>
+
+                            <div class="impact-card">
+                                <div class="impact-icon-circle">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <polyline points="9 12 12 15 16 10"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="impact-text">
+                                    Enhanced compliance tracking and regulatory adherence.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Optional Impact Highlight Banner -->
+                        <div id="team-impact-banner-wrap"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================================
+             SECTION 3: WHY GOODMEETINGS IS DIFFERENT (Enhanced Feature Cards)
+             ========================================================= -->
+        <section id="why-goodmeetings" class="why-different-section">
+            <div class="why-different-container">
+                <div class="why-different-header">
+                    <div class="why-eyebrow">CALL AUDIT · WHY GOODMEETINGS</div>
+                    <h2 class="why-heading">
+                        Where Goodmeetings <span class="text-gradient">is different.</span>
+                    </h2>
+                </div>
+
+                <div class="differentiators-grid">
+                    <!-- Card 1: Language Depth -->
+                    <div class="diff-card">
+                        <div class="diff-icon-box icon-teal">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="2" y1="12" x2="22" y2="12"></line>
+                                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="diff-title">Language depth, built for India</h3>
+                        <p class="diff-desc">
+                            Multilingual and dialect compliant transcription model tuned for the linguistic complexity of India, so nuance and intent are never lost in translation.
+                        </p>
+                        
+                        <!-- Bespoke Animation Widget: Vernacular Stream & Audio Equalizer -->
+                        <div class="diff-widget diff-lang-widget">
+                            <div class="diff-widget-header">
+                                <div class="lang-live-tag">
+                                    <span class="live-dot pulse-teal"></span>
+                                    <span>Tuned for 12+ Dialects</span>
+                                </div>
+                                <div class="audio-waveform-bars" aria-label="Audio stream visualizer">
+                                    <span class="wave-bar wb-1"></span>
+                                    <span class="wave-bar wb-2"></span>
+                                    <span class="wave-bar wb-3"></span>
+                                    <span class="wave-bar wb-4"></span>
+                                    <span class="wave-bar wb-5"></span>
+                                    <span class="wave-bar wb-6"></span>
+                                </div>
+                            </div>
+                            <div class="lang-pill-stream">
+                                <span class="lang-pill active-pill"><span class="lang-pill-dot"></span>Hindi</span>
+                                <span class="lang-pill"><span class="lang-pill-dot"></span>English</span>
+                                <span class="lang-pill"><span class="lang-pill-dot"></span>Tamil</span>
+                                <span class="lang-pill"><span class="lang-pill-dot"></span>Telugu</span>
+                                <span class="lang-pill"><span class="lang-pill-dot"></span>Marathi</span>
+                                <span class="lang-pill"><span class="lang-pill-dot"></span>Bengali</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Full Metric Coverage -->
+                    <div class="diff-card">
+                        <div class="diff-icon-box icon-blue">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                <polyline points="9 12 11 14 15 10"></polyline>
+                            </svg>
+                        </div>
+                        <h3 class="diff-title">Full metric coverage</h3>
+                        <p class="diff-desc">
+                            Every call scored across fatal, non fatal, and compliance metrics, with automated disposition tagging built in.
+                        </p>
+                        
+                        <!-- Bespoke Animation Widget: 3-Tier QA Audit Score Meters -->
+                        <div class="diff-widget diff-metric-widget">
+                            <div class="metric-meter-row">
+                                <div class="metric-meter-label">
+                                    <span class="metric-meter-name">Fatal Violations</span>
+                                    <span class="metric-meter-badge badge-green"><span class="badge-dot dot-green"></span>0 Breaches · Passed</span>
+                                </div>
+                                <div class="metric-meter-track">
+                                    <div class="metric-meter-bar bar-green" style="--bar-fill: 100%;"></div>
+                                </div>
+                            </div>
+                            <div class="metric-meter-row">
+                                <div class="metric-meter-label">
+                                    <span class="metric-meter-name">Non-Fatal QA Score</span>
+                                    <span class="metric-meter-badge badge-blue"><span class="badge-dot dot-blue"></span>96.4% Accuracy</span>
+                                </div>
+                                <div class="metric-meter-track">
+                                    <div class="metric-meter-bar bar-blue" style="--bar-fill: 96.4%;"></div>
+                                </div>
+                            </div>
+                            <div class="metric-meter-row">
+                                <div class="metric-meter-label">
+                                    <span class="metric-meter-name">Regulatory & Script</span>
+                                    <span class="metric-meter-badge badge-cyan"><span class="badge-dot dot-cyan"></span>100% Audited</span>
+                                </div>
+                                <div class="metric-meter-track">
+                                    <div class="metric-meter-bar bar-cyan" style="--bar-fill: 100%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Dispositions -->
+                    <div class="diff-card">
+                        <div class="diff-icon-box icon-purple">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
+                                <line x1="7" y1="7" x2="7.01" y2="7"></line>
+                            </svg>
+                        </div>
+                        <h3 class="diff-title">Dispositions that tell the full story</h3>
+                        <p class="diff-desc">
+                            Every call auto tagged across dispositions, so you know exactly what happened without listening to the call.
+                        </p>
+                        
+                        <!-- Bespoke Animation Widget: Real-time Radar Scanning Auto-Tagger -->
+                        <div class="diff-widget diff-tagger-widget">
+                            <div class="tagger-scan-header">
+                                <div class="tagger-status">
+                                    <span class="scanner-dot pulse-purple"></span>
+                                    <span>AI Auto-Tagger Active</span>
+                                </div>
+                                <div class="tagger-speed-pill">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                                        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                                    </svg>
+                                    <span>Tagged in 0.38s</span>
+                                </div>
+                            </div>
+                            <div class="diff-chips-row scanner-container">
+                                <div class="laser-scanner-beam"></div>
+                                <span class="diff-chip chip-highlight">PTP</span>
+                                <span class="diff-chip">Broken promise</span>
+                                <span class="diff-chip">Refusal</span>
+                                <span class="diff-chip">Not reachable</span>
+                                <span class="diff-chip">Third party contact</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: Speed -->
+                    <div class="diff-card">
+                        <div class="diff-icon-box icon-amber">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                            </svg>
+                        </div>
+                        <h3 class="diff-title">Speed that matters</h3>
+                        <p class="diff-desc">
+                            Turnaround in a couple of hours, not days, so compliance risk surfaces while it is still fixable, not after the fact.
+                        </p>
+                        
+                        <!-- Bespoke Animation Widget: Turnaround Speedometer / Time Comparison -->
+                        <div class="diff-widget diff-speed-widget">
+                            <div class="speed-compare-row human-row">
+                                <div class="speed-label-group">
+                                    <span class="speed-system-name">Traditional Manual QA</span>
+                                    <span class="speed-time-badge badge-dim">5–7 Days Latency</span>
+                                </div>
+                                <div class="speed-bar-track">
+                                    <div class="speed-bar-fill fill-slow"></div>
+                                </div>
+                            </div>
+                            <div class="speed-compare-row ai-row">
+                                <div class="speed-label-group">
+                                    <span class="speed-system-name highlight-gold">
+                                        <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
+                                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                                        </svg>
+                                        Goodmeetings AI Engine
+                                    </span>
+                                    <span class="speed-time-badge badge-turbo">⚡ ~1–2 Hours (100% Calls)</span>
+                                </div>
+                                <div class="speed-bar-track turbo-track">
+                                    <div class="speed-bar-fill fill-turbo">
+                                        <span class="turbo-particle"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================================
+             SECTION 4: KEY METRICS & CROSS-SERVICE LINKS
+             ========================================================= -->
+        <section class="call-audit-metrics-strip-section">
+            <div class="metrics-strip-container">
+                <!-- 3 Stats Tiles with Counter targets -->
+                <div class="stats-tiles-grid">
+                    <div class="stat-tile-card">
+                        <div class="stat-tile-num counter-target" data-target="98" data-suffix="%">98%</div>
+                        <div class="stat-tile-text">Transcription accuracy across languages and dialects</div>
+                    </div>
+                    <div class="stat-tile-card">
+                        <div class="stat-tile-num counter-target" data-target="100" data-suffix="%">100%</div>
+                        <div class="stat-tile-text">of calls audited by AI, not sampled</div>
+                    </div>
+                    <div class="stat-tile-card">
+                        <div class="stat-tile-num tile-title-text"><span class="highlight-hours">Days → Hours</span></div>
+                        <div class="stat-tile-text">Turnaround time in a couple of hours regardless of volume</div>
+                    </div>
+                </div>
+
+                <!-- Explore Other Services Section -->
+                <div class="explore-services-block">
+                    <div class="explore-eyebrow">EXPLORE THE OTHER SERVICES</div>
+                    
+                    <div class="explore-cards-grid">
+                        <!-- Voice Bot Card -->
+                        <a href="voice-bot.html" class="explore-service-card">
+                            <div class="explore-icon-box">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                </svg>
+                            </div>
+                            <div class="explore-info">
+                                <h4 class="explore-title">Voice Bot</h4>
+                                <p class="explore-desc">Automated voice outreach, 24×7, human in feel.</p>
+                            </div>
+                            <div class="explore-arrow">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </div>
+                        </a>
+
+                        <!-- Trust & Observability Card -->
+                        <a href="trust-observability.html" class="explore-service-card">
+                            <div class="explore-icon-box">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                    <path d="m9 12 2 2 4-4"></path>
+                                </svg>
+                            </div>
+                            <div class="explore-info">
+                                <h4 class="explore-title">Trust & Observability</h4>
+                                <p class="explore-desc">One layer to monitor, evaluate and improve human and AI conversations.</p>
+                            </div>
+                            <div class="explore-arrow">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================================
+             SECTION 5: BOTTOM CTA & FOOTER
+             ========================================================= -->
+        <section class="audit-cta-section">
+            <div class="audit-cta-ambient-glow" aria-hidden="true"></div>
+            <div class="audit-cta-container">
+                <h2 class="cta-heading">
+                    Ready to audit 100% of your <span class="text-gradient">customer conversations?</span>
+                </h2>
+                <p class="cta-sub">
+                    Join leading BFSI, automotive, and SaaS enterprises transforming compliance and QA with Goodmeetings.
+                </p>
+                <div class="cta-buttons-wrap">
+                    <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=GoodMeetings+Demo+Session+with+Shreya&add=shreya@goodmeetings.ai&details=1-on-1+Demo+Session+for+GoodMeetings+AI+Conversation+Intelligence" target="_blank" class="btn-primary hero-btn-demo book-demo-trigger">
+                        <span>Schedule a Personalized Demo</span>
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
+                    <a href="/" class="btn-secondary">
+                        <span>Back to Overview</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Site Footer -->
+        <footer class="site-footer">
+            <div class="footer-top-grid nav-matched">
+                <div class="footer-col brand-col">
+                    <a href="/" class="footer-logo">
+                        <svg viewBox="0 0 97 131" class="footer-logo-icon">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M42.0345 64.5586C52.9021 64.5933 61.5561 56.1185 61.65 45.3503C61.7426 34.6332 53.1449 26.0015 42.2747 25.8994C31.471 25.7973 22.678 34.4066 22.6542 45.1125C22.6292 55.9068 31.2169 64.5224 42.0345 64.5586ZM0.89649 45.2632C0.907756 22.4321 19.2469 4.11909 42.1296 4.08793C64.9722 4.05808 83.3377 22.3636 83.3878 45.2109C83.4365 68.0022 65.0923 86.3351 42.1859 86.3875C19.3896 86.4397 0.885233 68.0084 0.89649 45.2632Z" fill="currentColor" />
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0.814453 85.7657H22.2456C22.9664 92.6245 25.0423 99.04 31.4477 102.425C34.9689 104.285 39.2584 105.703 43.1712 105.635C53.5333 105.454 59.9325 98.3889 61.9796 85.8902H83.3085C83.3507 99.4671 78.2366 110.575 67.4954 118.741C53.5596 129.336 38.2286 130.749 22.7687 122.642C8.34357 115.077 1.22864 102.561 0.814453 85.7657Z" fill="currentColor" />
+                        <path d="M85.6337 21.1465C78.4873 18.7784 68.7603 22.1332 64.7901 24.1066L49.9018 15.2262C48.4129 16.213 48.1152 16.1143 58.8347 7.82588C69.5543 -0.462522 88.1151 -0.561194 96.0555 0.425521V25.5867C95.5592 25.0934 92.7801 23.5146 85.6337 21.1465Z" fill="currentColor" />
+                    </svg>
+                        <span class="brand-text">GOODMEETINGS</span>
+                    </a>
+                    <p class="footer-mission">
+                        The frontier infrastructure for 100% conversation auditing, autonomous voice bots, and unified trust across every interaction.
+                    </p>
+                    <div class="system-status">
+                        <span class="status-indicator-dot"></span>
+                        <span>All Systems Operational</span>
+                    </div>
+                    <div class="footer-socials">
+                        <a href="https://in.linkedin.com/company/goodmeetings" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.25V10.9H6.46M7.86 6.75a1.45 1.45 0 1 0 0 2.9 1.45 1.45 0 0 0 0-2.9z"/></svg></a>
+                        <a href="https://x.com/GoodmeetingsAI" target="_blank" rel="noopener noreferrer" aria-label="X / Twitter"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+                        <a href="https://www.youtube.com/@goodmeetings_ai/" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="call-audit.html">Call Audit</a></li>
+                        <li><a href="voice-bot.html">Voice Bot</a></li>
+                        <li><a href="trust-observability.html">Trust & Observability</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Case Studies</h4>
+                    <ul>
+                        <li><a href="case-studies.html">Customer Support</a></li>
+                        <li><a href="collections-compliance.html">Collections compliance</a></li>
+                        <li><a href="bot-ticket-audit.html">Bot & Ticket Audit</a></li>
+                        <li><a href="sales.html">Sales</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>About Us</h4>
+                    <ul>
+                        <li><a href="about.html#our-mission">Our Mission</a></li>
+                        <li><a href="about.html#our-story">Our Story</a></li>
+                        <li><a href="about.html#why-goodmeetings">What Sets Us Apart</a></li>
+                        <li><a href="about.html">About Goodmeetings</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Blog</h4>
+                    <ul>
+                        <li><a href="/#faq">Latest AI Insights</a></li>
+                        <li><a href="/#faq">Frontier Agent Research</a></li>
+                        <li><a href="/#faq">QA Automation Guides</a></li>
+                        <li><a href="/#faq">Product Updates & Changelog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="contact.html?type=demo" class="book-demo-trigger">Book a Demo</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="mailto:support@goodmeetings.ai">support@goodmeetings.ai</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">© 2026 Goodmeetings Inc. All rights reserved.</p>
+                <div class="footer-legal-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Security & SOC2</a>
+                    <a href="#">Cookie Preferences</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Interactive Scripts -->
+    <script src="script.js"></script>
+    <script>
+        // Dedicated Call Audit Page Interactive Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            // Team Tab Interactive Content Data
+            const teamData = {
+                sales: {
+                    title: "Every conversation, monitored.<br>Revenue per rep, lifted.",
+                    desc: "Automated call audits, CRM native automation, and inference that tells you which leads actually convert.",
+                    steps: [
+                        { num: "01", title: "100% sales call audit", desc: "Automated monitoring of every customer interaction." },
+                        { num: "02", title: "Automation", desc: "Call dispositions logged directly into your CRM." },
+                        { num: "03", title: "Inference", desc: "Identify good vs bad reps, lift revenue per rep." },
+                        { num: "04", title: "Insights", desc: "Surface the top leads most likely to convert." }
+                    ],
+                    impacts: [
+                        "Increased revenue per rep by 30%.",
+                        "Optimised the full funnel, conversions up 20%.",
+                        "Enhanced compliance tracking and regulatory adherence."
+                    ]
+                },
+                collections: {
+                    title: "100% call audit. Compliance,<br>proven in hours not weeks.",
+                    desc: "Capture payment intent, commitments and fatal violations, with the accuracy audit teams require.",
+                    steps: [
+                        { num: "01", title: "100% call audit", desc: "Every collection call audited by AI, not sampled." },
+                        { num: "02", title: "Intent & compliance", desc: "Payment intent, commitments and fatal violations captured automatically." }
+                    ],
+                    impacts: [
+                        "Full visibility into the collections floor, zero sampling blind spots.",
+                        "Zero manual audit effort; team redeployed to higher value tasks.",
+                        "From 4% to 100% compliance tracking coverage.",
+                        "Turnaround time cut from 5 to 6 days to 5 to 6 hours."
+                    ],
+                    banner: `
+                        <div class="team-impact-banner banner-split">
+                            <span class="banner-highlight">99%+ accuracy</span>
+                            <span class="banner-subhighlight">100% coverage</span>
+                        </div>
+                    `
+                },
+                support: {
+                    title: "Every customer interaction, monitored.<br>Every support experience, improved.",
+                    desc: "Automated ticket audits, omnichannel quality monitoring, and AI insights that improve customer satisfaction while reducing operational costs.",
+                    steps: [
+                        { num: "01", title: "100% Support Call Audit", desc: "Analyze every customer conversation to understand issue type, commitments made, sentiment, and final resolution." },
+                        { num: "02", title: "100% Support Ticket Audit", desc: "Audit every support ticket for categorization, resolution quality, SLA adherence, and documentation." },
+                        { num: "03", title: "Call to Ticket Reconciliation", desc: "Compare every call with its corresponding ticket to detect missing actions, incorrect resolutions, and documentation gaps." }
+                    ],
+                    impacts: [
+                        "100% call to ticket traceability. Every customer interaction reviewed by AI.",
+                        "Reduced incorrect ticket closures. Teams spend less time reviewing tickets and more time coaching.",
+                        "Higher audit accuracy. Prioritize fixes that improve customer satisfaction."
+                    ],
+                    banner: `
+                        <div class="team-impact-banner banner-full">
+                            <span class="banner-highlight">100% Call to Ticket Reconciliation</span>
+                        </div>
+                    `
+                }
+            };
+
+            const tabButtons = document.querySelectorAll('.team-tab-btn');
+            const cardTitle = document.getElementById('team-card-title');
+            const cardDesc = document.getElementById('team-card-desc');
+            const stepsList = document.getElementById('team-steps-list');
+            const impactCards = document.getElementById('team-impact-cards');
+            const bannerWrap = document.getElementById('team-impact-banner-wrap');
+            const contentCard = document.getElementById('team-content-container');
+
+            function renderTeam(teamKey, animate = true) {
+                if (!teamData[teamKey]) return;
+
+                tabButtons.forEach(b => {
+                    const isActive = b.getAttribute('data-team') === teamKey;
+                    b.classList.toggle('active', isActive);
+                    b.setAttribute('aria-selected', isActive ? 'true' : 'false');
+                });
+
+                const applyContent = () => {
+                    const data = teamData[teamKey];
+                    cardTitle.innerHTML = data.title;
+                    cardDesc.textContent = data.desc;
+
+                    // Render Steps
+                    stepsList.innerHTML = data.steps.map(step => `
+                        <div class="team-step-item">
+                            <div class="step-num-badge">${step.num}</div>
+                            <div class="step-text-wrap">
+                                <strong>${step.title}</strong>
+                                <span>${step.desc}</span>
+                            </div>
+                        </div>
+                    `).join('');
+
+                    // Render Impacts
+                    impactCards.innerHTML = data.impacts.map(impact => `
+                        <div class="impact-card">
+                            <div class="impact-icon-circle">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline points="9 12 12 15 16 10"></polyline>
+                                </svg>
+                            </div>
+                            <div class="impact-text">${impact}</div>
+                        </div>
+                    `).join('');
+
+                    // Render Banner
+                    if (bannerWrap) {
+                        bannerWrap.innerHTML = data.banner || '';
+                    }
+
+                    if (animate) {
+                        contentCard.style.opacity = '1';
+                        contentCard.style.transform = 'none';
+                    }
+                };
+
+                if (animate) {
+                    contentCard.style.opacity = '0.4';
+                    contentCard.style.transform = 'translateY(6px)';
+                    setTimeout(applyContent, 180);
+                } else {
+                    applyContent();
+                }
+            }
+
+            tabButtons.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const teamKey = this.getAttribute('data-team');
+                    renderTeam(teamKey, true);
+                });
+            });
+
+            // Interactive disposition chips toggle
+            const dispChips = document.querySelectorAll('.disposition-chips-grid .disp-chip');
+            dispChips.forEach(chip => {
+                chip.addEventListener('click', () => {
+                    chip.classList.toggle('active');
+                });
+            });
+
+            // Hero Score Ring & Counter Animation
+            const scoreRing = document.getElementById('hero-score-ring');
+            const scoreNumber = document.getElementById('hero-score-number');
+            if (scoreRing && scoreNumber) {
+                let currentVal = 0;
+                const targetVal = 86;
+                const duration = 1200;
+                const startTime = performance.now();
+
+                function animateScore(now) {
+                    const elapsed = now - startTime;
+                    const progress = Math.min(elapsed / duration, 1);
+                    const ease = 1 - Math.pow(1 - progress, 3); // Ease out cubic
+                    
+                    const score = Math.floor(ease * targetVal);
+                    scoreNumber.textContent = score;
+
+                    if (progress < 1) {
+                        requestAnimationFrame(animateScore);
+                    } else {
+                        scoreNumber.textContent = targetVal;
+                    }
+                }
+                setTimeout(() => requestAnimationFrame(animateScore), 300);
+            }
+
+            // Stats Tiles Counter Animation on Scroll
+            const counterElements = document.querySelectorAll('.counter-target');
+            if ('IntersectionObserver' in window && counterElements.length > 0) {
+                const countObserver = new IntersectionObserver((entries, obs) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const el = entry.target;
+                            const target = parseInt(el.getAttribute('data-target'), 10);
+                            const suffix = el.getAttribute('data-suffix') || '';
+                            let start = 0;
+                            const dur = 1000;
+                            const startT = performance.now();
+
+                            function step(now) {
+                                const p = Math.min((now - startT) / dur, 1);
+                                const ease = 1 - Math.pow(1 - p, 3);
+                                el.textContent = Math.floor(ease * target) + suffix;
+                                if (p < 1) {
+                                    requestAnimationFrame(step);
+                                } else {
+                                    el.textContent = target + suffix;
+                                }
+                            }
+                            requestAnimationFrame(step);
+                            obs.unobserve(el);
+                        }
+                    });
+                }, { threshold: 0.3 });
+
+                counterElements.forEach(el => countObserver.observe(el));
+            }
+
+            // Read URL parameter or hash to set initial tab or theme if specified
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('theme') === 'light') {
+                document.body.classList.add('light-mode');
+                document.documentElement.classList.add('light-mode');
+            } else if (urlParams.get('theme') === 'dark') {
+                document.body.classList.remove('light-mode');
+                document.documentElement.classList.remove('light-mode');
+            }
+
+            const initialTeam = urlParams.get('team') || window.location.hash.replace('#', '');
+            if (initialTeam && teamData[initialTeam]) {
+                renderTeam(initialTeam, false);
+            }
+
+            // Interactive 3D Card Tilt & Cursor Spotlight
+            const tiltCards = document.querySelectorAll('.diff-card, .stat-tile-card, .explore-service-card');
+            tiltCards.forEach(card => {
+                card.addEventListener('mousemove', (e) => {
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    card.style.setProperty('--mouse-x', `${x}px`);
+                    card.style.setProperty('--mouse-y', `${y}px`);
+
+                    // Subtle 3D tilt calculation
+                    const centerX = rect.width / 2;
+                    const centerY = rect.height / 2;
+                    const rotateX = ((y - centerY) / centerY) * -5;
+                    const rotateY = ((x - centerX) / centerX) * 5;
+                    card.style.transform = `perspective(1000px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) translateY(-8px)`;
+                });
+
+                card.addEventListener('mouseleave', () => {
+                    card.style.transform = '';
+                    card.style.setProperty('--mouse-x', '-200px');
+                    card.style.setProperty('--mouse-y', '-200px');
+                });
+            });
+
+            // Dialect Pill Rotation for Card 1 (Language depth, built for India)
+            const langPills = document.querySelectorAll('.lang-pill-stream .lang-pill');
+            if (langPills.length > 0) {
+                let currentLangIndex = 0;
+                setInterval(() => {
+                    langPills[currentLangIndex].classList.remove('active-pill');
+                    currentLangIndex = (currentLangIndex + 1) % langPills.length;
+                    langPills[currentLangIndex].classList.add('active-pill');
+                }, 2200);
+
+                langPills.forEach((pill, idx) => {
+                    pill.addEventListener('click', () => {
+                        langPills.forEach(p => p.classList.remove('active-pill'));
+                        pill.classList.add('active-pill');
+                        currentLangIndex = idx;
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>

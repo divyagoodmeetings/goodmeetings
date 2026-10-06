@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Goodmeetings</title>
+    <meta name="description" content="Building the trust and revenue layer for every conversation. Goodmeetings audits, automates, and analyzes conversations at scale.">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="alternate icon" type="image/png" href="favicon.png">
+
+    
+    <!-- Google Fonts: Inter for UI, Montserrat for Logo (matching index.html) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Montserrat:wght@800;900&display=swap" rel="stylesheet">
+    
+    <!-- Early Theme Check -->
+    <script>
+        (function() {
+            try {
+                var urlParams = new URLSearchParams(window.location.search);
+                var theme = urlParams.get('theme') || localStorage.getItem('gm-theme');
+                if (theme === 'light') {
+                    document.documentElement.classList.add('light-mode');
+                    window.addEventListener('DOMContentLoaded', function() {
+                        document.body.classList.add('light-mode');
+                    });
+                }
+            } catch(e) {}
+        })();
+    </script>
+</head>
+<body class="about-page">
+    <!-- Main Website Content -->
+    <div id="main-content" class="main-content visible">
+        
+        <!-- Premium Floating Navbar -->
+        <nav class="navbar">
+            <div class="nav-container">
+                <!-- Logo -->
+                <a href="/" class="nav-logo" aria-label="Goodmeetings Home">
+                    <img src="logo.png" alt="Goodmeetings" class="nav-logo-img">
+                </a>
+
+                <!-- Hamburger Menu Button (Mobile Only) -->
+                <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                </button>
+
+                <!-- Navigation Links (Desktop) -->
+                <ul class="nav-links" id="nav-links">
+                    <li class="nav-item has-dropdown">
+                        <a href="call-audit.html">Services <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+                        <div class="dropdown services-menu">
+                            <a href="call-audit.html" class="service-dropdown-item">
+                                <div class="service-icon-box">
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+                                        <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+                                        <path d="m9 14 2 2 4-4"></path>
+                                    </svg>
+                                </div>
+                                <div class="service-text-content">
+                                    <div class="service-title">Call Audit</div>
+                                    <div class="service-desc">100% call audit, human level accuracy</div>
+                                </div>
+                            </a>
+                            <a href="voice-bot.html" class="service-dropdown-item">
+                                <div class="service-icon-box">
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                    </svg>
+                                </div>
+                                <div class="service-text-content">
+                                    <div class="service-title">Voice Bot</div>
+                                    <div class="service-desc">Automated voice outreach, 24×7</div>
+                                </div>
+                            </a>
+                            <a href="trust-observability.html" class="service-dropdown-item">
+                                <div class="service-icon-box">
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                        <path d="m9 12 2 2 4-4"></path>
+                                    </svg>
+                                </div>
+                                <div class="service-text-content">
+                                    <div class="service-title">Trust & Observability</div>
+                                    <div class="service-desc">One layer for human and AI conversations</div>
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item has-dropdown">
+                        <a href="case-studies.html">Case Studies <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+                        <div class="dropdown services-menu case-studies-menu">
+                            <a href="case-studies.html" class="service-dropdown-item">
+                                <div class="service-icon-box">
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M3 18v-6a9 9 0 0 1 18 0v6"></path>
+                                        <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path>
+                                    </svg>
+                                </div>
+                                <div class="service-text-content">
+                                    <div class="service-title">Customer Support</div>
+                                    <div class="service-desc">Catch misattributions & eliminate QA blindspots</div>
+                                </div>
+                            </a>
+                            <a href="collections-compliance.html" class="service-dropdown-item">
+                                <div class="service-icon-box">
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                        <path d="m9 12 2 2 4-4"></path>
+                                    </svg>
+                                </div>
+                                <div class="service-text-content">
+                                    <div class="service-title">Collections compliance</div>
+                                    <div class="service-desc">Audit 100% of calls for regulatory adherence</div>
+                                </div>
+                            </a>
+                            <a href="bot-ticket-audit.html" class="service-dropdown-item">
+                                <div class="service-icon-box">
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="3" y="11" width="18" height="10" rx="2"></rect>
+                                        <circle cx="12" cy="5" r="2"></circle>
+                                        <path d="M12 7v4"></path>
+                                        <line x1="8" y1="16" x2="8" y2="16"></line>
+                                        <line x1="16" y1="16" x2="16" y2="16"></line>
+                                    </svg>
+                                </div>
+                                <div class="service-text-content">
+                                    <div class="service-title">Bot & Ticket Audit</div>
+                                    <div class="service-desc">Detect bot hallucinations & ticket errors</div>
+                                </div>
+                            </a>
+                            <a href="sales.html" class="service-dropdown-item">
+                                <div class="service-icon-box">
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <line x1="18" y1="20" x2="18" y2="10"></line>
+                                        <line x1="12" y1="20" x2="12" y2="4"></line>
+                                        <line x1="6" y1="20" x2="6" y2="14"></line>
+                                        <polyline points="4 9 12 2 20 7"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="service-text-content">
+                                    <div class="service-title">Sales</div>
+                                    <div class="service-desc">Uncover deal drop-off moments & buyer objections</div>
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://goodmeetings.ai/blog/" target="_blank" rel="noopener noreferrer">Blog</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html">Connect</a>
+                    </li>
+                </ul>
+
+                <!-- Login / Sign Up & Theme Toggle (Desktop) -->
+                <div class="nav-auth" id="nav-auth">
+                    <!-- Dark / Light Mode Toggle Button -->
+                    <button class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Toggle dark and light mode" title="Toggle theme">
+                        <span class="theme-toggle-track">
+                            <span class="theme-toggle-thumb">
+                                <svg class="theme-icon sun-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="5"></circle>
+                                    <line x1="12" y1="12" x2="12" y2="3"></line>
+                                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                                </svg>
+                                <svg class="theme-icon moon-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                                </svg>
+                            </span>
+                        </span>
+                    </button>
+                    <a href="https://app.goodmeetings.ai/login" target="_blank" rel="noopener noreferrer" class="nav-login">Log in</a>
+                    <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=GoodMeetings+Demo+Session+with+Shreya&add=shreya@goodmeetings.ai&details=1-on-1+Demo+Session+for+GoodMeetings+AI+Conversation+Intelligence" target="_blank" class="btn-primary nav-signup book-demo-trigger">Sign Up <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- =========================================================
+             SECTION 1: HERO SECTION (Screenshot 4)
+             Building the trust and revenue layer for every conversation.
+             ========================================================= -->
+        <header class="about-hero-section">
+            <div class="about-hero-container">
+                <!-- Left Column: Copy & Actions -->
+                <div class="about-hero-copy">
+                    <!-- Eyebrow Badge -->
+                    <div class="about-badge">
+                        <span class="about-badge-dot"></span>
+                        <span>About us</span>
+                    </div>
+
+                    <!-- Main Heading -->
+                    <h1 class="about-hero-title">
+                        Building the trust and revenue layer for <span class="text-teal">every conversation.</span>
+                    </h1>
+
+                    <!-- Subtitle -->
+                    <p class="about-hero-subtitle">
+                        Goodmeetings started with a simple observation: the most valuable data in any business, what customers actually say, was going unheard.
+                    </p>
+
+                    <!-- CTA Buttons -->
+                    <div class="about-hero-actions">
+                        <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=GoodMeetings+Demo+Session+with+Shreya&add=shreya@goodmeetings.ai&details=1-on-1+Demo+Session+for+GoodMeetings+AI+Conversation+Intelligence" target="_blank" class="about-btn-mint book-demo-trigger">
+                            Get a demo
+                        </a>
+                        <a href="#our-story" class="about-btn-outline">
+                            Meet the team
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Column: Interactive Animated Flow Diagram -->
+                <div class="about-hero-card-col">
+                    <div class="about-flow-card" aria-label="Goodmeetings Intelligence Layer Flow Animation">
+                        <svg class="about-flow-svg" viewBox="0 0 1340 460" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <filter id="flowGlow" x="-30%" y="-30%" width="160%" height="160%">
+                                    <feGaussianBlur stdDeviation="3" result="blur" />
+                                    <feMerge>
+                                        <feMergeNode in="blur" />
+                                        <feMergeNode in="SourceGraphic" />
+                                    </feMerge>
+                                </filter>
+                                <filter id="brandGlow" x="-20%" y="-20%" width="140%" height="140%">
+                                    <feGaussianBlur stdDeviation="5" result="blur" />
+                                    <feMerge>
+                                        <feMergeNode in="blur" />
+                                        <feMergeNode in="SourceGraphic" />
+                                    </feMerge>
+                                </filter>
+                                <radialGradient id="centerRadialGlow" cx="50%" cy="50%" r="50%">
+                                    <stop offset="0%" stop-color="#2DD4BF" stop-opacity="0.28" />
+                                    <stop offset="60%" stop-color="#2DD4BF" stop-opacity="0.06" />
+                                    <stop offset="100%" stop-color="#2DD4BF" stop-opacity="0" />
+                                </radialGradient>
+                            </defs>
+
+                            <!-- Ambient Center Glow Behind Bottleneck -->
+                            <ellipse cx="710" cy="230" rx="160" ry="90" fill="url(#centerRadialGlow)" />
+
+                            <!-- Background Static Track Lines -->
+                            <path class="flow-track-path" d="M 400 65 L 460 65 C 570 65 630 218 710 218 C 790 218 850 65 960 65 L 1020 65" />
+                            <path class="flow-track-path" d="M 400 230 L 1020 230" />
+                            <path class="flow-track-path" d="M 400 395 L 460 395 C 570 395 630 242 710 242 C 790 242 850 395 960 395 L 1020 395" />
+
+                            <!-- Animated Glowing Pulse Dashed Paths -->
+                            <path class="flow-pulse-path" d="M 400 65 L 460 65 C 570 65 630 218 710 218 C 790 218 850 65 960 65 L 1020 65" filter="url(#flowGlow)" />
+                            <path class="flow-pulse-path flow-pulse-mid" d="M 400 230 L 1020 230" filter="url(#flowGlow)" />
+                            <path class="flow-pulse-path flow-pulse-bot" d="M 400 395 L 460 395 C 570 395 630 242 710 242 C 790 242 850 395 960 395 L 1020 395" filter="url(#flowGlow)" />
+
+                            <!-- Center Junction Accent Node -->
+                            <rect x="706" y="226" width="8" height="8" rx="2" class="flow-center-node" filter="url(#brandGlow)" />
+
+                            <!-- Left Labels: Inputs -->
+                            <g class="flow-label-group flow-labels-left">
+                                <text x="30" y="71" class="flow-label-mono">SALES CALLS</text>
+                                <text x="30" y="236" class="flow-label-mono">SUPPORT TICKETS</text>
+                                <text x="30" y="401" class="flow-label-mono">COLLECTIONS CONVERSATIONS</text>
+                            </g>
+
+                            <!-- Center Core Content -->
+                            <g class="flow-center-group">
+                                <text x="710" y="202" text-anchor="middle" class="flow-center-brand" filter="url(#brandGlow)">GOODMEETINGS</text>
+                                <text x="710" y="260" text-anchor="middle" class="flow-center-title">The trust and revenue layer</text>
+                                <text x="710" y="282" text-anchor="middle" class="flow-center-subtitle">For every conversation, human or AI</text>
+                            </g>
+
+                            <!-- Right Labels: Outcomes -->
+                            <g class="flow-label-group flow-labels-right">
+                                <text x="1055" y="75" class="flow-label-outcome">Trust</text>
+                                <text x="1055" y="240" class="flow-label-outcome">Compliance</text>
+                                <text x="1055" y="405" class="flow-label-outcome">Revenue</text>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- =========================================================
+             SECTION 2: OUR MISSION (Screenshot 3)
+             We believe growth should not run on guesswork.
+             ========================================================= -->
+        <section class="about-mission-section" id="our-mission">
+            <div class="about-section-container">
+                <span class="about-section-eyebrow">OUR MISSION</span>
+                <h2 class="about-section-title">
+                    We believe growth should not run on <span class="text-teal">guesswork.</span>
+                </h2>
+                <p class="about-section-lead">
+                    Goodmeetings audits, automates, and analyzes conversations at scale, so revenue teams stop relying on gut feel and start relying on evidence.
+                </p>
+
+                <div class="about-mission-grid">
+                    <!-- Mission Card 1: Audit -->
+                    <div class="about-mission-card">
+                        <span class="about-card-badge">01 · AUDITS</span>
+                        <h3 class="about-mission-card-title">Audit</h3>
+                        <p class="about-mission-card-desc">
+                            Capture and audit 100% of conversations, across every Indian and global language.
+                        </p>
+                        <a href="call-audit.html" class="about-card-link">
+                            Explore Call Audit <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
+                    </div>
+
+                    <!-- Mission Card 2: Automate -->
+                    <div class="about-mission-card">
+                        <span class="about-card-badge">02 · AUTOMATES</span>
+                        <h3 class="about-mission-card-title">Automate</h3>
+                        <p class="about-mission-card-desc">
+                            Deploy always on voice and chat agents trained on your best performers.
+                        </p>
+                        <a href="voice-bot.html" class="about-card-link">
+                            Explore Voice Bot <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
+                    </div>
+
+                    <!-- Mission Card 3: Analyze -->
+                    <div class="about-mission-card">
+                        <span class="about-card-badge">03 · ANALYZES</span>
+                        <h3 class="about-mission-card-title">Analyze</h3>
+                        <p class="about-mission-card-desc">
+                            Complete visibility across human and AI conversations, for compliance and continuous improvement.
+                        </p>
+                        <a href="trust-observability.html" class="about-card-link">
+                            Explore Trust & Observability <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================================
+             SECTION 3: OUR STORY (Screenshot 2)
+             Signal that teams were leaving on the table.
+             ========================================================= -->
+        <section class="about-story-section" id="our-story">
+            <div class="about-section-container">
+                <span class="about-section-eyebrow">OUR STORY</span>
+                <h2 class="about-section-title">
+                    Signal that teams were <span class="text-teal">leaving on the table.</span>
+                </h2>
+
+                <div class="about-story-grid">
+                    <!-- Left Column: Story Narrative -->
+                    <div class="about-story-narrative">
+                        <p class="about-story-text">
+                            Goodmeetings started with a simple observation: the most valuable data in any business, what customers actually say, was going unheard. Every sales call, support ticket, and collections conversation held signal that teams were leaving on the table.
+                        </p>
+                        <p class="about-story-text">
+                            Today we help enterprises across BFSI, consumer internet, and global SaaS turn every conversation, human or AI, into something they can trust, learn from, and act on.
+                        </p>
+                    </div>
+
+                    <!-- Right Column: 3 Stacked Cards -->
+                    <div class="about-story-cards">
+                        <!-- Card 1 -->
+                        <div class="about-story-card">
+                            <h3 class="about-story-card-title">Every sales call</h3>
+                            <p class="about-story-card-desc">Objections, intent and the exact moments deals drop off.</p>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="about-story-card">
+                            <h3 class="about-story-card-title">Every support ticket</h3>
+                            <p class="about-story-card-desc">Resolutions, commitments and customer sentiment.</p>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="about-story-card">
+                            <h3 class="about-story-card-title">Every collections conversation</h3>
+                            <p class="about-story-card-desc">Payment intent, commitments and compliance.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================================
+             SECTION 4: WHY GOODMEETINGS (Screenshot 1)
+             What sets us apart.
+             ========================================================= -->
+        <section class="about-apart-section" id="why-goodmeetings">
+            <div class="about-section-container">
+                <span class="about-section-eyebrow">WHY GOODMEETINGS</span>
+                <h2 class="about-section-title">
+                    What sets us <span class="text-teal">apart.</span>
+                </h2>
+
+                <div class="about-apart-grid">
+                    <!-- Apart Card 1 -->
+                    <div class="about-apart-card">
+                        <div class="about-apart-stat">
+                            <span class="cs-counter" data-target="99">99</span>%
+                        </div>
+                        <p class="about-apart-desc">
+                            transcription accuracy across every Indian and global language
+                        </p>
+                    </div>
+
+                    <!-- Apart Card 2 -->
+                    <div class="about-apart-card">
+                        <div class="about-apart-stat">
+                            <span class="cs-counter" data-target="100">100</span>%
+                        </div>
+                        <p class="about-apart-desc">
+                            conversation coverage: audit every call, not a sample
+                        </p>
+                    </div>
+
+                    <!-- Apart Card 3 -->
+                    <div class="about-apart-card">
+                        <div class="about-apart-stat text-word">
+                            Your best
+                        </div>
+                        <p class="about-apart-desc">
+                            performers, not generic scripts, are what our agents are trained on
+                        </p>
+                    </div>
+
+                    <!-- Apart Card 4 -->
+                    <div class="about-apart-card">
+                        <div class="about-apart-stat text-word">
+                            Native
+                        </div>
+                        <p class="about-apart-desc">
+                            CRM integration with the tools your teams already use
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================================
+             PREMIUM SITE FOOTER (Matching Navigation Architecture)
+             ========================================================= -->
+        <footer class="site-footer">
+            <div class="footer-top-grid nav-matched">
+                <!-- Column 1: Brand & Identity -->
+                <div class="footer-col brand-col">
+                    <a href="/" class="footer-logo">
+                        <svg viewBox="0 0 97 131" class="footer-logo-icon">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M42.0345 64.5586C52.9021 64.5933 61.5561 56.1185 61.65 45.3503C61.7426 34.6332 53.1449 26.0015 42.2747 25.8994C31.471 25.7973 22.678 34.4066 22.6542 45.1125C22.6292 55.9068 31.2169 64.5224 42.0345 64.5586ZM0.89649 45.2632C0.907756 22.4321 19.2469 4.11909 42.1296 4.08793C64.9722 4.05808 83.3377 22.3636 83.3878 45.2109C83.4365 68.0022 65.0923 86.3351 42.1859 86.3875C19.3896 86.4397 0.885233 68.0084 0.89649 45.2632Z" fill="currentColor" />
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0.814453 85.7657H22.2456C22.9664 92.6245 25.0423 99.04 31.4477 102.425C34.9689 104.285 39.2584 105.703 43.1712 105.635C53.5333 105.454 59.9325 98.3889 61.9796 85.8902H83.3085C83.3507 99.4671 78.2366 110.575 67.4954 118.741C53.5596 129.336 38.2286 130.749 22.7687 122.642C8.34357 115.077 1.22864 102.561 0.814453 85.7657Z" fill="currentColor" />
+                        <path d="M85.6337 21.1465C78.4873 18.7784 68.7603 22.1332 64.7901 24.1066L49.9018 15.2262C48.4129 16.213 48.1152 16.1143 58.8347 7.82588C69.5543 -0.462522 88.1151 -0.561194 96.0555 0.425521V25.5867C95.5592 25.0934 92.7801 23.5146 85.6337 21.1465Z" fill="currentColor" />
+                    </svg>
+                        <span class="brand-text">GOODMEETINGS</span>
+                    </a>
+                    <p class="footer-mission">
+                        The frontier infrastructure for 100% conversation auditing, autonomous voice bots, and unified trust across every interaction.
+                    </p>
+                    <div class="system-status">
+                        <span class="status-indicator-dot"></span>
+                        <span>All Systems Operational</span>
+                    </div>
+                    <div class="footer-socials">
+                        <a href="https://in.linkedin.com/company/goodmeetings" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.25V10.9H6.46M7.86 6.75a1.45 1.45 0 1 0 0 2.9 1.45 1.45 0 0 0 0-2.9z"/></svg></a>
+                        <a href="https://x.com/GoodmeetingsAI" target="_blank" rel="noopener noreferrer" aria-label="X / Twitter"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+                        <a href="https://www.youtube.com/@goodmeetings_ai/" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Services -->
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="call-audit.html">Call Audit</a></li>
+                        <li><a href="voice-bot.html">Voice Bot</a></li>
+                        <li><a href="trust-observability.html">Trust & Observability</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Case Studies -->
+                <div class="footer-col">
+                    <h4>Case Studies</h4>
+                    <ul>
+                        <li><a href="case-studies.html">Customer Support</a></li>
+                        <li><a href="collections-compliance.html">Collections compliance</a></li>
+                        <li><a href="bot-ticket-audit.html">Bot & Ticket Audit</a></li>
+                        <li><a href="sales.html">Sales</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: About Us -->
+                <div class="footer-col">
+                    <h4>About Us</h4>
+                    <ul>
+                        <li><a href="about.html#our-mission">Our Mission</a></li>
+                        <li><a href="about.html#our-story">Our Story</a></li>
+                        <li><a href="about.html#why-goodmeetings">What Sets Us Apart</a></li>
+                        <li><a href="about.html">About Goodmeetings</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 5: Blog -->
+                <div class="footer-col">
+                    <h4>Blog</h4>
+                    <ul>
+                        <li><a href="/#faq">Latest AI Insights</a></li>
+                        <li><a href="/#faq">Frontier Agent Research</a></li>
+                        <li><a href="/#faq">QA Automation Guides</a></li>
+                        <li><a href="/#faq">Product Updates & Changelog</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 6: Connect -->
+                <div class="footer-col">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="contact.html?type=demo" class="book-demo-trigger">Book a Demo</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="mailto:support@goodmeetings.ai">support@goodmeetings.ai</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">© 2026 Goodmeetings Inc. All rights reserved.</p>
+                <div class="footer-legal-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Security & SOC2</a>
+                    <a href="#">Cookie Preferences</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- =========================================================
+         INTERACTIVE SCRIPTS
+         ========================================================= -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Theme toggle
+            const themeBtn = document.getElementById('theme-toggle-btn');
+            if (themeBtn) {
+                themeBtn.addEventListener('click', function() {
+                    const isLight = document.body.classList.toggle('light-mode');
+                    document.documentElement.classList.toggle('light-mode', isLight);
+                    try {
+                        localStorage.setItem('gm-theme', isLight ? 'light' : 'dark');
+                    } catch(e) {}
+                });
+            }
+
+            // Mobile menu toggle
+            const mobileBtn = document.getElementById('mobile-menu-btn');
+            const navLinks = document.getElementById('nav-links');
+            const navAuth = document.getElementById('nav-auth');
+            if (mobileBtn && navLinks) {
+                mobileBtn.addEventListener('click', function() {
+                    navLinks.classList.toggle('mobile-active');
+                    if (navAuth) navAuth.classList.toggle('mobile-active');
+                });
+            }
+
+            // Interactive 3D Card Tilt & Cursor Spotlight
+            const tiltCards = document.querySelectorAll('.about-diagram-card, .about-mission-card, .about-story-card, .about-apart-card');
+            tiltCards.forEach(card => {
+                card.addEventListener('mousemove', (e) => {
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+
+                    card.style.setProperty('--mouse-x', `${x}px`);
+                    card.style.setProperty('--mouse-y', `${y}px`);
+
+                    const centerX = rect.width / 2;
+                    const centerY = rect.height / 2;
+                    const rotateX = ((y - centerY) / centerY) * -3;
+                    const rotateY = ((x - centerX) / centerX) * 3;
+                    card.style.transform = `perspective(1000px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) translateY(-4px)`;
+                });
+
+                card.addEventListener('mouseleave', () => {
+                    card.style.transform = '';
+                });
+            });
+
+            // Animated Number Counter on View
+            const counterElements = document.querySelectorAll('.cs-counter');
+            if ('IntersectionObserver' in window) {
+                const counterObserver = new IntersectionObserver((entries, obs) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const el = entry.target;
+                            const target = parseInt(el.getAttribute('data-target'), 10);
+                            const duration = 1400;
+                            const startTime = performance.now();
+
+                            function updateCount(currentTime) {
+                                const elapsed = currentTime - startTime;
+                                const progress = Math.min(elapsed / duration, 1);
+                                const easeOut = 1 - Math.pow(1 - progress, 3);
+                                const currentVal = Math.round(easeOut * target);
+                                el.textContent = currentVal;
+
+                                if (progress < 1) {
+                                    requestAnimationFrame(updateCount);
+                                } else {
+                                    el.textContent = target;
+                                }
+                            }
+
+                            requestAnimationFrame(updateCount);
+                            counterObserver.unobserve(el);
+                        }
+                    });
+                }, { threshold: 0.2 });
+
+                counterElements.forEach(el => counterObserver.observe(el));
+            }
+        });
+    </script>
+</body>
+</html>

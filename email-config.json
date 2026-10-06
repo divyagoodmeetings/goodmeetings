@@ -1,0 +1,8 @@
+{
+  "provider": "gmail",
+  "auth": {
+    "user": "",
+    "pass": ""
+  },
+  "recipient": "shreya@goodmeetings.ai"
+}
