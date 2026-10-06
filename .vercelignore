@@ -1,0 +1,11 @@
+package.json
+package-lock.json
+server.js
+server.log
+bookings.json
+contacts.json
+email-config.json
+node_modules
+.DS_Store
+.env
+.git
