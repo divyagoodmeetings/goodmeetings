@@ -10534,6 +10534,93 @@ body.light-mode .agents-bg-sphere {
     text-overflow: ellipsis;
 }
 
+/* Company Logo Card inside Arched Canopy (Classplus, upGrad, Spinny, CRED, Paytm, Muthoot) */
+.company-logo-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 16px 10px;
+    background: #0F1B33;
+    border: 1.5px solid rgba(228, 233, 242, 0.18);
+    box-shadow: 0 20px 45px -8px rgba(0, 0, 0, 0.65), 0 0 28px rgba(94, 234, 212, 0.14);
+    text-align: center;
+    box-sizing: border-box;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.light-mode .company-logo-card,
+html.light-mode .company-logo-card,
+.light-mode .company-logo-card {
+    background: #FFFFFF;
+    border-color: #E2E8F0;
+    box-shadow: 0 14px 35px -8px rgba(15, 23, 42, 0.08);
+}
+
+.company-arch-icon-wrap {
+    width: 58px;
+    height: 58px;
+    border-radius: 14px;
+    background: #FFFFFF;
+    border: 1px solid rgba(228, 233, 242, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    box-sizing: border-box;
+    transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+body.light-mode .company-arch-icon-wrap,
+html.light-mode .company-arch-icon-wrap,
+.light-mode .company-arch-icon-wrap {
+    background: #F8FAFC;
+    border-color: #E2E8F0;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.05);
+}
+
+.leader-arch-card:hover .company-arch-icon-wrap {
+    transform: scale(1.12);
+}
+
+.company-arch-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.company-arch-name {
+    font-size: 13.5px;
+    font-weight: 800;
+    color: #FFFFFF;
+    line-height: 1.2;
+    margin-top: 2px;
+}
+
+body.light-mode .company-arch-name,
+html.light-mode .company-arch-name,
+.light-mode .company-arch-name {
+    color: #0B1426;
+}
+
+.company-arch-tag {
+    font-size: 11px;
+    font-weight: 600;
+    color: #5EEAD4;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    line-height: 1;
+}
+
+body.light-mode .company-arch-tag,
+html.light-mode .company-arch-tag,
+.light-mode .company-arch-tag {
+    color: #0F766E;
+}
+
 /* Arch Positions & Smooth Parabolic Heights (6 Cards Canopy) */
 .arch-pos-1  { transform: translateY(36px) rotate(-5.5deg); }
 .arch-pos-2  { transform: translateY(16px) rotate(-2.8deg); }
@@ -10670,6 +10757,8 @@ body.light-mode .agents-bg-sphere {
     align-items: center;
     gap: 13px;
     margin-top: auto;
+    padding-top: 18px;
+    border-top: 1px solid rgba(228, 233, 242, 0.12);
 }
 
 .author-avatar {
@@ -10814,6 +10903,10 @@ body.light-mode .author-role {
     color: #64748b;
 }
 
+body.light-mode .story-author {
+    border-top-color: #E2E8F0;
+}
+
 body.light-mode .recognition-label {
     color: #475569;
 }
@@ -10841,6 +10934,18 @@ body.light-mode .rec-pill:hover {
         height: 138px;
         border-radius: 18px;
     }
+    .company-arch-icon-wrap {
+        width: 46px;
+        height: 46px;
+        border-radius: 10px;
+        padding: 6px;
+    }
+    .company-arch-name {
+        font-size: 11.5px;
+    }
+    .company-arch-tag {
+        font-size: 9.5px;
+    }
     .stories-testimonials-grid {
         grid-template-columns: 1fr;
         gap: 20px;
@@ -10862,6 +10967,18 @@ body.light-mode .rec-pill:hover {
         width: 96px;
         height: 126px;
         transform: none !important;
+    }
+    .company-arch-icon-wrap {
+        width: 38px;
+        height: 38px;
+        border-radius: 8px;
+        padding: 5px;
+    }
+    .company-arch-name {
+        font-size: 10px;
+    }
+    .company-arch-tag {
+        font-size: 8.5px;
     }
     .stories-main-title {
         font-size: 32px;
