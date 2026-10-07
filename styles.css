@@ -11442,9 +11442,17 @@ html.light-mode .faq-card-canvas {
     text-decoration: none;
 }
 
-.booking-logo-icon {
-    width: 22px;
-    height: 28px;
+.booking-logo-img {
+    height: 30px;
+    width: auto;
+    max-width: 140px;
+    display: block;
+    object-fit: contain;
+    transition: opacity 0.2s ease;
+}
+
+.booking-logo:hover .booking-logo-img {
+    opacity: 0.85;
 }
 
 .booking-logo-text {
