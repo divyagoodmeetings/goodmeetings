@@ -16889,10 +16889,17 @@ body.light-mode .audit-cta-ambient-glow {
    LIGHT MODE STYLING FOR VOICE BOT PAGE
    ========================================================= */
 body.light-mode .vb-hero-section,
-body.light-mode .vb-metrics-comparison-section,
 body.light-mode .vb-usecases-section,
 body.light-mode .vb-how-it-works-section {
     background: #FFFFFF;
+}
+
+body.light-mode .vb-metrics-comparison-section,
+html.light-mode .vb-metrics-comparison-section,
+.light-mode .vb-metrics-comparison-section {
+    background: #F8FAFC;
+    border-top: 1px solid #EDF2F7;
+    border-bottom: 1px solid #EDF2F7;
 }
 
 body.light-mode .vb-hero-title,
@@ -16999,13 +17006,68 @@ body.light-mode .vb-action-chip.chip-highlight .chip-val {
     color: #0F766E;
 }
 
-body.light-mode .vb-stat-num,
-body.light-mode .vb-result-num {
-    color: #0F766E;
+body.light-mode .vb-stat-card,
+html.light-mode .vb-stat-card,
+.light-mode .vb-stat-card {
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
 }
 
-body.light-mode .vb-stat-desc {
+body.light-mode .vb-card-serif-title,
+html.light-mode .vb-card-serif-title,
+.light-mode .vb-card-serif-title {
     color: #0B1426;
+    font-weight: 800;
+}
+
+body.light-mode .vb-stat-num,
+html.light-mode .vb-stat-num,
+.light-mode .vb-stat-num,
+body.light-mode .vb-result-num,
+html.light-mode .vb-result-num,
+.light-mode .vb-result-num {
+    background: linear-gradient(135deg, #093B37 0%, #0F766E 55%, #0D9488 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #0F766E;
+    font-weight: 800;
+}
+
+body.light-mode .vb-stat-num.editorial-accent,
+html.light-mode .vb-stat-num.editorial-accent,
+.light-mode .vb-stat-num.editorial-accent,
+body.light-mode .vb-result-num.editorial-accent,
+html.light-mode .vb-result-num.editorial-accent,
+.light-mode .vb-result-num.editorial-accent {
+    background: linear-gradient(135deg, #0F766E 0%, #0D9488 50%, #14B8A6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #0F766E;
+    font-weight: 800;
+}
+
+body.light-mode .vb-stat-desc,
+html.light-mode .vb-stat-desc,
+.light-mode .vb-stat-desc {
+    color: #1E293B;
+    font-weight: 600;
+}
+
+body.light-mode .vb-result-desc,
+html.light-mode .vb-result-desc,
+.light-mode .vb-result-desc {
+    color: #475569;
+    font-weight: 500;
+}
+
+body.light-mode .vb-matter-row:hover,
+html.light-mode .vb-matter-row:hover,
+.light-mode .vb-matter-row:hover,
+body.light-mode .vb-result-item:hover,
+html.light-mode .vb-result-item:hover,
+.light-mode .vb-result-item:hover {
+    background: rgba(15, 118, 110, 0.06);
 }
 
 body.light-mode .vb-usecase-icon-box {
