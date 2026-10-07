@@ -3923,6 +3923,24 @@ body.light-mode .cta-sec-btn:hover {
     margin-bottom: 16px;
 }
 
+.footer-logo-img {
+    height: 32px;
+    width: auto;
+    max-width: 140px;
+    display: block;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.footer-logo:hover .footer-logo-img {
+    opacity: 0.92;
+}
+
+body.light-mode .footer-logo-img {
+    filter: none;
+}
+
 .footer-logo-icon {
     width: 21px;
     height: 28px;
