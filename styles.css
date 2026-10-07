@@ -662,13 +662,13 @@ main {
     z-index: 2;
 }
 
-/* Centerpiece Logo & Waves Showcase below Company Marquee */
+/* Centerpiece Architecture Diagram & Waves Showcase */
 .hero-showcase-centerpiece {
     position: relative;
     width: 100%;
     max-width: 1360px;
     margin: 48px auto 36px;
-    min-height: 440px;
+    min-height: 520px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -676,14 +676,16 @@ main {
     border-radius: 28px;
     background: #030712;
     border: 1px solid rgba(255, 255, 255, 0.08);
-    box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.65), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    box-shadow: 0 25px 70px -15px rgba(0, 0, 0, 0.8), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    padding: 60px 48px;
+    box-sizing: border-box;
 }
 
 html.light-mode .hero-showcase-centerpiece,
 body.light-mode .hero-showcase-centerpiece {
     background: #030712 !important;
-    border: 1px solid rgba(15, 23, 42, 0.15) !important;
-    box-shadow: 0 24px 60px rgba(15, 23, 42, 0.2), 0 4px 12px rgba(15, 23, 42, 0.08) !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    box-shadow: 0 25px 70px -15px rgba(0, 0, 0, 0.8) !important;
 }
 
 .centerpiece-waves-wrapper {
@@ -692,60 +694,270 @@ body.light-mode .hero-showcase-centerpiece {
     width: 100%;
     height: 100%;
     pointer-events: none;
-    z-index: 1;
+    z-index: 2;
     overflow: visible;
 }
 
 .centerpiece-bg-lines {
     position: absolute;
-    top: 0;
-    left: 0;
-    transform: none !important;
+    inset: 0;
     width: 100%;
     height: 100%;
     pointer-events: none;
     overflow: visible;
 }
 
-.hero-showcase-centerpiece .hero-orb-pillar,
-body.light-mode .hero-showcase-centerpiece .hero-orb-pillar {
-    background: rgba(11, 17, 32, 0.92) !important;
-    border: 1px solid rgba(255, 255, 255, 0.14) !important;
-    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.65), inset 0 1px 0 rgba(255, 255, 255, 0.12) !important;
-}
-
-.hero-showcase-centerpiece .orb-pillar-name,
-body.light-mode .hero-showcase-centerpiece .orb-pillar-name {
-    color: #F8FAFC !important;
-}
-
-body.light-mode .hero-showcase-centerpiece .pillar-orb-01 {
-    border-color: rgba(168, 85, 247, 0.45) !important;
-}
-
-body.light-mode .hero-showcase-centerpiece .pillar-orb-02 {
-    border-color: rgba(56, 189, 248, 0.45) !important;
-}
-
-body.light-mode .hero-showcase-centerpiece .pillar-orb-03 {
-    border-color: rgba(16, 185, 129, 0.45) !important;
-}
-
-.hero-visual-wrapper {
+/* Main Diagram Layout Grid */
+.cp-diagram-container {
     position: relative;
-    width: 240px;
-    height: 240px;
-    margin: 0 auto;
+    z-index: 5;
+    width: 100%;
+    max-width: 1240px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    z-index: 5;
+    gap: 32px;
 }
 
-.centerpiece-visual {
+/* Column Eyebrow Labels */
+.cp-col-eyebrow {
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: #94A3B8;
+    margin-bottom: 22px;
+}
+
+/* LEFT COLUMN: Customer Touchpoints (4 Points) */
+.cp-touchpoints-col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 0 0 260px;
+    width: 260px;
+    z-index: 6;
+}
+
+.cp-touchpoints-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+}
+
+.cp-touchpoint-card {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    width: 100%;
+    background: #080C1A;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 9999px;
+    padding: 10px 22px 10px 12px;
+    box-shadow: 0 8px 24px -4px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+    box-sizing: border-box;
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+    cursor: default;
+    user-select: none;
+}
+
+.cp-touchpoint-card:hover {
+    transform: translateX(4px);
+    border-color: rgba(192, 132, 252, 0.35);
+    box-shadow: 0 10px 28px -4px rgba(168, 85, 247, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.cp-icon-circle {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: rgba(168, 85, 247, 0.08);
+    border: 1.5px solid rgba(168, 85, 247, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 0 12px rgba(168, 85, 247, 0.18);
+}
+
+.cp-card-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #FFFFFF;
+    letter-spacing: -0.01em;
+    white-space: nowrap;
+}
+
+/* CENTER COLUMN: Intelligence Layer Orb */
+.cp-center-orb-wrapper {
     position: relative;
-    z-index: 5;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 320px;
+    width: 320px;
+    z-index: 6;
+}
+
+.cp-orb-box {
+    position: relative;
+    width: 260px;
+    height: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cp-orb-svg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.cp-center-g {
+    position: absolute;
+    width: 76px;
+    height: 104px;
+    z-index: 3;
+    pointer-events: none;
+    filter: drop-shadow(0 4px 16px rgba(0, 0, 0, 0.7));
+}
+
+.cp-orb-caption {
+    margin-top: 24px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #CBD5E1;
+    text-align: center;
+    white-space: nowrap;
+    opacity: 0.95;
+}
+
+/* RIGHT COLUMN: What It Leads To (3 Points) */
+.cp-outcomes-col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 0 0 350px;
+    width: 350px;
+    z-index: 6;
+}
+
+.cp-outcomes-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    width: 100%;
+}
+
+.cp-outcome-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    background: #080C1A;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 9999px;
+    padding: 12px 26px 12px 14px;
+    box-shadow: 0 8px 24px -4px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+    text-decoration: none;
+    box-sizing: border-box;
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.cp-outcome-card:hover {
+    transform: translateX(4px);
+    box-shadow: 0 12px 30px -4px rgba(0, 0, 0, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+}
+
+.cp-outcome-card.card-purple:hover {
+    border-color: rgba(192, 132, 252, 0.45);
+    box-shadow: 0 12px 30px -4px rgba(168, 85, 247, 0.25);
+}
+
+.cp-outcome-card.card-blue:hover {
+    border-color: rgba(56, 189, 248, 0.45);
+    box-shadow: 0 12px 30px -4px rgba(56, 189, 248, 0.25);
+}
+
+.cp-outcome-card.card-green:hover {
+    border-color: rgba(52, 211, 153, 0.45);
+    box-shadow: 0 12px 30px -4px rgba(52, 211, 153, 0.25);
+}
+
+.cp-badge-circle {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(8, 12, 26, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    flex-shrink: 0;
+}
+
+.cp-badge-circle.badge-purple {
+    border: 1.5px solid #A855F7;
+    color: #D8B4FE;
+    background: rgba(168, 85, 247, 0.1);
+    box-shadow: 0 0 12px rgba(168, 85, 247, 0.25);
+}
+
+.cp-badge-circle.badge-blue {
+    border: 1.5px solid #0EA5E9;
+    color: #38BDF8;
+    background: rgba(14, 165, 233, 0.1);
+    box-shadow: 0 0 12px rgba(14, 165, 233, 0.25);
+}
+
+.cp-badge-circle.badge-green {
+    border: 1.5px solid #10B981;
+    color: #34D399;
+    background: rgba(16, 185, 129, 0.1);
+    box-shadow: 0 0 12px rgba(16, 185, 129, 0.25);
+}
+
+.cp-outcome-details {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.cp-outcome-tag {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.cp-outcome-tag.tag-purple {
+    color: #C084FC;
+}
+
+.cp-outcome-tag.tag-blue {
+    color: #38BDF8;
+}
+
+.cp-outcome-tag.tag-green {
+    color: #34D399;
+}
+
+.cp-outcome-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: #FFFFFF;
+    letter-spacing: -0.01em;
+    white-space: nowrap;
 }
 
 .hero-split-grid {
@@ -2034,73 +2246,67 @@ body.light-mode .text-gradient {
         justify-content: center;
     }
 
-    .centerpiece-waves-wrapper {
-        inset: -10px -10px;
-        width: calc(100% + 20px);
-        height: calc(100% + 20px);
-    }
-
-    .hero-visual-wrapper {
-        width: 100%;
-        height: auto;
+    /* Centerpiece Architecture Diagram Showcase on Mobile/Tablet */
+    .hero-showcase-centerpiece {
+        margin: 36px auto 20px;
+        min-height: auto;
+        padding: 40px 18px;
+        border-radius: 20px;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        margin: 0 auto;
     }
 
-    .hero-center-glow {
-        width: 170px;
-        height: 170px;
-        margin: 0 auto 12px;
+    .centerpiece-waves-wrapper {
+        display: none;
     }
 
-    .hero-orb-svg {
-        width: 170px;
-        height: 170px;
-    }
-
-    .hero-center-g {
-        width: 56px;
-        height: 75px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-
-    .hero-orb-pillars {
-        position: relative !important;
-        inset: auto !important;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+    .cp-diagram-container {
+        flex-direction: column;
+        gap: 36px;
         align-items: center;
-        gap: 8px;
-        margin-top: 14px;
-        height: auto;
         width: 100%;
-        max-width: 380px;
-        z-index: 10;
-        pointer-events: auto;
+        max-width: 360px;
     }
 
-    .hero-orb-pillar {
-        position: relative !important;
-        top: auto !important;
-        left: auto !important;
-        right: auto !important;
-        bottom: auto !important;
-        transform: none !important;
-        opacity: 1 !important;
-        padding: 6px 14px;
-        font-size: 12px;
-        border-radius: 999px;
+    .cp-touchpoints-col,
+    .cp-outcomes-col {
+        width: 100%;
+        max-width: 340px;
+        align-items: center;
+        flex: auto;
     }
 
-    .hero-orb-pillar:hover {
-        transform: translateY(-2px) !important;
+    .cp-col-eyebrow {
+        text-align: center;
+        margin-bottom: 16px;
+    }
+
+    .cp-touchpoints-list,
+    .cp-outcomes-list {
+        width: 100%;
+    }
+
+    .cp-touchpoint-card,
+    .cp-outcome-card {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .cp-center-orb-wrapper {
+        width: 100%;
+        flex: auto;
+    }
+
+    .cp-orb-box {
+        width: 210px;
+        height: 210px;
+    }
+
+    .cp-center-g {
+        width: 62px;
+        height: 84px;
     }
 
     /* Features Mobile Layout */

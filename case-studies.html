@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="light-mode">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,23 +14,30 @@
     <!-- Google Fonts: Inter for UI, Montserrat for Logo (matching index.html) -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Montserrat:wght@800;900&display=swap" rel="stylesheet">
     
-    <!-- Early Theme Check -->
+        <!-- Early Theme Check: Default to Light Mode -->
     <script>
         (function() {
             try {
                 var urlParams = new URLSearchParams(window.location.search);
                 var theme = urlParams.get('theme') || localStorage.getItem('gm-theme');
-                if (theme === 'light') {
+                if (theme === 'dark') {
+                    document.documentElement.classList.remove('light-mode');
+                    window.addEventListener('DOMContentLoaded', function() {
+                        if (document.body) document.body.classList.remove('light-mode');
+                    });
+                } else {
                     document.documentElement.classList.add('light-mode');
                     window.addEventListener('DOMContentLoaded', function() {
-                        document.body.classList.add('light-mode');
+                        if (document.body) document.body.classList.add('light-mode');
                     });
                 }
-            } catch(e) {}
+            } catch(e) {
+                document.documentElement.classList.add('light-mode');
+            }
         })();
     </script>
 </head>
-<body class="case-studies-page">
+<body class="light-mode case-studies-page">
     <!-- Main Website Content -->
     <div id="main-content" class="main-content visible">
         

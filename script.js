@@ -217,6 +217,7 @@ let isAnimatingWaves = false;
 
 function createWaveSet(container, purpleGradId, colorGradIds) {
     if (!container) return null;
+    container.innerHTML = '';
     
     let leftPaths = [];
     let rightPaths = [];
@@ -256,7 +257,7 @@ function createWaveSet(container, purpleGradId, colorGradIds) {
 
     const svgElement = container.closest('svg');
     const parentSection = container.closest('.hero-showcase-centerpiece') || container.closest('.hero');
-    const orb = parentSection ? parentSection.querySelector('.hero-center-glow') : document.querySelector('.hero-center-glow');
+    const orb = parentSection ? (parentSection.querySelector('.cp-orb-box') || parentSection.querySelector('.hero-center-glow')) : document.querySelector('.cp-orb-box, .hero-center-glow');
 
     return {
         leftPaths,
@@ -289,7 +290,7 @@ function initDynamicWaves() {
 
 function animateDynamicWaves() {
     const mainContent = document.getElementById('main-content');
-    if (mainContent && mainContent.classList.contains('visible') && waveInstances.length > 0) {
+    if ((!mainContent || mainContent.classList.contains('visible')) && waveInstances.length > 0) {
         wavePhaseOffset -= 0.025; // Speed of the flow
 
         waveInstances.forEach(inst => {
@@ -308,8 +309,9 @@ function animateDynamicWaves() {
                     const orbCenterX = (orbRect.left + orbRect.width / 2) - svgRect.left;
                     const orbCenterInSvg = (orbCenterX / svgRect.width) * 1400;
 
-                    // Match exact outer radius of orb (r=95 in 240px container)
-                    const orbRadiusInSvg = ((orbRect.width * (95 / 240)) / svgRect.width) * 1400;
+                    // Match exact outer radius of orb (r=90 in 260px container, r=95 in 240px container)
+                    const radiusRatio = orbRect.width >= 250 ? (90 / 260) : (95 / 240);
+                    const orbRadiusInSvg = ((orbRect.width * radiusRatio) / svgRect.width) * 1400;
 
                     pinchLeftX = orbCenterInSvg - orbRadiusInSvg;
                     pinchRightX = orbCenterInSvg + orbRadiusInSvg;
@@ -1277,8 +1279,11 @@ function initThemeController() {
     const themeBtn = document.getElementById('theme-toggle-btn');
     const savedTheme = localStorage.getItem('gm-theme');
     
-    // Check saved theme
-    if (savedTheme === 'light' || window.location.search.indexOf('theme=light') !== -1) {
+    // Default to LIGHT mode for all visitors and link clicks
+    if (savedTheme === 'dark') {
+        document.body.classList.remove('light-mode');
+        document.documentElement.classList.remove('light-mode');
+    } else {
         document.body.classList.add('light-mode');
         document.documentElement.classList.add('light-mode');
     }
@@ -1287,12 +1292,7 @@ function initThemeController() {
         themeBtn.addEventListener('click', () => {
             const isLight = document.body.classList.toggle('light-mode');
             document.documentElement.classList.toggle('light-mode', isLight);
-            
-            if (isLight) {
-                localStorage.setItem('gm-theme', 'light');
-            } else {
-                localStorage.setItem('gm-theme', 'dark');
-            }
+            localStorage.setItem('gm-theme', isLight ? 'light' : 'dark');
         });
     }
 }

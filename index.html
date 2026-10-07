@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="light-mode">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,19 +13,23 @@
     <!-- Google Fonts: Inter for UI, Montserrat for Logo -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@800;900&display=swap" rel="stylesheet">
     
-    <!-- Early Theme Check -->
+    <!-- Default to Light Mode -->
     <script>
         (function() {
             try {
                 var theme = localStorage.getItem('gm-theme');
-                if (theme === 'light' || window.location.search.indexOf('theme=light') !== -1) {
+                if (theme === 'dark') {
+                    document.documentElement.classList.remove('light-mode');
+                } else {
                     document.documentElement.classList.add('light-mode');
                 }
-            } catch(e) {}
+            } catch(e) {
+                document.documentElement.classList.add('light-mode');
+            }
         })();
     </script>
 </head>
-<body>
+<body class="light-mode">
     <!-- Splash Screen (Adaptive Light & Dark Modes) -->
     <div id="splash-screen" class="splash-screen">
         <div class="splash-wrapper">
@@ -378,402 +382,246 @@
                                 <!-- Single Moving Line Marquee Track -->
                                                                                                 <div class="trusted-marquee-track marquee-single-line">
                                     <div class="trusted-marquee-group">
-                                        <!-- 1. XYLEM Learning App -->
-                                        <div class="trusted-logo-tile" title="XYLEM Learning App">
-                                            <svg viewBox="0 0 135 34" width="120" height="30">
-                                                <rect x="4" y="3" width="28" height="28" rx="7" fill="#62c1ad"/>
-                                                <path d="M 18 8 C 18 8 23 11 23 15 C 20 15 18 13.5 18 8 Z" fill="#ffffff"/>
-                                                <path d="M 18 8 C 18 8 13 11 13 15 C 16 15 18 13.5 18 8 Z" fill="#ffffff"/>
-                                                <path d="M 18 13 L 18 23" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round"/>
-                                                <path d="M 18 16 C 18 16 22 17.5 22 20.5 C 19.5 20.5 18 19 18 16 Z" fill="#ffffff"/>
-                                                <path d="M 18 16 C 18 16 14 17.5 14 20.5 C 16.5 20.5 18 19 18 16 Z" fill="#ffffff"/>
-                                                <text x="38" y="16.5" font-family="'Inter', sans-serif" font-weight="900" font-size="13" fill="#123646" letter-spacing="0.4">XYLEM</text>
-                                                <text x="38" y="26" font-family="'Inter', sans-serif" font-weight="800" font-size="8" fill="#123646" letter-spacing="0.1">Learning App</text>
+                                        <!-- 1. Muthoot FinCorp -->
+                                        <div class="trusted-logo-tile" title="Muthoot FinCorp">
+                                            <svg viewBox="0 0 160 36" width="145" height="32">
+                                                <rect x="2" y="2" width="32" height="32" rx="6" fill="#0091df"/>
+                                                <text x="18" y="24" font-family="'Inter', -apple-system, sans-serif" font-weight="900" font-size="20" fill="#ffffff" text-anchor="middle">M</text>
+                                                <circle cx="26" cy="10" r="3" fill="#ef4444"/>
+                                                <text x="40" y="17" font-family="'Inter', sans-serif" font-weight="900" font-size="12.5" fill="#0091df" letter-spacing="-0.3">muthoot</text>
+                                                <text x="40" y="29" font-family="'Inter', sans-serif" font-weight="900" font-size="11" fill="#0284c7" letter-spacing="1.2">FINCORP</text>
                                             </svg>
                                         </div>
 
-                                        <!-- 2. Wakefit -->
-                                        <div class="trusted-logo-tile" title="Wakefit">
-                                            <svg viewBox="0 0 120 34" width="108" height="30">
-                                                <rect x="2" y="3" width="116" height="28" rx="8" fill="#4d2679"/>
-                                                <path d="M 18 20 L 18 13.5 L 23.5 9.5 L 29 13.5 L 29 20 Z" fill="none" stroke="#ffffff" stroke-width="2.2" stroke-linejoin="round"/>
-                                                <rect x="22" y="13.5" width="3" height="6.5" fill="#f97316" rx="0.5"/>
-                                                <text x="35" y="20.5" font-family="'Inter', sans-serif" font-weight="900" font-size="13.5" fill="#ffffff" letter-spacing="-0.3">wakefit</text>
-                                            </svg>
-                                        </div>
-
-                                        <!-- 3. Kapiva -->
-                                        <div class="trusted-logo-tile" title="Kapiva">
-                                            <svg viewBox="0 0 125 34" width="112" height="30">
-                                                <path d="M 3 3 L 122 3 L 122 13.5 L 118 17 L 122 20.5 L 122 31 L 3 31 L 3 20.5 L 7 17 L 3 13.5 Z" fill="#18181b"/>
-                                                <text x="14" y="21" font-family="'Inter', sans-serif" font-weight="900" font-size="12" fill="#ffffff" letter-spacing="4">KAPIVA</text>
-                                                <circle cx="106" cy="17" r="2" fill="#ffffff"/>
-                                            </svg>
-                                        </div>
-
-                                        <!-- 4. IncNut Digital -->
-                                        <div class="trusted-logo-tile" title="IncNut Digital">
-                                            <svg viewBox="0 0 125 34" width="112" height="30">
-                                                <g transform="rotate(-6 16 17)">
-                                                    <rect x="8" y="7" width="14" height="19" rx="1.5" fill="#e9488a"/>
-                                                    <rect x="11" y="10" width="8" height="10" rx="1" fill="#ffffff"/>
-                                                </g>
-                                                <text x="27" y="18" font-family="'Brush Script MT', 'Segoe Script', cursive, sans-serif" font-style="italic" font-weight="900" font-size="16" fill="#e9488a">incnut</text>
-                                                <text x="44" y="26" font-family="'Inter', sans-serif" font-weight="800" font-size="6" fill="#475569" letter-spacing="1.5">DIGITAL</text>
-                                                <line x1="43" y1="27.5" x2="74" y2="27.5" stroke="#475569" stroke-width="0.8"/>
-                                            </svg>
-                                        </div>
-
-                                        <!-- 5. Paytm -->
+                                        <!-- 2. Paytm -->
                                         <div class="trusted-logo-tile" title="Paytm">
-                                            <svg viewBox="0 0 115 34" width="100" height="30">
-                                                <text x="8" y="24" font-family="'Inter', sans-serif" font-weight="900" font-size="22" fill="#002970" letter-spacing="-0.8">pay</text>
-                                                <text x="50" y="24" font-family="'Inter', sans-serif" font-weight="900" font-size="22" fill="#00baf2" letter-spacing="-0.8">tm</text>
+                                            <svg viewBox="0 0 115 34" width="105" height="30">
+                                                <text x="6" y="24" font-family="'Inter', sans-serif" font-weight="900" font-size="23" fill="#002970" letter-spacing="-0.8">pay</text>
+                                                <text x="50" y="24" font-family="'Inter', sans-serif" font-weight="900" font-size="23" fill="#00baf2" letter-spacing="-0.8">tm</text>
                                             </svg>
                                         </div>
 
-                                        <!-- 6. upGrad -->
-                                        <div class="trusted-logo-tile" title="upGrad">
-                                            <svg viewBox="0 0 115 34" width="100" height="30">
-                                                <text x="10" y="23.5" font-family="'Inter', sans-serif" font-weight="700" font-size="21" fill="#eb1c24" letter-spacing="-0.6">up<tspan font-weight="900">Grad</tspan></text>
-                                            </svg>
-                                        </div>
-
-                                        <!-- 7. Spinny -->
-                                        <div class="trusted-logo-tile" title="Spinny">
-                                            <svg viewBox="0 0 120 34" width="105" height="30">
-                                                <rect x="3" y="3" width="114" height="28" rx="6" fill="#2d1238"/>
-                                                <circle cx="18" cy="17" r="7" fill="none" stroke="#f97316" stroke-width="2.2"/>
-                                                <path d="M18 13a4 4 0 1 1-4 4" fill="none" stroke="#f97316" stroke-width="2.2" stroke-linecap="round"/>
-                                                <text x="32" y="21.5" font-family="'Inter', sans-serif" font-weight="800" font-size="14" fill="#ffffff" letter-spacing="0.3">Spinny</text>
-                                            </svg>
-                                        </div>
-
-                                        <!-- 8. Physics Wallah -->
-                                        <div class="trusted-logo-tile" title="Physics Wallah">
-                                            <svg viewBox="0 0 125 34" width="110" height="30">
-                                                <circle cx="16" cy="17" r="12" fill="#000000"/>
-                                                <text x="9" y="21" font-family="'Inter', sans-serif" font-weight="900" font-size="11" fill="#ffffff">P</text>
-                                                <text x="16" y="21" font-family="'Inter', sans-serif" font-weight="900" font-size="10" fill="#ffffff">W</text>
-                                                <text x="34" y="15.5" font-family="'Inter', sans-serif" font-weight="800" font-size="9" fill="#000000" letter-spacing="0.5">PHYSICS</text>
-                                                <text x="34" y="24.5" font-family="'Inter', sans-serif" font-weight="800" font-size="9" fill="#000000" letter-spacing="0.5">WALLAH</text>
-                                            </svg>
-                                        </div>
-
-                                        <!-- 9. CRED -->
-                                        <div class="trusted-logo-tile" title="CRED">
-                                            <svg viewBox="0 0 115 34" width="100" height="30">
-                                                <path d="M 14 8 L 24 8 L 24 18 C 24 23 19 25.5 19 25.5 C 19 25.5 14 23 14 18 Z" fill="none" stroke="#000000" stroke-width="2.4"/>
-                                                <path d="M 17.5 12 L 20.5 12 L 20.5 17 C 20.5 19 19 20 19 20 C 19 20 17.5 19 17.5 17 Z" fill="#000000"/>
-                                                <text x="32" y="23" font-family="'Inter', sans-serif" font-weight="900" font-size="16" fill="#000000" letter-spacing="1.5">CRED</text>
-                                            </svg>
-                                        </div>
-
-                                        <!-- 10. Shriram Finance -->
-                                        <div class="trusted-logo-tile" title="Shriram Finance">
-                                            <svg viewBox="0 0 125 34" width="110" height="30">
-                                                <rect x="5" y="4" width="26" height="26" rx="3.5" fill="#f8fafc" stroke="#cbd5e1" stroke-width="0.8"/>
-                                                <path d="M 12 10 L 18 17 L 24 10 L 18 24 Z" fill="#0B1426"/>
-                                                <text x="36" y="17" font-family="'Inter', sans-serif" font-weight="900" font-size="10.5" fill="#1e293b" letter-spacing="0.4">SHRIRAM</text>
-                                                <text x="36" y="25" font-family="'Inter', sans-serif" font-weight="700" font-size="7.5" fill="#f59e0b" letter-spacing="1">FINANCE</text>
-                                            </svg>
-                                        </div>
-
-                                        <!-- 11. Muthoot Finance -->
-                                        <div class="trusted-logo-tile" title="Muthoot Finance">
-                                            <svg viewBox="0 0 125 34" width="110" height="30">
-                                                <path d="M 8 23 L 8 11 A 4.5 4.5 0 0 1 17 11 L 17 23" fill="none" stroke="#0F766E" stroke-width="2.5" stroke-linecap="round"/>
-                                                <path d="M 17 23 L 17 11 A 4.5 4.5 0 0 1 26 11 L 26 23" fill="none" stroke="#0F766E" stroke-width="2.5" stroke-linecap="round"/>
-                                                <text x="32" y="18" font-family="'Inter', sans-serif" font-weight="800" font-size="12" fill="#0F766E" letter-spacing="-0.3">muthoot</text>
-                                                <text x="32" y="25" font-family="'Inter', sans-serif" font-weight="700" font-size="6.5" fill="#dc2626" letter-spacing="0.6">FINANCE</text>
-                                            </svg>
-                                        </div>
-
-                                        <!-- 12. Fino Payments Bank -->
-                                        <div class="trusted-logo-tile" title="Fino Payments Bank">
-                                            <svg viewBox="0 0 125 34" width="110" height="30">
-                                                <circle cx="14" cy="17" r="5.5" fill="#dc2626"/>
-                                                <circle cx="14" cy="17" r="2.8" fill="#ffffff"/>
-                                                <text x="24" y="21" font-family="'Inter', sans-serif" font-weight="800" font-size="14.5" fill="#1e293b" letter-spacing="-0.5">Fino</text>
-                                                <text x="56" y="15.5" font-family="'Inter', sans-serif" font-weight="600" font-size="6" fill="#64748b">Payments</text>
-                                                <text x="56" y="23" font-family="'Inter', sans-serif" font-weight="600" font-size="6" fill="#64748b">Bank</text>
-                                            </svg>
-                                        </div>
-
-                                        <!-- 13. Indifi -->
-                                        <div class="trusted-logo-tile" title="Indifi">
-                                            <svg viewBox="0 0 115 34" width="100" height="30">
-                                                <text x="10" y="23.5" font-family="'Inter', sans-serif" font-weight="800" font-size="19" fill="#0F766E" letter-spacing="-0.5">indifi</text>
-                                                <circle cx="56" cy="11.5" r="2.2" fill="#8b5cf6"/>
-                                            </svg>
-                                        </div>
-
-                                        <!-- 14. Kissht -->
-                                        <div class="trusted-logo-tile" title="Kissht">
-                                            <svg viewBox="0 0 115 34" width="100" height="30">
-                                                <rect x="5" y="4" width="105" height="26" rx="5" fill="#0B1426"/>
-                                                <text x="22" y="21" font-family="'Inter', sans-serif" font-weight="800" font-size="14.5" fill="#ffffff" letter-spacing="-0.3">kıssht</text>
-                                                <path d="M 60 20 Q 67 25 74 20" fill="none" stroke="#facc15" stroke-width="2" stroke-linecap="round"/>
-                                            </svg>
-                                        </div>
-
-                                        <!-- 15. BrightCHAMPS -->
-                                        <div class="trusted-logo-tile" title="BrightCHAMPS">
-                                            <svg viewBox="0 0 135 34" width="120" height="30">
-                                                <path d="M 10 7 L 21 7 L 21 18 C 21 22 15.5 25 15.5 25 C 15.5 25 10 22 10 18 Z" fill="#0F766E"/>
-                                                <polygon points="15.5 10 16.8 13.2 20 13.6 17.7 15.8 18.2 19 15.5 17.3 12.8 19 13.3 15.8 11 13.6 14.2 13.2" fill="#fbbf24"/>
-                                                <text x="26" y="17" font-family="'Inter', sans-serif" font-weight="800" font-size="10.5" fill="#0B1426">Bright</text>
-                                                <text x="58" y="17" font-family="'Inter', sans-serif" font-weight="800" font-size="10.5" fill="#ec4899">CHAMPS</text>
-                                                <text x="26" y="25" font-family="'Inter', sans-serif" font-weight="600" font-size="5.5" fill="#64748b" letter-spacing="0.4">NEXT-GEN SKILLS</text>
-                                            </svg>
-                                        </div>
-
-                                        <!-- 16. Classplus -->
+                                        <!-- 3. Classplus -->
                                         <div class="trusted-logo-tile" title="Classplus">
-                                            <svg viewBox="0 0 125 34" width="110" height="30">
-                                                <polygon points="8 8 16 17 8 26 13 26 21 17 13 8" fill="#06b6d4"/>
-                                                <text x="26" y="22" font-family="'Inter', sans-serif" font-weight="800" font-size="15" fill="#1e293b" letter-spacing="-0.4">Classplus</text>
+                                            <svg viewBox="0 0 135 34" width="120" height="30">
+                                                <polygon points="5 17 16 6 27 17 16 28" fill="#06b6d4"/>
+                                                <polygon points="16 10 23 17 16 24 9 17" fill="#ffffff"/>
+                                                <polygon points="16 13 20 17 16 21 12 17" fill="#0284c7"/>
+                                                <text x="35" y="22" font-family="'Inter', sans-serif" font-weight="800" font-size="15.5" fill="#0f172a" letter-spacing="-0.4">Classplus</text>
                                             </svg>
                                         </div>
 
-                                        <!-- 17. Leverage Edu -->
+                                        <!-- 4. Leverage Edu -->
                                         <div class="trusted-logo-tile" title="Leverage Edu">
-                                            <svg viewBox="0 0 125 34" width="110" height="30">
-                                                <path d="M 10 22 L 17 8 L 21 22" stroke="#5EEAD4" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path d="M 15 15 L 23 22" stroke="#10b981" stroke-width="2.2" fill="none" stroke-linecap="round"/>
-                                                <text x="28" y="16" font-family="'Inter', sans-serif" font-weight="800" font-size="10" fill="#1e293b">leverage</text>
-                                                <text x="28" y="24" font-family="'Inter', sans-serif" font-weight="800" font-size="8.5" fill="#5EEAD4">edu</text>
+                                            <svg viewBox="0 0 145 36" width="130" height="32">
+                                                <rect x="2" y="2" width="141" height="32" rx="6" fill="#071b35"/>
+                                                <g transform="translate(10, 6)">
+                                                    <path d="M 4 20 L 10 7 L 16 20" stroke="#38bdf8" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M 8 14 L 14 20" stroke="#34d399" stroke-width="2" fill="none" stroke-linecap="round"/>
+                                                    <circle cx="10" cy="5" r="1.5" fill="#facc15"/>
+                                                </g>
+                                                <text x="35" y="17" font-family="'Inter', sans-serif" font-weight="800" font-size="11" fill="#ffffff" letter-spacing="-0.2">leverage</text>
+                                                <text x="35" y="27" font-family="'Inter', sans-serif" font-weight="900" font-size="10" fill="#38bdf8" letter-spacing="0.5">edu</text>
                                             </svg>
                                         </div>
 
-                                        <!-- 18. GrowthSchool -->
+                                        <!-- 5. CRED -->
+                                        <div class="trusted-logo-tile" title="CRED">
+                                            <svg viewBox="0 0 115 34" width="105" height="30">
+                                                <path d="M 8 6 L 22 6 L 22 18 C 22 23.5 15 26.5 15 26.5 C 15 26.5 8 23.5 8 18 Z" fill="none" stroke="#0f172a" stroke-width="2.6" stroke-linejoin="round"/>
+                                                <path d="M 12.5 10.5 L 17.5 10.5 L 17.5 17 C 17.5 19 15 20.5 15 20.5 C 15 20.5 12.5 19 12.5 17 Z" fill="#0f172a"/>
+                                                <text x="31" y="23" font-family="'Inter', sans-serif" font-weight="900" font-size="17" fill="#0f172a" letter-spacing="2.5">CRED</text>
+                                            </svg>
+                                        </div>
+
+                                        <!-- 6. Kapiva -->
+                                        <div class="trusted-logo-tile" title="Kapiva">
+                                            <svg viewBox="0 0 135 34" width="120" height="30">
+                                                <path d="M 2 3 L 133 3 L 133 13.5 L 129 17 L 133 20.5 L 133 31 L 2 31 L 2 20.5 L 6 17 L 2 13.5 Z" fill="#111827"/>
+                                                <text x="18" y="21.5" font-family="'Inter', sans-serif" font-weight="900" font-size="13" fill="#ffffff" letter-spacing="4.5">KAPIVA</text>
+                                            </svg>
+                                        </div>
+
+                                        <!-- 7. GrowthSchool -->
                                         <div class="trusted-logo-tile" title="GrowthSchool">
-                                            <svg viewBox="0 0 135 34" width="120" height="30">
-                                                <circle cx="16" cy="17" r="10" fill="#0d9488"/>
-                                                <path d="M 12 21 L 20 13 M 14 13 L 20 13 L 20 19" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <text x="31" y="16" font-family="'Inter', sans-serif" font-weight="800" font-size="11" fill="#134e4a">Growth</text>
-                                                <text x="31" y="25" font-family="'Inter', sans-serif" font-weight="600" font-size="9.5" fill="#0f766e">School</text>
+                                            <svg viewBox="0 0 145 36" width="130" height="32">
+                                                <circle cx="18" cy="18" r="12" fill="#0d9488"/>
+                                                <path d="M 13 22 L 23 13 M 17 13 L 23 13 L 23 19" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <text x="36" y="17" font-family="'Inter', sans-serif" font-weight="800" font-size="12" fill="#0f172a">Growth</text>
+                                                <text x="36" y="27" font-family="'Inter', sans-serif" font-weight="600" font-size="10" fill="#0d9488">School</text>
                                             </svg>
                                         </div>
 
-                                        <!-- 19. Azent Overseas Education -->
-                                        <div class="trusted-logo-tile" title="Azent Overseas Education">
-                                            <svg viewBox="0 0 135 34" width="120" height="30">
-                                                <path d="M 8 24 L 15 10 L 22 24 L 18 24 L 15 19 L 12 24 Z" fill="#ea580c"/>
-                                                <text x="28" y="16" font-family="'Inter', sans-serif" font-weight="900" font-size="10.5" fill="#1e293b" letter-spacing="0.8">AZENT</text>
-                                                <text x="28" y="24" font-family="'Inter', sans-serif" font-weight="600" font-size="6" fill="#64748b" letter-spacing="0.6">OVERSEAS EDUCATION</text>
+                                        <!-- 8. upGrad -->
+                                        <div class="trusted-logo-tile" title="upGrad">
+                                            <svg viewBox="0 0 130 36" width="115" height="32">
+                                                <rect x="2" y="2" width="126" height="32" rx="7" fill="#ffffff" stroke="#ff2800" stroke-width="1.8"/>
+                                                <text x="18" y="24" font-family="'Inter', sans-serif" font-weight="700" font-size="20" fill="#ff2800" letter-spacing="-0.8">up<tspan font-weight="900">Grad</tspan></text>
                                             </svg>
                                         </div>
 
-                                        <!-- 20. Orion Edutech -->
-                                        <div class="trusted-logo-tile" title="Orion Edutech">
-                                            <svg viewBox="0 0 140 34" width="125" height="30">
-                                                <text x="4" y="15" font-family="'Inter', sans-serif" font-style="italic" font-weight="800" font-size="9" fill="#334155">Orion</text>
-                                                <text x="4" y="24" font-family="'Inter', sans-serif" font-weight="700" font-size="7.5" fill="#64748b">Edutech</text>
-                                                <line x1="42" y1="7" x2="42" y2="27" stroke="#cbd5e1" stroke-width="0.8"/>
-                                                <text x="48" y="16" font-family="'Inter', sans-serif" font-weight="800" font-size="10" fill="#f97316">study</text>
-                                                <text x="48" y="25" font-family="'Inter', sans-serif" font-weight="800" font-size="10" fill="#f97316">abroad</text>
+                                        <!-- 9. Spinny -->
+                                        <div class="trusted-logo-tile" title="Spinny">
+                                            <svg viewBox="0 0 135 36" width="120" height="32">
+                                                <rect x="2" y="2" width="131" height="32" rx="7" fill="#240c36"/>
+                                                <polygon points="19 7 27 15 19 23 11 15" fill="#f43f5e"/>
+                                                <path d="M 19 11 C 17 11 15.5 12.5 15.5 14 C 15.5 16.5 22.5 15.5 22.5 18 C 22.5 19.5 21 21 19 21 C 17 21 15.5 19.5 15.5 19.5" stroke="#ffffff" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+                                                <text x="37" y="22.5" font-family="'Inter', sans-serif" font-weight="900" font-size="15" fill="#ffffff" letter-spacing="0.2">Spinny</text>
+                                            </svg>
+                                        </div>
+
+                                        <!-- 10. Physics Wallah -->
+                                        <div class="trusted-logo-tile" title="Physics Wallah">
+                                            <svg viewBox="0 0 150 36" width="135" height="32">
+                                                <circle cx="18" cy="18" r="13" fill="#0f172a"/>
+                                                <text x="18" y="23" font-family="'Inter', sans-serif" font-weight="900" font-size="12" fill="#ffffff" text-anchor="middle" letter-spacing="0.5">PW</text>
+                                                <text x="38" y="16.5" font-family="'Inter', sans-serif" font-weight="800" font-size="9.5" fill="#0f172a" letter-spacing="0.6">PHYSICS</text>
+                                                <text x="38" y="26.5" font-family="'Inter', sans-serif" font-weight="800" font-size="9.5" fill="#0f172a" letter-spacing="0.6">WALLAH</text>
+                                            </svg>
+                                        </div>
+
+                                        <!-- 11. Wakefit -->
+                                        <div class="trusted-logo-tile" title="Wakefit">
+                                            <svg viewBox="0 0 135 36" width="120" height="32">
+                                                <rect x="2" y="2" width="131" height="32" rx="7" fill="#582386"/>
+                                                <path d="M 14 22 L 14 15 L 19 11 L 24 15 L 24 22 Z" fill="none" stroke="#ffffff" stroke-width="2" stroke-linejoin="round"/>
+                                                <path d="M 22 22 L 22 17 L 26 13.5 L 30 17 L 30 22 Z" fill="none" stroke="#fb7185" stroke-width="2" stroke-linejoin="round"/>
+                                                <text x="37" y="22.5" font-family="'Inter', sans-serif" font-weight="900" font-size="14.5" fill="#ffffff" letter-spacing="-0.3">wakefit</text>
+                                            </svg>
+                                        </div>
+
+                                        <!-- 12. XYLEM -->
+                                        <div class="trusted-logo-tile" title="XYLEM">
+                                            <svg viewBox="0 0 145 36" width="130" height="32">
+                                                <rect x="4" y="3" width="29" height="29" rx="7" fill="#00a651"/>
+                                                <g transform="translate(10, 8)">
+                                                    <path d="M 8.5 2 L 3 9 L 6 9 L 2 15 L 15 15 L 11 9 L 14 9 Z" fill="#ffffff"/>
+                                                    <rect x="7" y="15" width="3" height="4" fill="#ffffff"/>
+                                                </g>
+                                                <text x="40" y="23" font-family="'Inter', sans-serif" font-weight="900" font-size="16" fill="#00a651" letter-spacing="0.6">XYLEM</text>
                                             </svg>
                                         </div>
                                     </div>
 
                                     <!-- Duplicate Group for Seamless Infinite Loop -->
                                     <div class="trusted-marquee-group" aria-hidden="true">
-                                        <!-- 1. XYLEM Learning App -->
-                                        <div class="trusted-logo-tile" title="XYLEM Learning App">
-                                            <svg viewBox="0 0 135 34" width="120" height="30">
-                                                <rect x="4" y="3" width="28" height="28" rx="7" fill="#62c1ad"/>
-                                                <path d="M 18 8 C 18 8 23 11 23 15 C 20 15 18 13.5 18 8 Z" fill="#ffffff"/>
-                                                <path d="M 18 8 C 18 8 13 11 13 15 C 16 15 18 13.5 18 8 Z" fill="#ffffff"/>
-                                                <path d="M 18 13 L 18 23" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round"/>
-                                                <path d="M 18 16 C 18 16 22 17.5 22 20.5 C 19.5 20.5 18 19 18 16 Z" fill="#ffffff"/>
-                                                <path d="M 18 16 C 18 16 14 17.5 14 20.5 C 16.5 20.5 18 19 18 16 Z" fill="#ffffff"/>
-                                                <text x="38" y="16.5" font-family="'Inter', sans-serif" font-weight="900" font-size="13" fill="#123646" letter-spacing="0.4">XYLEM</text>
-                                                <text x="38" y="26" font-family="'Inter', sans-serif" font-weight="800" font-size="8" fill="#123646" letter-spacing="0.1">Learning App</text>
+                                        <!-- 1. Muthoot FinCorp -->
+                                        <div class="trusted-logo-tile" title="Muthoot FinCorp">
+                                            <svg viewBox="0 0 160 36" width="145" height="32">
+                                                <rect x="2" y="2" width="32" height="32" rx="6" fill="#0091df"/>
+                                                <text x="18" y="24" font-family="'Inter', -apple-system, sans-serif" font-weight="900" font-size="20" fill="#ffffff" text-anchor="middle">M</text>
+                                                <circle cx="26" cy="10" r="3" fill="#ef4444"/>
+                                                <text x="40" y="17" font-family="'Inter', sans-serif" font-weight="900" font-size="12.5" fill="#0091df" letter-spacing="-0.3">muthoot</text>
+                                                <text x="40" y="29" font-family="'Inter', sans-serif" font-weight="900" font-size="11" fill="#0284c7" letter-spacing="1.2">FINCORP</text>
                                             </svg>
                                         </div>
 
-                                        <!-- 2. Wakefit -->
-                                        <div class="trusted-logo-tile" title="Wakefit">
-                                            <svg viewBox="0 0 120 34" width="108" height="30">
-                                                <rect x="2" y="3" width="116" height="28" rx="8" fill="#4d2679"/>
-                                                <path d="M 18 20 L 18 13.5 L 23.5 9.5 L 29 13.5 L 29 20 Z" fill="none" stroke="#ffffff" stroke-width="2.2" stroke-linejoin="round"/>
-                                                <rect x="22" y="13.5" width="3" height="6.5" fill="#f97316" rx="0.5"/>
-                                                <text x="35" y="20.5" font-family="'Inter', sans-serif" font-weight="900" font-size="13.5" fill="#ffffff" letter-spacing="-0.3">wakefit</text>
-                                            </svg>
-                                        </div>
-
-                                        <!-- 3. Kapiva -->
-                                        <div class="trusted-logo-tile" title="Kapiva">
-                                            <svg viewBox="0 0 125 34" width="112" height="30">
-                                                <path d="M 3 3 L 122 3 L 122 13.5 L 118 17 L 122 20.5 L 122 31 L 3 31 L 3 20.5 L 7 17 L 3 13.5 Z" fill="#18181b"/>
-                                                <text x="14" y="21" font-family="'Inter', sans-serif" font-weight="900" font-size="12" fill="#ffffff" letter-spacing="4">KAPIVA</text>
-                                                <circle cx="106" cy="17" r="2" fill="#ffffff"/>
-                                            </svg>
-                                        </div>
-
-                                        <!-- 4. IncNut Digital -->
-                                        <div class="trusted-logo-tile" title="IncNut Digital">
-                                            <svg viewBox="0 0 125 34" width="112" height="30">
-                                                <g transform="rotate(-6 16 17)">
-                                                    <rect x="8" y="7" width="14" height="19" rx="1.5" fill="#e9488a"/>
-                                                    <rect x="11" y="10" width="8" height="10" rx="1" fill="#ffffff"/>
-                                                </g>
-                                                <text x="27" y="18" font-family="'Brush Script MT', 'Segoe Script', cursive, sans-serif" font-style="italic" font-weight="900" font-size="16" fill="#e9488a">incnut</text>
-                                                <text x="44" y="26" font-family="'Inter', sans-serif" font-weight="800" font-size="6" fill="#475569" letter-spacing="1.5">DIGITAL</text>
-                                                <line x1="43" y1="27.5" x2="74" y2="27.5" stroke="#475569" stroke-width="0.8"/>
-                                            </svg>
-                                        </div>
-
-                                        <!-- 5. Paytm -->
+                                        <!-- 2. Paytm -->
                                         <div class="trusted-logo-tile" title="Paytm">
-                                            <svg viewBox="0 0 115 34" width="100" height="30">
-                                                <text x="8" y="24" font-family="'Inter', sans-serif" font-weight="900" font-size="22" fill="#002970" letter-spacing="-0.8">pay</text>
-                                                <text x="50" y="24" font-family="'Inter', sans-serif" font-weight="900" font-size="22" fill="#00baf2" letter-spacing="-0.8">tm</text>
+                                            <svg viewBox="0 0 115 34" width="105" height="30">
+                                                <text x="6" y="24" font-family="'Inter', sans-serif" font-weight="900" font-size="23" fill="#002970" letter-spacing="-0.8">pay</text>
+                                                <text x="50" y="24" font-family="'Inter', sans-serif" font-weight="900" font-size="23" fill="#00baf2" letter-spacing="-0.8">tm</text>
                                             </svg>
                                         </div>
 
-                                        <!-- 6. upGrad -->
-                                        <div class="trusted-logo-tile" title="upGrad">
-                                            <svg viewBox="0 0 115 34" width="100" height="30">
-                                                <text x="10" y="23.5" font-family="'Inter', sans-serif" font-weight="700" font-size="21" fill="#eb1c24" letter-spacing="-0.6">up<tspan font-weight="900">Grad</tspan></text>
-                                            </svg>
-                                        </div>
-
-                                        <!-- 7. Spinny -->
-                                        <div class="trusted-logo-tile" title="Spinny">
-                                            <svg viewBox="0 0 120 34" width="105" height="30">
-                                                <rect x="3" y="3" width="114" height="28" rx="6" fill="#2d1238"/>
-                                                <circle cx="18" cy="17" r="7" fill="none" stroke="#f97316" stroke-width="2.2"/>
-                                                <path d="M18 13a4 4 0 1 1-4 4" fill="none" stroke="#f97316" stroke-width="2.2" stroke-linecap="round"/>
-                                                <text x="32" y="21.5" font-family="'Inter', sans-serif" font-weight="800" font-size="14" fill="#ffffff" letter-spacing="0.3">Spinny</text>
-                                            </svg>
-                                        </div>
-
-                                        <!-- 8. Physics Wallah -->
-                                        <div class="trusted-logo-tile" title="Physics Wallah">
-                                            <svg viewBox="0 0 125 34" width="110" height="30">
-                                                <circle cx="16" cy="17" r="12" fill="#000000"/>
-                                                <text x="9" y="21" font-family="'Inter', sans-serif" font-weight="900" font-size="11" fill="#ffffff">P</text>
-                                                <text x="16" y="21" font-family="'Inter', sans-serif" font-weight="900" font-size="10" fill="#ffffff">W</text>
-                                                <text x="34" y="15.5" font-family="'Inter', sans-serif" font-weight="800" font-size="9" fill="#000000" letter-spacing="0.5">PHYSICS</text>
-                                                <text x="34" y="24.5" font-family="'Inter', sans-serif" font-weight="800" font-size="9" fill="#000000" letter-spacing="0.5">WALLAH</text>
-                                            </svg>
-                                        </div>
-
-                                        <!-- 9. CRED -->
-                                        <div class="trusted-logo-tile" title="CRED">
-                                            <svg viewBox="0 0 115 34" width="100" height="30">
-                                                <path d="M 14 8 L 24 8 L 24 18 C 24 23 19 25.5 19 25.5 C 19 25.5 14 23 14 18 Z" fill="none" stroke="#000000" stroke-width="2.4"/>
-                                                <path d="M 17.5 12 L 20.5 12 L 20.5 17 C 20.5 19 19 20 19 20 C 19 20 17.5 19 17.5 17 Z" fill="#000000"/>
-                                                <text x="32" y="23" font-family="'Inter', sans-serif" font-weight="900" font-size="16" fill="#000000" letter-spacing="1.5">CRED</text>
-                                            </svg>
-                                        </div>
-
-                                        <!-- 10. Shriram Finance -->
-                                        <div class="trusted-logo-tile" title="Shriram Finance">
-                                            <svg viewBox="0 0 125 34" width="110" height="30">
-                                                <rect x="5" y="4" width="26" height="26" rx="3.5" fill="#f8fafc" stroke="#cbd5e1" stroke-width="0.8"/>
-                                                <path d="M 12 10 L 18 17 L 24 10 L 18 24 Z" fill="#0B1426"/>
-                                                <text x="36" y="17" font-family="'Inter', sans-serif" font-weight="900" font-size="10.5" fill="#1e293b" letter-spacing="0.4">SHRIRAM</text>
-                                                <text x="36" y="25" font-family="'Inter', sans-serif" font-weight="700" font-size="7.5" fill="#f59e0b" letter-spacing="1">FINANCE</text>
-                                            </svg>
-                                        </div>
-
-                                        <!-- 11. Muthoot Finance -->
-                                        <div class="trusted-logo-tile" title="Muthoot Finance">
-                                            <svg viewBox="0 0 125 34" width="110" height="30">
-                                                <path d="M 8 23 L 8 11 A 4.5 4.5 0 0 1 17 11 L 17 23" fill="none" stroke="#0F766E" stroke-width="2.5" stroke-linecap="round"/>
-                                                <path d="M 17 23 L 17 11 A 4.5 4.5 0 0 1 26 11 L 26 23" fill="none" stroke="#0F766E" stroke-width="2.5" stroke-linecap="round"/>
-                                                <text x="32" y="18" font-family="'Inter', sans-serif" font-weight="800" font-size="12" fill="#0F766E" letter-spacing="-0.3">muthoot</text>
-                                                <text x="32" y="25" font-family="'Inter', sans-serif" font-weight="700" font-size="6.5" fill="#dc2626" letter-spacing="0.6">FINANCE</text>
-                                            </svg>
-                                        </div>
-
-                                        <!-- 12. Fino Payments Bank -->
-                                        <div class="trusted-logo-tile" title="Fino Payments Bank">
-                                            <svg viewBox="0 0 125 34" width="110" height="30">
-                                                <circle cx="14" cy="17" r="5.5" fill="#dc2626"/>
-                                                <circle cx="14" cy="17" r="2.8" fill="#ffffff"/>
-                                                <text x="24" y="21" font-family="'Inter', sans-serif" font-weight="800" font-size="14.5" fill="#1e293b" letter-spacing="-0.5">Fino</text>
-                                                <text x="56" y="15.5" font-family="'Inter', sans-serif" font-weight="600" font-size="6" fill="#64748b">Payments</text>
-                                                <text x="56" y="23" font-family="'Inter', sans-serif" font-weight="600" font-size="6" fill="#64748b">Bank</text>
-                                            </svg>
-                                        </div>
-
-                                        <!-- 13. Indifi -->
-                                        <div class="trusted-logo-tile" title="Indifi">
-                                            <svg viewBox="0 0 115 34" width="100" height="30">
-                                                <text x="10" y="23.5" font-family="'Inter', sans-serif" font-weight="800" font-size="19" fill="#0F766E" letter-spacing="-0.5">indifi</text>
-                                                <circle cx="56" cy="11.5" r="2.2" fill="#8b5cf6"/>
-                                            </svg>
-                                        </div>
-
-                                        <!-- 14. Kissht -->
-                                        <div class="trusted-logo-tile" title="Kissht">
-                                            <svg viewBox="0 0 115 34" width="100" height="30">
-                                                <rect x="5" y="4" width="105" height="26" rx="5" fill="#0B1426"/>
-                                                <text x="22" y="21" font-family="'Inter', sans-serif" font-weight="800" font-size="14.5" fill="#ffffff" letter-spacing="-0.3">kıssht</text>
-                                                <path d="M 60 20 Q 67 25 74 20" fill="none" stroke="#facc15" stroke-width="2" stroke-linecap="round"/>
-                                            </svg>
-                                        </div>
-
-                                        <!-- 15. BrightCHAMPS -->
-                                        <div class="trusted-logo-tile" title="BrightCHAMPS">
-                                            <svg viewBox="0 0 135 34" width="120" height="30">
-                                                <path d="M 10 7 L 21 7 L 21 18 C 21 22 15.5 25 15.5 25 C 15.5 25 10 22 10 18 Z" fill="#0F766E"/>
-                                                <polygon points="15.5 10 16.8 13.2 20 13.6 17.7 15.8 18.2 19 15.5 17.3 12.8 19 13.3 15.8 11 13.6 14.2 13.2" fill="#fbbf24"/>
-                                                <text x="26" y="17" font-family="'Inter', sans-serif" font-weight="800" font-size="10.5" fill="#0B1426">Bright</text>
-                                                <text x="58" y="17" font-family="'Inter', sans-serif" font-weight="800" font-size="10.5" fill="#ec4899">CHAMPS</text>
-                                                <text x="26" y="25" font-family="'Inter', sans-serif" font-weight="600" font-size="5.5" fill="#64748b" letter-spacing="0.4">NEXT-GEN SKILLS</text>
-                                            </svg>
-                                        </div>
-
-                                        <!-- 16. Classplus -->
+                                        <!-- 3. Classplus -->
                                         <div class="trusted-logo-tile" title="Classplus">
-                                            <svg viewBox="0 0 125 34" width="110" height="30">
-                                                <polygon points="8 8 16 17 8 26 13 26 21 17 13 8" fill="#06b6d4"/>
-                                                <text x="26" y="22" font-family="'Inter', sans-serif" font-weight="800" font-size="15" fill="#1e293b" letter-spacing="-0.4">Classplus</text>
+                                            <svg viewBox="0 0 135 34" width="120" height="30">
+                                                <polygon points="5 17 16 6 27 17 16 28" fill="#06b6d4"/>
+                                                <polygon points="16 10 23 17 16 24 9 17" fill="#ffffff"/>
+                                                <polygon points="16 13 20 17 16 21 12 17" fill="#0284c7"/>
+                                                <text x="35" y="22" font-family="'Inter', sans-serif" font-weight="800" font-size="15.5" fill="#0f172a" letter-spacing="-0.4">Classplus</text>
                                             </svg>
                                         </div>
 
-                                        <!-- 17. Leverage Edu -->
+                                        <!-- 4. Leverage Edu -->
                                         <div class="trusted-logo-tile" title="Leverage Edu">
-                                            <svg viewBox="0 0 125 34" width="110" height="30">
-                                                <path d="M 10 22 L 17 8 L 21 22" stroke="#5EEAD4" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path d="M 15 15 L 23 22" stroke="#10b981" stroke-width="2.2" fill="none" stroke-linecap="round"/>
-                                                <text x="28" y="16" font-family="'Inter', sans-serif" font-weight="800" font-size="10" fill="#1e293b">leverage</text>
-                                                <text x="28" y="24" font-family="'Inter', sans-serif" font-weight="800" font-size="8.5" fill="#5EEAD4">edu</text>
+                                            <svg viewBox="0 0 145 36" width="130" height="32">
+                                                <rect x="2" y="2" width="141" height="32" rx="6" fill="#071b35"/>
+                                                <g transform="translate(10, 6)">
+                                                    <path d="M 4 20 L 10 7 L 16 20" stroke="#38bdf8" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M 8 14 L 14 20" stroke="#34d399" stroke-width="2" fill="none" stroke-linecap="round"/>
+                                                    <circle cx="10" cy="5" r="1.5" fill="#facc15"/>
+                                                </g>
+                                                <text x="35" y="17" font-family="'Inter', sans-serif" font-weight="800" font-size="11" fill="#ffffff" letter-spacing="-0.2">leverage</text>
+                                                <text x="35" y="27" font-family="'Inter', sans-serif" font-weight="900" font-size="10" fill="#38bdf8" letter-spacing="0.5">edu</text>
                                             </svg>
                                         </div>
 
-                                        <!-- 18. GrowthSchool -->
+                                        <!-- 5. CRED -->
+                                        <div class="trusted-logo-tile" title="CRED">
+                                            <svg viewBox="0 0 115 34" width="105" height="30">
+                                                <path d="M 8 6 L 22 6 L 22 18 C 22 23.5 15 26.5 15 26.5 C 15 26.5 8 23.5 8 18 Z" fill="none" stroke="#0f172a" stroke-width="2.6" stroke-linejoin="round"/>
+                                                <path d="M 12.5 10.5 L 17.5 10.5 L 17.5 17 C 17.5 19 15 20.5 15 20.5 C 15 20.5 12.5 19 12.5 17 Z" fill="#0f172a"/>
+                                                <text x="31" y="23" font-family="'Inter', sans-serif" font-weight="900" font-size="17" fill="#0f172a" letter-spacing="2.5">CRED</text>
+                                            </svg>
+                                        </div>
+
+                                        <!-- 6. Kapiva -->
+                                        <div class="trusted-logo-tile" title="Kapiva">
+                                            <svg viewBox="0 0 135 34" width="120" height="30">
+                                                <path d="M 2 3 L 133 3 L 133 13.5 L 129 17 L 133 20.5 L 133 31 L 2 31 L 2 20.5 L 6 17 L 2 13.5 Z" fill="#111827"/>
+                                                <text x="18" y="21.5" font-family="'Inter', sans-serif" font-weight="900" font-size="13" fill="#ffffff" letter-spacing="4.5">KAPIVA</text>
+                                            </svg>
+                                        </div>
+
+                                        <!-- 7. GrowthSchool -->
                                         <div class="trusted-logo-tile" title="GrowthSchool">
-                                            <svg viewBox="0 0 135 34" width="120" height="30">
-                                                <circle cx="16" cy="17" r="10" fill="#0d9488"/>
-                                                <path d="M 12 21 L 20 13 M 14 13 L 20 13 L 20 19" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <text x="31" y="16" font-family="'Inter', sans-serif" font-weight="800" font-size="11" fill="#134e4a">Growth</text>
-                                                <text x="31" y="25" font-family="'Inter', sans-serif" font-weight="600" font-size="9.5" fill="#0f766e">School</text>
+                                            <svg viewBox="0 0 145 36" width="130" height="32">
+                                                <circle cx="18" cy="18" r="12" fill="#0d9488"/>
+                                                <path d="M 13 22 L 23 13 M 17 13 L 23 13 L 23 19" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <text x="36" y="17" font-family="'Inter', sans-serif" font-weight="800" font-size="12" fill="#0f172a">Growth</text>
+                                                <text x="36" y="27" font-family="'Inter', sans-serif" font-weight="600" font-size="10" fill="#0d9488">School</text>
                                             </svg>
                                         </div>
 
-                                        <!-- 19. Azent Overseas Education -->
-                                        <div class="trusted-logo-tile" title="Azent Overseas Education">
-                                            <svg viewBox="0 0 135 34" width="120" height="30">
-                                                <path d="M 8 24 L 15 10 L 22 24 L 18 24 L 15 19 L 12 24 Z" fill="#ea580c"/>
-                                                <text x="28" y="16" font-family="'Inter', sans-serif" font-weight="900" font-size="10.5" fill="#1e293b" letter-spacing="0.8">AZENT</text>
-                                                <text x="28" y="24" font-family="'Inter', sans-serif" font-weight="600" font-size="6" fill="#64748b" letter-spacing="0.6">OVERSEAS EDUCATION</text>
+                                        <!-- 8. upGrad -->
+                                        <div class="trusted-logo-tile" title="upGrad">
+                                            <svg viewBox="0 0 130 36" width="115" height="32">
+                                                <rect x="2" y="2" width="126" height="32" rx="7" fill="#ffffff" stroke="#ff2800" stroke-width="1.8"/>
+                                                <text x="18" y="24" font-family="'Inter', sans-serif" font-weight="700" font-size="20" fill="#ff2800" letter-spacing="-0.8">up<tspan font-weight="900">Grad</tspan></text>
                                             </svg>
                                         </div>
 
-                                        <!-- 20. Orion Edutech -->
-                                        <div class="trusted-logo-tile" title="Orion Edutech">
-                                            <svg viewBox="0 0 140 34" width="125" height="30">
-                                                <text x="4" y="15" font-family="'Inter', sans-serif" font-style="italic" font-weight="800" font-size="9" fill="#334155">Orion</text>
-                                                <text x="4" y="24" font-family="'Inter', sans-serif" font-weight="700" font-size="7.5" fill="#64748b">Edutech</text>
-                                                <line x1="42" y1="7" x2="42" y2="27" stroke="#cbd5e1" stroke-width="0.8"/>
-                                                <text x="48" y="16" font-family="'Inter', sans-serif" font-weight="800" font-size="10" fill="#f97316">study</text>
-                                                <text x="48" y="25" font-family="'Inter', sans-serif" font-weight="800" font-size="10" fill="#f97316">abroad</text>
+                                        <!-- 9. Spinny -->
+                                        <div class="trusted-logo-tile" title="Spinny">
+                                            <svg viewBox="0 0 135 36" width="120" height="32">
+                                                <rect x="2" y="2" width="131" height="32" rx="7" fill="#240c36"/>
+                                                <polygon points="19 7 27 15 19 23 11 15" fill="#f43f5e"/>
+                                                <path d="M 19 11 C 17 11 15.5 12.5 15.5 14 C 15.5 16.5 22.5 15.5 22.5 18 C 22.5 19.5 21 21 19 21 C 17 21 15.5 19.5 15.5 19.5" stroke="#ffffff" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+                                                <text x="37" y="22.5" font-family="'Inter', sans-serif" font-weight="900" font-size="15" fill="#ffffff" letter-spacing="0.2">Spinny</text>
+                                            </svg>
+                                        </div>
+
+                                        <!-- 10. Physics Wallah -->
+                                        <div class="trusted-logo-tile" title="Physics Wallah">
+                                            <svg viewBox="0 0 150 36" width="135" height="32">
+                                                <circle cx="18" cy="18" r="13" fill="#0f172a"/>
+                                                <text x="18" y="23" font-family="'Inter', sans-serif" font-weight="900" font-size="12" fill="#ffffff" text-anchor="middle" letter-spacing="0.5">PW</text>
+                                                <text x="38" y="16.5" font-family="'Inter', sans-serif" font-weight="800" font-size="9.5" fill="#0f172a" letter-spacing="0.6">PHYSICS</text>
+                                                <text x="38" y="26.5" font-family="'Inter', sans-serif" font-weight="800" font-size="9.5" fill="#0f172a" letter-spacing="0.6">WALLAH</text>
+                                            </svg>
+                                        </div>
+
+                                        <!-- 11. Wakefit -->
+                                        <div class="trusted-logo-tile" title="Wakefit">
+                                            <svg viewBox="0 0 135 36" width="120" height="32">
+                                                <rect x="2" y="2" width="131" height="32" rx="7" fill="#582386"/>
+                                                <path d="M 14 22 L 14 15 L 19 11 L 24 15 L 24 22 Z" fill="none" stroke="#ffffff" stroke-width="2" stroke-linejoin="round"/>
+                                                <path d="M 22 22 L 22 17 L 26 13.5 L 30 17 L 30 22 Z" fill="none" stroke="#fb7185" stroke-width="2" stroke-linejoin="round"/>
+                                                <text x="37" y="22.5" font-family="'Inter', sans-serif" font-weight="900" font-size="14.5" fill="#ffffff" letter-spacing="-0.3">wakefit</text>
+                                            </svg>
+                                        </div>
+
+                                        <!-- 12. XYLEM -->
+                                        <div class="trusted-logo-tile" title="XYLEM">
+                                            <svg viewBox="0 0 145 36" width="130" height="32">
+                                                <rect x="4" y="3" width="29" height="29" rx="7" fill="#00a651"/>
+                                                <g transform="translate(10, 8)">
+                                                    <path d="M 8.5 2 L 3 9 L 6 9 L 2 15 L 15 15 L 11 9 L 14 9 Z" fill="#ffffff"/>
+                                                    <rect x="7" y="15" width="3" height="4" fill="#ffffff"/>
+                                                </g>
+                                                <text x="40" y="23" font-family="'Inter', sans-serif" font-weight="900" font-size="16" fill="#00a651" letter-spacing="0.6">XYLEM</text>
                                             </svg>
                                         </div>
                                     </div>
@@ -781,8 +629,9 @@
                             </div>
                         </div>
 
-                        <!-- Centerpiece: Glowing 'g' Logo Visual & 3 Floating Pillars with Dynamic Wavy Lines -->
-                        <div class="hero-showcase-centerpiece">
+                        <!-- Centerpiece: Signature One Intelligence Layer Architecture Diagram with Dynamic Waves -->
+                        <div class="hero-showcase-centerpiece" id="architecture-diagram">
+                            <!-- Background SVG Streamlines Connecting Touchpoints to Orb to Outcomes -->
                             <div class="centerpiece-waves-wrapper">
                                 <svg class="hero-bg-lines centerpiece-bg-lines" viewBox="0 0 1400 800" preserveAspectRatio="none" style="overflow: visible;">
                                     <defs>
@@ -815,93 +664,131 @@
                                 </svg>
                             </div>
 
-                            <div class="hero-visual-wrapper centerpiece-visual">
-                                <div class="hero-center-glow">
-                                    <!-- Pure SVG implementation of the glowing gradient ring -->
-                                    <svg viewBox="0 0 240 240" class="hero-orb-svg" style="overflow: visible;">
-                                        <defs>
-                                            <!-- Neon Rim Gradient: Magenta/Purple on left, Cyan/Blue on right -->
-                                            <linearGradient id="orb-grad-cp" x1="0%" y1="0%" x2="100%" y2="0%">
-                                                <stop offset="0%" stop-color="#C026D3" />
-                                                <stop offset="35%" stop-color="#A855F7" />
-                                                <stop offset="65%" stop-color="#38BDF8" />
-                                                <stop offset="100%" stop-color="#0EA5E9" />
-                                            </linearGradient>
-                                            <filter id="orb-glow-cp" x="-50%" y="-50%" width="200%" height="200%">
-                                                <feGaussianBlur stdDeviation="5" result="blur1" />
-                                                <feGaussianBlur stdDeviation="13" result="blur2" />
-                                                <feGaussianBlur stdDeviation="24" result="blur3" />
-                                                <feMerge>
-                                                    <feMergeNode in="blur3"/>
-                                                    <feMergeNode in="blur2"/>
-                                                    <feMergeNode in="blur1"/>
-                                                    <feMergeNode in="SourceGraphic"/>
-                                                </feMerge>
-                                            </filter>
-                                        </defs>
+                            <!-- Diagram Grid: Left 4 Touchpoints | Center Orb | Right 3 Outcomes -->
+                            <div class="cp-diagram-container">
+                                <!-- LEFT COLUMN: Every Customer Touch Point (4 Points) -->
+                                <div class="cp-touchpoints-col">
+                                    <span class="cp-col-eyebrow">EVERY CUSTOMER TOUCH POINT</span>
+                                    <div class="cp-touchpoints-list">
+                                        <div class="cp-touchpoint-card" id="touchpoint-phone">
+                                            <span class="cp-icon-circle">
+                                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#C084FC" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                                </svg>
+                                            </span>
+                                            <span class="cp-card-label">Phone calls</span>
+                                        </div>
 
-                                        <!-- Concentric Dotted Circles centered directly behind the Orb -->
-                                        <circle cx="120" cy="120" r="142" fill="none" stroke="#A855F7" stroke-width="1" stroke-dasharray="2 6" opacity="0.35" />
-                                        <circle cx="120" cy="120" r="182" fill="none" stroke="#38BDF8" stroke-width="1" stroke-dasharray="2 9" opacity="0.25" />
-                                        <circle cx="120" cy="120" r="228" fill="none" stroke="#38BDF8" stroke-width="1" stroke-dasharray="2 13" opacity="0.15" />
+                                        <div class="cp-touchpoint-card" id="touchpoint-bot">
+                                            <span class="cp-icon-circle">
+                                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#C084FC" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                                    <rect x="3" y="11" width="18" height="10" rx="2"></rect>
+                                                    <circle cx="12" cy="5" r="2"></circle>
+                                                    <path d="M12 7v4"></path>
+                                                    <line x1="8" y1="16" x2="8" y2="16"></line>
+                                                    <line x1="16" y1="16" x2="16" y2="16"></line>
+                                                </svg>
+                                            </span>
+                                            <span class="cp-card-label">AI voicebot calls</span>
+                                        </div>
 
-                                        <!-- Intense Outer Neon Glow Aura -->
-                                        <circle cx="120" cy="120" r="95" fill="none" stroke="url(#orb-grad-cp)" stroke-width="7" opacity="0.9" filter="url(#orb-glow-cp)" />
+                                        <div class="cp-touchpoint-card" id="touchpoint-video">
+                                            <span class="cp-icon-circle">
+                                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#C084FC" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                                    <polygon points="23 7 16 12 23 17 23 7"></polygon>
+                                                    <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
+                                                </svg>
+                                            </span>
+                                            <span class="cp-card-label">Video meetings</span>
+                                        </div>
 
-                                        <!-- Central Solid Black Core -->
-                                        <circle cx="120" cy="120" r="95" fill="#030712" />
-
-                                        <!-- Crisp Sharp Front Gradient Ring -->
-                                        <circle cx="120" cy="120" r="95" fill="none" stroke="url(#orb-grad-cp)" stroke-width="3" />
-                                    </svg>
-                                    
-                                    <!-- Inner Exact 'g' Logo (Centered inside the orb) -->
-                                    <svg viewBox="0 0 97 131" class="hero-center-g">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M42.0345 64.5586C52.9021 64.5933 61.5561 56.1185 61.65 45.3503C61.7426 34.6332 53.1449 26.0015 42.2747 25.8994C31.471 25.7973 22.678 34.4066 22.6542 45.1125C22.6292 55.9068 31.2169 64.5224 42.0345 64.5586ZM0.89649 45.2632C0.907756 22.4321 19.2469 4.11909 42.1296 4.08793C64.9722 4.05808 83.3377 22.3636 83.3878 45.2109C83.4365 68.0022 65.0923 86.3351 42.1859 86.3875C19.3896 86.4397 0.885233 68.0084 0.89649 45.2632Z" fill="#ffffff" />
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0.814453 85.7657H22.2456C22.9664 92.6245 25.0423 99.04 31.4477 102.425C34.9689 104.285 39.2584 105.703 43.1712 105.635C53.5333 105.454 59.9325 98.3889 61.9796 85.8902H83.3085C83.3507 99.4671 78.2366 110.575 67.4954 118.741C53.5596 129.336 38.2286 130.749 22.7687 122.642C8.34357 115.077 1.22864 102.561 0.814453 85.7657Z" fill="#ffffff" />
-                                        <path d="M85.6337 21.1465C78.4873 18.7784 68.7603 22.1332 64.7901 24.1066L49.9018 15.2262C48.4129 16.213 48.1152 16.1143 58.8347 7.82588C69.5543 -0.462522 88.1151 -0.561194 96.0555 0.425521V25.5867C95.5592 25.0934 92.7801 23.5146 85.6337 21.1465Z" fill="#ffffff" />
-                                    </svg>
+                                        <div class="cp-touchpoint-card" id="touchpoint-chat">
+                                            <span class="cp-icon-circle">
+                                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#C084FC" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                                                </svg>
+                                            </span>
+                                            <span class="cp-card-label">Chat and WhatsApp</span>
+                                        </div>
+                                    </div>
                                 </div>
 
-                                <!-- 3 Core Pillars Floating Interactive Orbit Cards -->
-                                <div class="hero-orb-pillars">
-                                    <!-- 01 Conversation Analysis (Left Flank) -->
-                                    <a href="#pillar-conversation" class="hero-orb-pillar pillar-orb-01" id="orb-pill-conversation">
-                                        <span class="orb-pillar-badge badge-purple">01</span>
-                                        <div class="orb-pillar-icon icon-purple">
-                                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none">
-                                                <path d="M12 3V21M7 7V17M17 7V17M2 10V14M22 10V14" stroke="#C084FC" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-                                            </svg>
-                                        </div>
-                                        <span class="orb-pillar-name">Conversation Analysis</span>
-                                    </a>
+                                <!-- CENTER: The Glowing Orb & 'g' Logo with ONE INTELLIGENCE LAYER -->
+                                <div class="cp-center-orb-wrapper" id="cp-center-orb-wrapper">
+                                    <div class="hero-center-glow cp-orb-box" id="cp-orb-box">
+                                        <svg viewBox="0 0 260 260" class="hero-orb-svg cp-orb-svg" style="overflow: visible;">
+                                            <defs>
+                                                <!-- Gradient Ring: Purple on left, Blue/Cyan on right -->
+                                                <linearGradient id="orb-grad-cp" x1="0%" y1="0%" x2="100%" y2="0%">
+                                                    <stop offset="0%" stop-color="#C026D3" />
+                                                    <stop offset="35%" stop-color="#A855F7" />
+                                                    <stop offset="65%" stop-color="#38BDF8" />
+                                                    <stop offset="100%" stop-color="#0EA5E9" />
+                                                </linearGradient>
+                                                <filter id="orb-glow-cp" x="-50%" y="-50%" width="200%" height="200%">
+                                                    <feGaussianBlur stdDeviation="6" result="blur1" />
+                                                    <feGaussianBlur stdDeviation="15" result="blur2" />
+                                                    <feGaussianBlur stdDeviation="28" result="blur3" />
+                                                    <feMerge>
+                                                        <feMergeNode in="blur3"/>
+                                                        <feMergeNode in="blur2"/>
+                                                        <feMergeNode in="blur1"/>
+                                                        <feMergeNode in="SourceGraphic"/>
+                                                    </feMerge>
+                                                </filter>
+                                            </defs>
 
-                                    <!-- 02 AI Agents (Top Right Flank) -->
-                                    <a href="#pillar-agents" class="hero-orb-pillar pillar-orb-02" id="orb-pill-agents">
-                                        <span class="orb-pillar-badge badge-blue">02</span>
-                                        <div class="orb-pillar-icon icon-blue">
-                                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none">
-                                                <rect x="3" y="7" width="18" height="13" rx="3.5" stroke="#38BDF8" stroke-width="2" fill="#38BDF8" fill-opacity="0.2"/>
-                                                <circle cx="8.5" cy="12.5" r="1.5" fill="#38BDF8"/>
-                                                <circle cx="15.5" cy="12.5" r="1.5" fill="#38BDF8"/>
-                                                <path d="M12 2V7" stroke="#38BDF8" stroke-width="2" stroke-linecap="round"/>
-                                                <circle cx="12" cy="2" r="1.2" fill="#38BDF8"/>
-                                            </svg>
-                                        </div>
-                                        <span class="orb-pillar-name">AI Agents</span>
-                                    </a>
+                                            <!-- Concentric Dotted Orbit Rings matching reference -->
+                                            <circle cx="130" cy="130" r="174" fill="none" stroke="#6366F1" stroke-width="1.1" stroke-dasharray="2 8" opacity="0.25" />
+                                            <circle cx="130" cy="130" r="146" fill="none" stroke="#A855F7" stroke-width="1.1" stroke-dasharray="2 7" opacity="0.32" />
+                                            <circle cx="130" cy="130" r="122" fill="none" stroke="#38BDF8" stroke-width="1.0" stroke-dasharray="2 7" opacity="0.22" />
 
-                                    <!-- 03 Trust & Observability (Bottom Right Flank) -->
-                                    <a href="#pillar-observability" class="hero-orb-pillar pillar-orb-03" id="orb-pill-observability">
-                                        <span class="orb-pillar-badge badge-green">03</span>
-                                        <div class="orb-pillar-icon icon-green">
-                                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none">
-                                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="#34D399" stroke-width="2" fill="#10B981" fill-opacity="0.2" stroke-linejoin="round"/>
-                                                <polyline points="9 12 11 14 15 9" stroke="#34D399" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-                                            </svg>
-                                        </div>
-                                        <span class="orb-pillar-name">Trust &amp; Observability</span>
-                                    </a>
+                                            <!-- Outer Glowing Ring -->
+                                            <circle cx="130" cy="130" r="90" fill="none" stroke="url(#orb-grad-cp)" stroke-width="7" opacity="0.95" filter="url(#orb-glow-cp)" />
+                                            <!-- Inner Solid Dark Center -->
+                                            <circle cx="130" cy="130" r="90" fill="#040711" />
+                                            <!-- Crisp Front Ring -->
+                                            <circle cx="130" cy="130" r="90" fill="none" stroke="url(#orb-grad-cp)" stroke-width="3.5" />
+                                        </svg>
+
+                                        <!-- Center 'g' Logo (Centered inside the orb) -->
+                                        <svg viewBox="0 0 97 131" class="hero-center-g cp-center-g">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M42.0345 64.5586C52.9021 64.5933 61.5561 56.1185 61.65 45.3503C61.7426 34.6332 53.1449 26.0015 42.2747 25.8994C31.471 25.7973 22.678 34.4066 22.6542 45.1125C22.6292 55.9068 31.2169 64.5224 42.0345 64.5586ZM0.89649 45.2632C0.907756 22.4321 19.2469 4.11909 42.1296 4.08793C64.9722 4.05808 83.3377 22.3636 83.3878 45.2109C83.4365 68.0022 65.0923 86.3351 42.1859 86.3875C19.3896 86.4397 0.885233 68.0084 0.89649 45.2632Z" fill="#ffffff" />
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0.814453 85.7657H22.2456C22.9664 92.6245 25.0423 99.04 31.4477 102.425C34.9689 104.285 39.2584 105.703 43.1712 105.635C53.5333 105.454 59.9325 98.3889 61.9796 85.8902H83.3085C83.3507 99.4671 78.2366 110.575 67.4954 118.741C53.5596 129.336 38.2286 130.749 22.7687 122.642C8.34357 115.077 1.22864 102.561 0.814453 85.7657Z" fill="#ffffff" />
+                                            <path d="M85.6337 21.1465C78.4873 18.7784 68.7603 22.1332 64.7901 24.1066L49.9018 15.2262C48.4129 16.213 48.1152 16.1143 58.8347 7.82588C69.5543 -0.462522 88.1151 -0.561194 96.0555 0.425521V25.5867C95.5592 25.0934 92.7801 23.5146 85.6337 21.1465Z" fill="#ffffff" />
+                                        </svg>
+                                    </div>
+                                    <span class="cp-orb-caption">ONE INTELLIGENCE LAYER</span>
+                                </div>
+
+                                <!-- RIGHT COLUMN: What It Leads To (3 Points) -->
+                                <div class="cp-outcomes-col">
+                                    <span class="cp-col-eyebrow">WHAT IT LEADS TO</span>
+                                    <div class="cp-outcomes-list">
+                                        <a href="#pillar-conversation" class="cp-outcome-card card-purple" id="outcome-conversation">
+                                            <span class="cp-badge-circle badge-purple">01</span>
+                                            <div class="cp-outcome-details">
+                                                <span class="cp-outcome-tag tag-purple">UNDERSTAND</span>
+                                                <span class="cp-outcome-title">Conversation Analysis</span>
+                                            </div>
+                                        </a>
+
+                                        <a href="#pillar-agents" class="cp-outcome-card card-blue" id="outcome-agents">
+                                            <span class="cp-badge-circle badge-blue">02</span>
+                                            <div class="cp-outcome-details">
+                                                <span class="cp-outcome-tag tag-blue">AUTOMATE</span>
+                                                <span class="cp-outcome-title">AI Agents</span>
+                                            </div>
+                                        </a>
+
+                                        <a href="#pillar-observability" class="cp-outcome-card card-green" id="outcome-observability">
+                                            <span class="cp-badge-circle badge-green">03</span>
+                                            <div class="cp-outcome-details">
+                                                <span class="cp-outcome-tag tag-green">GOVERN</span>
+                                                <span class="cp-outcome-title">Trust &amp; Observability</span>
+                                            </div>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
