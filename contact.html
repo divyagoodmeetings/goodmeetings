@@ -736,17 +736,6 @@
                 });
             }
 
-            // Mobile menu toggle
-            const mobileBtn = document.getElementById('mobile-menu-btn');
-            const navLinks = document.getElementById('nav-links');
-            const navAuth = document.getElementById('nav-auth');
-            if (mobileBtn && navLinks) {
-                mobileBtn.addEventListener('click', function() {
-                    navLinks.classList.toggle('mobile-active');
-                    if (navAuth) navAuth.classList.toggle('mobile-active');
-                });
-            }
-
             // Inline Contact Purpose Pills
             const pills = document.querySelectorAll('.contact-demo-pill');
             pills.forEach(pill => {
@@ -1212,5 +1201,6 @@
             }
         });
     </script>
+    <script src="nav.js"></script>
 </body>
 </html>

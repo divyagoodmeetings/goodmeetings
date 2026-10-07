@@ -94,56 +94,98 @@ function animatePath(path, startOffset, endOffset, duration, callback) {
 
 // Mobile Menu Logic
 document.addEventListener('DOMContentLoaded', () => {
-    const mobileBtn = document.getElementById('mobile-menu-btn');
-    const navLinks = document.getElementById('nav-links');
-    const navAuth = document.getElementById('nav-auth');
-
-    if (mobileBtn) {
-        mobileBtn.addEventListener('click', () => {
-            navLinks.classList.toggle('mobile-active');
-            navAuth.classList.toggle('mobile-active');
-            
-            // Toggle hamburger to X icon
-            if (navLinks.classList.contains('mobile-active')) {
-                mobileBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>';
-                document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
-            } else {
-                mobileBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>';
-                document.body.style.overflow = 'auto';
-            }
-        });
-    }
-
-    // Handle mobile accordion dropdowns
-    const navItems = document.querySelectorAll('.nav-item.has-dropdown');
-    navItems.forEach(item => {
-        item.addEventListener('click', (e) => {
-            // Only trigger JS accordion if we are in mobile view
-            if (window.innerWidth <= 900) {
-                // Check if the click was on the link itself (not inside the dropdown)
-                if (e.target.closest('a') && !e.target.closest('.dropdown')) {
-                    e.preventDefault(); // Prevent navigating away
-                    
-                    // Close others
-                    navItems.forEach(otherItem => {
-                        if (otherItem !== item) {
-                            otherItem.classList.remove('mobile-dropdown-active');
-                        }
-                    });
-                    
-                    // Toggle current
-                    item.classList.toggle('mobile-dropdown-active');
-                }
-            }
-        });
-    });
-
+    initMobileNavigation();
+    
     // Initialize the complex 3D animated waves
     initDynamicWaves();
 
     // Initialize Three Pillars Platform interactive cards
     initPlatformPillarsInteractive();
 });
+
+function initMobileNavigation() {
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const navLinks = document.getElementById('nav-links');
+
+    if (!mobileBtn || !navLinks) return;
+
+    // Inject mobile auth buttons into mobile drawer if not already present
+    if (!navLinks.querySelector('.mobile-auth-item')) {
+        const authLi = document.createElement('li');
+        authLi.className = 'nav-item mobile-auth-item';
+        authLi.innerHTML = `
+            <div class="mobile-drawer-auth-buttons">
+                <a href="https://app.goodmeetings.ai/login" target="_blank" rel="noopener noreferrer" class="mobile-drawer-login-btn">Log in</a>
+                <a href="https://app.goodmeetings.ai/login?tab=2" target="_blank" rel="noopener noreferrer" class="btn-primary mobile-drawer-signup-btn">Sign Up <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+            </div>
+        `;
+        navLinks.appendChild(authLi);
+    }
+
+    function toggleMobileMenu(open) {
+        const shouldOpen = open !== undefined ? open : !navLinks.classList.contains('mobile-active');
+        if (shouldOpen) {
+            navLinks.classList.add('mobile-active');
+            mobileBtn.setAttribute('aria-expanded', 'true');
+            mobileBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>';
+            document.body.style.overflow = 'hidden';
+        } else {
+            navLinks.classList.remove('mobile-active');
+            mobileBtn.setAttribute('aria-expanded', 'false');
+            mobileBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>';
+            document.body.style.overflow = '';
+        }
+    }
+
+    mobileBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        toggleMobileMenu();
+    });
+
+    // Handle mobile accordion dropdowns
+    const navItems = document.querySelectorAll('.nav-item.has-dropdown');
+    navItems.forEach(item => {
+        const trigger = item.querySelector(':scope > a');
+        if (!trigger) return;
+
+        trigger.addEventListener('click', (e) => {
+            if (window.innerWidth <= 992) {
+                e.preventDefault();
+                e.stopPropagation();
+
+                const isCurrentlyActive = item.classList.contains('mobile-dropdown-active');
+
+                // Close other open accordions
+                navItems.forEach(other => {
+                    if (other !== item) other.classList.remove('mobile-dropdown-active');
+                });
+
+                // Toggle this accordion
+                item.classList.toggle('mobile-dropdown-active', !isCurrentlyActive);
+            }
+        });
+
+        // Close mobile drawer when a link inside dropdown is tapped
+        const dropdownLinks = item.querySelectorAll('.dropdown a');
+        dropdownLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 992) {
+                    toggleMobileMenu(false);
+                }
+            });
+        });
+    });
+
+    // Close mobile drawer if clicking direct links
+    const directLinks = navLinks.querySelectorAll('.nav-item:not(.has-dropdown) > a');
+    directLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (window.innerWidth <= 992) {
+                toggleMobileMenu(false);
+            }
+        });
+    });
+}
 
 // ==========================================
 // THREE PILLARS PLATFORM INTERACTIVE LOGIC

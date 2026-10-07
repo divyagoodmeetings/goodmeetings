@@ -488,17 +488,6 @@
                 });
             }
 
-            // Mobile menu toggle
-            const mobileBtn = document.getElementById('mobile-menu-btn');
-            const navLinks = document.getElementById('nav-links');
-            const navAuth = document.getElementById('nav-auth');
-            if (mobileBtn && navLinks) {
-                mobileBtn.addEventListener('click', function() {
-                    navLinks.classList.toggle('mobile-active');
-                    if (navAuth) navAuth.classList.toggle('mobile-active');
-                });
-            }
-
             // Interactive 3D Card Tilt & Cursor Spotlight
             const tiltCards = document.querySelectorAll('.sales-window-card, .sales-approach-card, .sales-metric-card, .sales-disclaimer-box');
             tiltCards.forEach(card => {
@@ -557,5 +546,6 @@
             }
         });
     </script>
+    <script src="nav.js"></script>
 </body>
 </html>
